@@ -1,0 +1,155 @@
+Accessibility Mistakes and Fixes
+===============================
+
+
+1. Missing Alternative Text (alt) in Images
+
+Problem:
+Screen readers cannot understand images without alt text.
+
+Fix:
+Add descriptive alt attributes to all images.
+
+Example:
+<img src="photo.jpg" alt="Profile photo of user">
+
+
+--------------------------------
+
+
+2. Unlabelled Form Inputs
+
+Problem:
+Screen reader users cannot know what information should be entered.
+
+Fix:
+Use label elements connected with input fields.
+
+Example:
+<label for="name">Name</label>
+<input id="name" type="text">
+
+
+--------------------------------
+
+
+3. Skipped Heading Levels
+
+Problem:
+Users cannot understand the correct page structure.
+
+Fix:
+Follow proper heading order.
+
+Example:
+h1 → h2 → h3
+
+
+--------------------------------
+
+
+4. Colour Only Information
+
+Problem:
+Color blind users cannot identify important information.
+
+Fix:
+Use text or symbols with colors.
+
+Example:
+"Error: Invalid Password" instead of only red color.
+
+
+--------------------------------
+
+
+5. Div Used as Button
+
+Problem:
+A div cannot be easily accessed using keyboard.
+
+Fix:
+Use the button element.
+
+Example:
+<button>Submit</button>
+
+
+--------------------------------
+
+
+6. Missing Page Language
+
+Problem:
+Screen readers may pronounce content incorrectly.
+
+Fix:
+Add language attribute.
+
+Example:
+<html lang="en">
+
+
+--------------------------------
+
+
+7. Poor Link Text
+
+Problem:
+"Click Here" does not explain link purpose.
+
+Fix:
+Use meaningful link text.
+
+Example:
+Read Accessibility Guide
+
+
+--------------------------------
+
+
+8. Missing Form Labels
+
+Problem:
+Input purpose is unclear for assistive technology.
+
+Fix:
+Provide proper labels for every form control.
+
+
+--------------------------------
+
+
+9. Missing Keyboard Navigation
+
+Problem:
+Keyboard users cannot access all controls.
+
+Fix:
+Make all interactive elements reachable using Tab key.
+
+
+--------------------------------
+
+
+10. Missing Semantic Structure
+
+Problem:
+Screen readers cannot identify page sections easily.
+
+Fix:
+Use semantic HTML elements.
+
+Example:
+<header>
+<nav>
+<main>
+<section>
+<footer>
+
+
+================================
+
+Summary:
+Accessible websites improve usability for everyone,
+including users who use screen readers and keyboard navigation.

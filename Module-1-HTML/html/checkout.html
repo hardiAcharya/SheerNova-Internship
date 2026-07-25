@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Checkout Form</h1>
+</header>
+
+<main>
+
+<form>
+
+<fieldset>
+<legend>Delivery</legend>
+
+<label>
+Name:
+<input type="text" name="name" autocomplete="name" required>
+</label>
+
+<br>
+
+<label>
+Email:
+<input type="email" name="email" autocomplete="email" required>
+</label>
+
+<br>
+
+<label>
+Phone:
+<input type="tel" name="phone" autocomplete="tel" required>
+</label>
+
+<br>
+
+<label>
+Address:
+<input 
+type="text" 
+name="address" 
+autocomplete="address-line1" 
+required>
+</label>
+
+<br>
+
+<label>
+City:
+<input type="text" name="city" autocomplete="shipping address-level2" required>
+</label>
+
+<br>
+
+<label>
+Postal Code:
+<input type="text" name="postal" autocomplete="shipping postal-code" required>
+</label>
+
+</fieldset>
+
+
+
+<fieldset>
+<legend>Payment</legend>
+
+<label>
+Card Name:
+<input type="text" autocomplete="cc-name" required>
+</label>
+
+<br>
+
+<label>
+Card Number:
+<input type="text" autocomplete="cc-number" required>
+</label>
+
+<br>
+
+<label>
+Expiry:
+<input type="month" autocomplete="cc-exp" required>
+</label>
+
+<br>
+
+<label>
+CVV:<input type="password" name="cvv" autocomplete="off" maxlength="4" required>
+</label>
+
+</fieldset>
+
+
+
+<fieldset>
+<legend>Confirmation</legend>
+
+<label>
+<textarea placeholder="Order Notes"></textarea>
+</label>
+
+<br>
+
+<label>
+<input type="checkbox" required>
+Accept Terms
+</label>
+
+<br>
+
+<button type="submit">
+Submit
+</button>
+
+</fieldset>
+
+
+</form>
+
+</main>
+
+
+<footer>
+<p>&copy; 2026 Checkout</p>
+</footer>
+
+
+</body>
+</html>
