@@ -1,175 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-
-    <title>Accessibility Fixed Page</title>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixed Accessible Page</title>
+<link rel="stylesheet" href="../css/accessibility-fixed.css">
 </head>
-
-
 <body>
-
-
-<!-- Fixed: Skip Link -->
-
-<a href="#main-content">
-    Skip to Content
-</a>
-
-
-
+<a href="#main" class="skip-link">Skip to Content</a>
 <header>
-
-
-<h1>
-    My Website
-</h1>
-
-
-
-<!-- Fixed: Navigation Landmark -->
-
+<h1>My Site</h1>
 <nav aria-label="Main Navigation">
-
-
-<a href="#">
-    Home
-</a>
-
-
-<a href="#">
-    About
-</a>
-
-
+<a href="#">Home</a>
+<a href="#">About</a>
 </nav>
-
-
 </header>
-
-
-
-
-<main id="main-content">
-
-
-
-<!-- Fixed: Correct Heading Order -->
-
-<h2>
-    Welcome Section
-</h2>
-
-
-
-<!-- Fixed: Image with Alt -->
-
-<img 
-src="image.jpg"
-alt="Website homepage design example">
-
-
-
-
-
-<!-- Fixed: Information not dependent on color -->
-
-<p>
-    Error status is marked with text:
-    Error Found
-</p>
-
-
-
-
-
-<!-- Fixed: Input with Label -->
-
-<label for="name">
-    Name:
-</label>
-
-<input
-type="text"
-id="name"
-name="name">
-
-
-
-
-
-<br><br>
-
-
-
-
-<!-- Fixed: Button instead of Div -->
-
-<button type="button">
-    Click Me
-</button>
-
-
-
-
-
-<br><br>
-
-
-
-
-<!-- Fixed: Form Label -->
-
-<form>
-
-
-<label for="email">
-    Email:
-</label>
-
-
-<input
-type="email"
-id="email"
-name="email">
-
-
-
-</form>
-
-
-
-
-
-<br>
-
-
-
-<!-- Fixed: Meaningful Link Text -->
-
-<a href="#">
-    Read About Accessibility
-</a>
-
-
-
-
+<main id="main">
+<h2>Welcome</h2> <!-- Fixed M1 -->
+<img src="banner.jpg" alt="Website banner showing our team working"> <!-- Fixed M2 -->
+<button type="button" onclick="alert('clicked')">Click Me</button> <!-- Fixed M3 -->
+<p class="error-message">Error: Form submission failed</p> <!-- Fixed M4 -->
+<label for="name">Name:</label> <!-- Fixed M5 -->
+<input type="text" id="name" name="name">
+<label for="email">Email:</label> <!-- Fixed M6 -->
+<input type="email" id="email" name="email">
+<a href="/accessibility-guide">Read our Accessibility Guide</a> <!-- Fixed M7 -->
+<h3>Important Note</h3> <!-- Fixed M10 -->
+<p>Read this</p>
 </main>
-
-
-
-
-
-<footer>
-
-<p> Copyright 2026</p>
+<footer> <!-- Fixed M8 -->
+<p>Copyright 2026</p>
 </footer>
 </body>
-
 </html>

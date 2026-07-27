@@ -1,137 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Checkout</title>
+<link rel="stylesheet" href="../css/checkout.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Checkout Form</h1>
+<h1>Checkout Form</h1>
 </header>
 
 <main>
-
 <form>
-
 <fieldset>
 <legend>Delivery</legend>
 
-<label>
-Name:
-<input type="text" name="name" autocomplete="name" required>
+<label for="name">Name:
+<input type="text" id="name" name="name" autocomplete="name" required>
 </label>
 
-<br>
-
-<label>
-Email:
-<input type="email" name="email" autocomplete="email" required>
+<label for="email">Email:
+<input type="email" id="email" name="email" autocomplete="email" required>
 </label>
 
-<br>
-
-<label>
-Phone:
-<input type="tel" name="phone" autocomplete="tel" required>
+<label for="phone">Phone:
+<input type="tel" id="phone" name="phone" autocomplete="tel" required>
 </label>
 
-<br>
-
-<label>
-Address:
-<input 
-type="text" 
-name="address" 
-autocomplete="address-line1" 
-required>
+<label for="address">Address:
+<input type="text" id="address" name="address" autocomplete="address-line1" required>
 </label>
 
-<br>
-
-<label>
-City:
-<input type="text" name="city" autocomplete="shipping address-level2" required>
+<label for="city">City:
+<input type="text" id="city" name="city" autocomplete="address-level2" required>
 </label>
 
-<br>
-
-<label>
-Postal Code:
-<input type="text" name="postal" autocomplete="shipping postal-code" required>
+<label for="postal">Postal Code:
+<input type="text" id="postal" name="postal" autocomplete="postal-code" required>
 </label>
-
 </fieldset>
-
-
 
 <fieldset>
 <legend>Payment</legend>
 
-<label>
-Card Name:
-<input type="text" autocomplete="cc-name" required>
+<label for="ccname">Card Name:
+<input type="text" id="ccname" name="ccname" autocomplete="cc-name" required>
 </label>
 
-<br>
-
-<label>
-Card Number:
-<input type="text" autocomplete="cc-number" required>
+<label for="ccnumber">Card Number:
+<input type="text" id="ccnumber" name="ccnumber" autocomplete="cc-number" inputmode="numeric" maxlength="19" required>
 </label>
 
-<br>
-
-<label>
-Expiry:
-<input type="month" autocomplete="cc-exp" required>
+<label for="ccexp">Expiry:
+<input type="month" id="ccexp" name="ccexp" autocomplete="cc-exp" required>
 </label>
 
-<br>
-
-<label>
-CVV:<input type="password" name="cvv" autocomplete="off" maxlength="4" required>
+<label for="cvv">CVV:
+<input type="password" id="cvv" name="cvv" autocomplete="cc-csc" maxlength="4" required>
 </label>
-
 </fieldset>
-
-
 
 <fieldset>
 <legend>Confirmation</legend>
 
-<label>
-<textarea placeholder="Order Notes"></textarea>
+<label for="notes">Order Notes:
+<textarea id="notes" name="notes" placeholder="Any special instructions"></textarea>
 </label>
 
-<br>
-
-<label>
-<input type="checkbox" required>
-Accept Terms
+<label for="terms">
+<input type="checkbox" id="terms" name="terms" required>
+Accept Terms and Conditions
 </label>
 
-<br>
-
-<button type="submit">
-Submit
-</button>
-
+<button type="submit">Place Order</button>
 </fieldset>
-
-
 </form>
-
 </main>
-
 
 <footer>
 <p>&copy; 2026 Checkout</p>
 </footer>
-
 
 </body>
 </html>

@@ -1,207 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-
-    <title>Daily News Homepage</title>
-
-    <meta name="description"
-    content="Latest news and updates from around the world.">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Latest news and updates from around the world.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../css/news-homepage.css">
+<title>Daily News Homepage</title>
 </head>
-
-
 <body>
 
-
-<header>
-
-    <h1>
-        Daily News
-    </h1>
-
-
-    <p>
-        Latest Updates | World | Technology | Sports
-    </p>
-
-
-
-    <nav aria-label="News Navigation">
-
-        <a href="#">
-            Home
-        </a>
-
-        <a href="#">
-            World
-        </a>
-
-        <a href="#">
-            Technology
-        </a>
-
-        <a href="#">
-            Sports
-        </a>
-
-    </nav>
-
-
+<header class="site-header">
+<div class="container">
+<h1>Daily News</h1>
+<p class="tagline">Latest Updates | World | Technology | Sports</p>
+<nav aria-label="News Navigation">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">World</a></li>
+<li><a href="#">Technology</a></li>
+<li><a href="#">Sports</a></li>
+</ul>
+</nav>
+</div>
 </header>
 
-
-
-
-<main>
-
-
-
-<section>
-
-    <h2>
-        Main Story
-    </h2>
-
-
-    <article>
-
-        <h3>
-            New Technology Changes The Future
-        </h3>
-
-
-        <p>
-            Technology is improving daily life with
-            new innovations and solutions.
-        </p>
-
-
-        <time datetime="2026-07-24">
-            24 July 2026
-        </time>
-
-
-    </article>
-
-
+<main class="container">
+<div class="grid">
+<section class="main-story">
+<h2>Main Story</h2>
+<article class="card featured">
+<img src="https://picsum.photos/800/400?tech" alt="Technology News">
+<div class="card-content">
+<h3>New Technology Changes The Future</h3>
+<p>Technology is improving daily life with new innovations and solutions in AI, health, and education.</p>
+<time datetime="2026-07-24">24 July 2026</time>
+</div>
+</article>
 </section>
 
+<section class="secondary-stories">
+<h2>Secondary Stories</h2>
+<div class="card-grid">
+<article class="card">
+<h3>New Education Trends</h3>
+<p>Digital learning is growing worldwide with online courses and AI tutors.</p>
+</article>
 
+<article class="card">
+<h3>Sports Highlights</h3>
+<p>Latest sports news and match updates from cricket, football and Olympics.</p>
+</article>
 
-
-
-<section>
-
-    <h2>
-        Secondary Stories
-    </h2>
-
-
-
-    <article>
-
-        <h3>
-            New Education Trends
-        </h3>
-
-        <p>
-            Digital learning is growing worldwide.
-        </p>
-
-    </article>
-
-
-
-
-    <article>
-
-        <h3>
-            Sports Highlights
-        </h3>
-
-        <p>
-            Latest sports news and match updates.
-        </p>
-
-    </article>
-
-
-
-    <article>
-
-        <h3>
-            Business Updates
-        </h3>
-
-        <p>
-            New business opportunities and markets.
-        </p>
-
-    </article>
-
-
-
+<article class="card">
+<h3>Business Updates</h3>
+<p>New business opportunities and markets opening in renewable energy sector.</p>
+</article>
+</div>
 </section>
 
-
-
-
-
-<aside>
-
-    <h2>
-        Popular News
-    </h2>
-
-
-    <ul>
-
-        <li>
-            Weather Updates
-        </li>
-
-        <li>
-            Technology News
-        </li>
-
-        <li>
-            Health Updates
-        </li>
-
-
-    </ul>
-
-
+<aside class="sidebar">
+<h2>Popular News</h2>
+<ul class="popular-list">
+<li><a href="#">Weather Updates</a></li>
+<li><a href="#">Technology News</a></li>
+<li><a href="#">Health Updates</a></li>
+</ul>
 </aside>
-
-
-
-
+</div>
 </main>
 
-
-
-
-
-<footer>
-
-
-<p>
-    &copy; 2026 Daily News.
-    All Rights Reserved.
-</p>
-
-
+<footer class="site-footer">
+<div class="container">
+<p>&copy; 2026 Daily News. All Rights Reserved.</p>
+</div>
 </footer>
 
-
-
 </body>
-
 </html>

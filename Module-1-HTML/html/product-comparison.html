@@ -1,170 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Comparison</title>
-
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th,
-        td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
-
-        caption {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../css/product-comparison.css">
+<title>Product Comparison</title>
 </head>
-
-
 <body>
 
 <header>
-    <h1>Laptop Product Comparison</h1>
+<h1>Laptop Product Comparison</h1>
+<p class="subtitle">Compare 5 popular laptop models in 2026</p>
 </header>
 
-
 <main>
-
+<div class="table-wrapper">
 <table>
-
-    <caption>
-        Comparison of Five Laptop Models
-    </caption>
-
-
-    <thead>
-        <tr>
-            <th scope="col">Attribute</th>
-            <th scope="col">Dell Inspiron</th>
-            <th scope="col">HP Pavilion</th>
-            <th scope="col">Lenovo IdeaPad</th>
-            <th scope="col">ASUS VivoBook</th>
-            <th scope="col">Acer Aspire</th>
-        </tr>
-    </thead>
-
-
-    <tbody>
-
-        <tr>
-            <th scope="row">Processor</th>
-            <td>Intel Core i5</td>
-            <td>Intel Core i5</td>
-            <td>AMD Ryzen 5</td>
-            <td>Intel Core i7</td>
-            <td>AMD Ryzen 7</td>
-        </tr>
-
-
-        <tr>
-            <th scope="row">RAM</th>
-            <td>8 GB</td>
-            <td>16 GB</td>
-            <td>8 GB</td>
-            <td>16 GB</td>
-            <td>16 GB</td>
-        </tr>
-
-
-        <tr>
-            <th scope="row">Storage</th>
-            <td>512 GB SSD</td>
-            <td>1 TB SSD</td>
-            <td>512 GB SSD</td>
-            <td>1 TB SSD</td>
-            <td>512 GB SSD</td>
-        </tr>
-
-
-        <tr>
-            <th scope="row">Display</th>
-            <td>15.6 Inch</td>
-            <td>15.6 Inch</td>
-            <td>14 Inch</td>
-            <td>15.6 Inch</td>
-            <td>15.6 Inch</td>
-        </tr>
-
-
-        <tr>
-            <th scope="row">Graphics</th>
-            <td>Intel Iris Xe</td>
-            <td>NVIDIA RTX 3050</td>
-            <td>AMD Radeon</td>
-            <td>Intel Iris Xe</td>
-            <td>NVIDIA RTX 2050</td>
-        </tr>
-
-
-        <tr>
-            <th scope="row">Battery Life</th>
-            <td>8 Hours</td>
-            <td>7 Hours</td>
-            <td>9 Hours</td>
-            <td>8 Hours</td>
-            <td>10 Hours</td>
-        </tr>
-
-
-        <tr>
-            <th scope="row">Weight</th>
-            <td>1.70 kg</td>
-            <td>1.75 kg</td>
-            <td>1.60 kg</td>
-            <td>1.80 kg</td>
-            <td>1.65 kg</td>
-        </tr>
-
-
-        <tr>
-            <th scope="row">Price</th>
-            <td>₹55,000</td>
-            <td>₹65,000</td>
-            <td>₹58,000</td>
-            <td>₹72,000</td>
-            <td>₹60,000</td>
-        </tr>
-
-
-    </tbody>
-
-
-    <tfoot>
-
-        <tr>
-            <th scope="row">Summary</th>
-            <td>Budget Choice</td>
-            <td>Gaming Laptop</td>
-            <td>Best Value</td>
-            <td>High Performance</td>
-            <td>Longest Battery</td>
-        </tr>
-
-    </tfoot>
-
-
+<caption>Comparison of Five Laptop Models</caption>
+<thead>
+<tr>
+<th scope="col">Attribute</th>
+<th scope="col">Dell<br>Inspiron</th>
+<th scope="col">HP<br>Pavilion</th>
+<th scope="col">Lenovo<br>IdeaPad</th>
+<th scope="col">ASUS<br>VivoBook</th>
+<th scope="col">Acer<br>Aspire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Processor</th>
+<td>Intel i5</td>
+<td>Intel i5</td>
+<td>Ryzen 5</td>
+<td>Intel i7</td>
+<td>Ryzen 7</td>
+</tr>
+<tr>
+<th scope="row">RAM</th>
+<td>8 GB</td>
+<td>16 GB</td>
+<td>8 GB</td>
+<td>16 GB</td>
+<td>16 GB</td>
+</tr>
+<tr>
+<th scope="row">Storage</th>
+<td>512GB SSD</td>
+<td>1TB SSD</td>
+<td>512GB SSD</td>
+<td>1TB SSD</td>
+<td>512GB SSD</td>
+</tr>
+<tr>
+<th scope="row">Display</th>
+<td>15.6"</td>
+<td>15.6"</td>
+<td>14"</td>
+<td>15.6"</td>
+<td>15.6"</td>
+</tr>
+<tr>
+<th scope="row">Graphics</th>
+<td>Iris Xe</td>
+<td>RTX 3050</td>
+<td>Radeon</td>
+<td>Iris Xe</td>
+<td>RTX 2050</td>
+</tr>
+<tr>
+<th scope="row">Battery</th>
+<td>8 Hrs</td>
+<td>7 Hrs</td>
+<td>9 Hrs</td>
+<td>8 Hrs</td>
+<td>10 Hrs</td>
+</tr>
+<tr>
+<th scope="row">Weight</th>
+<td>1.70 kg</td>
+<td>1.75 kg</td>
+<td>1.60 kg</td>
+<td>1.80 kg</td>
+<td>1.65 kg</td>
+</tr>
+<tr>
+<th scope="row">Price</th>
+<td class="price">₹55,000</td>
+<td class="price">₹65,000</td>
+<td class="price">₹58,000</td>
+<td class="price">₹72,000</td>
+<td class="price">₹60,000</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th scope="row">Best For</th>
+<td>Budget</td>
+<td>Gaming</td>
+<td>Value</td>
+<td>Performance</td>
+<td>Battery</td>
+</tr>
+</tfoot>
 </table>
-
+</div>
 </main>
 
-
 <footer>
-    <p>&copy; 2026 Product Comparison Table</p>
+<p>&copy; 2026 Product Comparison Table</p>
 </footer>
-
 
 </body>
 </html>

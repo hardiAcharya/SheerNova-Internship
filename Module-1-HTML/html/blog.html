@@ -1,126 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Post</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>My Blog</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<a href="#main" class="skip-link">Skip to Content</a>
 
 <header>
-    <h1>My Technology Blog</h1>
+<h1><a href="#">MyBlog</a></h1>
+<nav aria-label="Main Navigation">
+<a href="#">Home</a>
+<a href="#">Tech</a>
+<a href="#">Coding</a>
+<a href="#">About</a>
+</nav>
 </header>
 
-
-<main>
-
+<main id="main">
+<section class="blog-grid">
 <article>
-
-    <header>
-        <h2>Getting Started with HTML5</h2>
-
-        <p>
-            Written by:
-            <strong>Hardi Acharya</strong>
-        </p>
-
-        <p>
-            Published on:
-            <time datetime="2026-07-24">
-                24 July 2026
-            </time>
-        </p>
-
-    </header>
-
-
-    <section>
-        <h3>Introduction to HTML5</h3>
-
-    <p>HTML5 is the latest version of HTML used to create modern and semantic websites.</p>
-    <p>Semantic tags help developers create meaningful website structures.</p>
-
-    <blockquote cite="https://developer.mozilla.org/">
-
-        "Good HTML structure makes websites easier to
-        understand and maintain."
-
-    </blockquote>
-
-    </section>
-
-    <section>
-
-        <h3>HTML Code Example</h3>
-
-
-        <pre>
-<code>
-&lt;header&gt;
-    &lt;h1&gt;My Website&lt;/h1&gt;
-&lt;/header&gt;
-
-&lt;main&gt;
-    Content goes here
-&lt;/main&gt;
-</code>
-        </pre>
-
-
-    </section>
-
-
-    <section>
-
-        <h3>Conclusion</h3>
-
-        <p>
-            Learning HTML5 is the first step toward becoming
-            a successful web developer.
-        </p>
-
-    </section>
-
-
+<h2><a href="#">How to Learn Web Development in 2026</a></h2>
+<p>Start with HTML, CSS and JavaScript. Build small projects and learn step by step. Consistency is the key to become a good developer.</p>
+<small>By Admin - 27 July 2026</small>
 </article>
 
+<article>
+<span class="tag">Tech</span>
+<h2><a href="#">Top 5 AI Tools Every Developer Should Use</a></h2>
+<p>AI is changing how we code. From GitHub Copilot to ChatGPT, here are the tools that will save you hours of work every week.</p>
+<small>By Admin - 25 July 2026</small>
+</article>
 
-<!-- Related Posts -->
+<article>
+<span class="tag">Design</span>
+<h2><a href="#">Responsive Design: CSS Tips for Beginners</a></h2>
+<p>Learn flexbox, grid and media queries to make your website look perfect on mobile, tablet and desktop. No framework needed.</p>
+<small>By Admin - 22 July 2026</small>
+</article>
+</section>
+
 <aside>
-
-    <h2>Related Posts</h2>
-
-    <ul>
-        <li>
-            CSS Basics for Beginners
-        </li>
-
-        <li>
-            Introduction to JavaScript
-        </li>
-
-        <li>
-            Understanding Web Development
-        </li>
-    </ul>
-
+<section>
+<h3>About Me</h3>
+<p>Hi! I write about web development, tech news and coding tips. Follow for weekly articles.</p>
+</section>
+<section>
+<h3>Categories</h3>
+<ul>
+<li><a href="#">Coding</a></li>
+<li><a href="#">Tech</a></li>
+<li><a href="#">Design</a></li>
+<li><a href="#">Career</a></li>
+</ul>
+</section>
 </aside>
-
-
 </main>
 
-
 <footer>
-
-    <p>
-        &copy; 2026 Hardi Blog
-    </p>
-
+<p>&copy; 2026 MyBlog. All rights reserved.</p>
 </footer>
-
-
 </body>
-
 </html>

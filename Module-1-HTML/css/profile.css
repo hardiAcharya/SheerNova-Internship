@@ -1,0 +1,60 @@
+:root{
+--primary:#2563eb;
+--primary-light:#dbeafe;
+--accent:#f59e0b;
+--text:#1e293b;
+--text-light:#475569;
+--bg:#f8fafc;
+--card:#ffffff;
+--border:#e2e8f0;
+--font:"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7}
+
+/* Header */
+header{background:linear-gradient(135deg,var(--primary),#1d4ed8);color:#fff;text-align:center;padding:50px 20px}
+header h1{font-size:2.4rem;margin-bottom:6px}
+header p{font-size:1.1rem;opacity:.9}
+
+/* Navigation */
+nav{background:var(--card);box-shadow:0 2px 6px rgba(0,0,0,.05);position:sticky;top:0;z-index:100}
+nav ul{display:flex;justify-content:center;flex-wrap:wrap;list-style:none;gap:4px;padding:12px}
+nav a{display:block;padding:10px 18px;color:var(--text);text-decoration:none;font-weight:600;border-radius:6px;transition:.2s}
+nav a:hover{background:var(--primary);color:#fff}
+
+/* Main Layout */
+main{max-width:1000px;margin:30px auto;padding:0 20px;display:grid;grid-template-columns:2fr 1fr;gap:30px}
+
+/* Sections */
+section{background:var(--card);padding:24px;border-radius:10px;border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.04);margin-bottom:24px}
+section h2{color:var(--primary);font-size:1.5rem;margin-bottom:14px;border-left:4px solid var(--accent);padding-left:10px}
+article h3{color:var(--text);font-size:1.1rem;margin:12px 0 6px}
+
+article p{color:var(--text-light);margin-bottom:10px}
+article ul{list-style:none;padding-left:0}
+article ul li{padding:6px 0;padding-left:20px;position:relative}
+article ul li::before{content:"▹";position:absolute;left:0;color:var(--primary)}
+
+/* Aside */
+aside{background:var(--primary-light);padding:20px;border-radius:10px;border:1px solid var(--primary)}
+aside h2{color:var(--primary);font-size:1.3rem;margin-bottom:12px}
+aside ul{list-style:none}
+aside li{padding:8px 0;color:var(--text);border-bottom:1px dashed var(--border)}
+aside li:last-child{border:none}
+
+/* Contact */
+address{font-style:normal}
+address p{background:var(--bg);padding:10px;border-radius:6px;display:inline-block}
+
+/* Footer */
+footer{text-align:center;padding:20px;margin-top:30px;background:var(--card);border-top:1px solid var(--border);color:var(--text-light);font-size:.9rem}
+
+/* Responsive */
+@media(max-width:900px){
+main{grid-template-columns:1fr}
+nav ul{gap:0}
+header h1{font-size:1.8rem}
+}

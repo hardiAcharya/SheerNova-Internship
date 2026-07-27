@@ -1,68 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="nav.css">
+<title>Navigation Menu</title>
 </head>
 <body>
 
-<header>
-    <h1>Media Page</h1>
+<header class="navbar">
+<div class="logo">HTML Hub</div>
+
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="hamburger">&#9776;</label>
+
+<nav>
+<ul class="menu">
+<li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+<a href="#">Profile ▾</a>
+<ul class="dropdown-menu">
+<li><a href="profile.html">Personal Profile</a></li>
+<li><a href="resume.html">Resume</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#">HTML Examples ▾</a>
+<ul class="dropdown-menu">
+<li class="dropdown-sub">
+<a href="#">Text ▸</a>
+<ul class="dropdown-menu">
+<li><a href="text-formatting.html">Text Formatting</a></li>
+<li><a href="description-list.html">Description List</a></li>
+</ul>
+</li>
+<li class="dropdown-sub">
+<a href="#">Lists ▸</a>
+<ul class="dropdown-menu">
+<li><a href="nested-menu.html">Nested Menu</a></li>
+<li><a href="timetable.html">Time Table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
 </header>
 
 <main>
-
-    <h2>Video</h2>
-        <video controls width="500" poster="../images/media/poster.jpg">
-        <source src="../media/sample_video-1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-
-    </video>
-
-    <hr>
-    <h2>Audio</h2>
-        <audio controls>
-            <source src="../media/Ganga_Ke_Kinare.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-    </audio>
-
-    <hr>
-
-    <h2>Responsive Picture</h2>
-
-    <picture>
-
-    <img src="../images/media/nature.jpg" alt="Nature Image" width="500" loading="lazy">
-
-</picture>
-
-    <hr>
-
-    <h2>Image Gallery</h2>
-
-    <img src="../images/media/small.jpg" alt="Image 1" loading="lazy" width="300">
-
-    <img src="../images/media/medium.jpg" alt="Image 2" loading="lazy" width="300">
-
-    <img src="../images/media/large.jpg" alt="Image 3" loading="lazy" width="300">
-
-    <hr>
-
-    <h2>Google Map</h2>
-
-    <iframe
-        src="https://www.google.com/maps?q=Surendranagar&output=embed"
-        width="500"
-        height="300"
-        loading="lazy">
-    </iframe>
-
+<h1>Welcome to HTML Hub</h1>
+<p>Use the navigation above to explore.</p>
 </main>
-
-<footer>
-    <p>&copy; 2026 Media Page</p>
-</footer>
 
 </body>
 </html>

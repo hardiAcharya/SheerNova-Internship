@@ -1,121 +1,35 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-    <title>Accessibility Errors</title>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixed Accessible Page</title>
+<link rel="stylesheet" href="../css/accessibility-fixed.css">
 </head>
-
-
 <body>
-
-
-<!-- Error 1: No Skip Link -->
-
-
+<a href="#main" class="skip-link">Skip to Content</a>
 <header>
-
-    <h1>
-        My Website
-    </h1>
-
-
-    <!-- Error 2: Navigation without proper label -->
-
-    <nav>
-
-        <a href="#">
-            Home
-        </a>
-
-        <a href="#">
-            About
-        </a>
-
-    </nav>
-
+<h1>My Site</h1>
+<nav aria-label="Main Navigation">
+<a href="#">Home</a>
+<a href="#">About</a>
+</nav>
 </header>
-
-
-
-<main>
-
-
-<!-- Error 3: Wrong heading order -->
-
-<h4>
-    Welcome Section
-</h4>
-
-
-
-<!-- Error 4: Image without alt -->
-
-<img src="image.jpg">
-
-
-
-<!-- Error 5: Color only information -->
-
-<p style="color:red;">
-    Red means error
-</p>
-
-
-
-<!-- Error 6: Input without label -->
-
-<input 
-type="text"
-placeholder="Enter Name">
-
-
-
-<br><br>
-
-
-
-<!-- Error 7: Div used as button -->
-
-<div onclick="alert('Clicked')">
-    Click Me
-</div>
-
-
-
-<!-- Error 8: Missing form label -->
-
-<form>
-
-<input type="email"
-placeholder="Email">
-
-
-</form>
-
-
-
-<!-- Error 9: Poor link text -->
-
-<a href="#">
-    Click Here
-</a>
-
-
-
-<!-- Error 10: No language attribute -->
-
-<p>
-    Welcome to our website.
-</p>
-
+<main id="main">
+<h2>Welcome</h2> <!-- Fixed M1 -->
+<img src="../images/icons/image1.jpg" alt="Website banner showing our team working"> <!-- Fixed M2 -->
+<button type="button" onclick="alert('clicked')">Click Me</button> <!-- Fixed M3 -->
+<p class="error">Error: Form submission failed</p> <!-- Fixed M4 -->
+<label for="name">Name:</label> <!-- Fixed M5 -->
+<input type="text" id="name" name="name">
+<label for="email">Email:</label> <!-- Fixed M6 -->
+<input type="email" id="email" name="email">
+<a href="/accessibility-guide">Read our Accessibility Guide</a> <!-- Fixed M7 -->
+<h3>Important Note</h3> <!-- Fixed M10 -->
+<p>Read this</p>
 </main>
-<footer>
-
-    Copyright 2026
-
+<footer> <!-- Fixed M8 -->
+<p>Copyright 2026</p>
 </footer>
 </body>
-
 </html>
