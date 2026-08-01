@@ -14,91 +14,88 @@
 
 <body>
     <!-- ================= HEADER ================= -->
-    <header>
-        <div class="container company-header"> <!-- section ko div kiya -->
-            <figure>
-                <img src="../images/icons/logo.jpg" alt="Techno Web Solutions Logo" class="logo">
-            </figure>
-            <div> <!-- article ko div kiya -->
-                <h1>Techno Web Solutions</h1>
-                <p>Professional Website Design, Development & Digital Solutions</p>
-            </div>
-        </div>
+    <header class="container company-header">
+        <figure>
+            <img src="../images/icons/logo.jpg" alt="Techno Web Solutions Logo" class="logo">
+        </figure>
+        <header>
+            <h1>Techno Web Solutions</h1>
+            <p>Professional Website Design, Development & Digital Solutions</p>
+        </header>
 
-        <nav aria-label="Main Navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html" aria-current="page">Gallery</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <input type="checkbox" id="nav-toggle" class="nav__toggle">
+        <label for="nav-toggle" class="nav__burger">☰</label>
     </header>
+
+    <nav class="nav__menu" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
     <!-- ================= MAIN ================= -->
     <main>
         <!-- Gallery Banner -->
-        <div class="page-banner"> <!-- section ko div kiya -->
-            <div class="container"> <!-- article ko div kiya -->
-                <h2>Our Gallery</h2>
-                <p>
-                    Explore some of our featured work including
-                    website designs, web applications, mobile
-                    applications and business solutions.
-                </p>
-            </div>
-        </div>
+        <section class="page-banner container">
+            <h2>Our Gallery</h2>
+            <p>
+                Explore some of our featured work including
+                website designs, web applications, mobile
+                applications and business solutions.
+            </p>
+        </section>
 
         <!-- Gallery -->
-        <section class="gallery">
-            <div class="container"> <!-- article ko div kiya -->
-                <h2>Featured Projects</h2>
-                <div class="gallery-grid"> <!-- section ko div kiya -->
-                    <figure>
-                        <img src="../images/gallery/website_development.jpg" alt="Website Development Project">
-                        <figcaption>Website Development</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/gallery/resposive_web_design.jpg" alt="Responsive Website Design">
-                        <figcaption>Responsive Web Design</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/gallery/business_web_design.jpg" alt="Business Website">
-                        <figcaption>Business Website</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/gallery/ecommerce_solutions.jpg" alt="E-Commerce Website">
-                        <figcaption>E-Commerce Solution</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/gallery/mobile_application.jpg" alt="Mobile Application">
-                        <figcaption>Mobile Application</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/gallery/database_management.jpg" alt="Database Project">
-                        <figcaption>Database Management</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/gallery/dashboard_ui.jpg" alt="Dashboard Design">
-                        <figcaption>Dashboard UI</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/gallery/Portfoli_Website.jpg" alt="Portfolio Website">
-                        <figcaption>Portfolio Website</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/gallery/Corporate_Website.jpg" alt="Corporate Website"> <!-- space ko - kiya -->
-                        <figcaption>Corporate Website</figcaption>
-                    </figure>
-                </div>
-            </div>
+        <section class="gallery container">
+            <h2>Featured Projects</h2>
+            <section class="gallery-grid">
+                <figure>
+                    <img src="../images/gallery/website_development.jpg" alt="Website Development Project">
+                    <figcaption>Website Development</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/gallery/resposive_web_design.jpg" alt="Responsive Website Design">
+                    <figcaption>Responsive Web Design</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/gallery/business_web_design.jpg" alt="Business Website">
+                    <figcaption>Business Website</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/gallery/ecommerce_solutions.jpg" alt="E-Commerce Website">
+                    <figcaption>E-Commerce Solution</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/gallery/mobile_application.jpg" alt="Mobile Application">
+                    <figcaption>Mobile Application</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/gallery/database_management.jpg" alt="Database Project">
+                    <figcaption>Database Management</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/gallery/dashboard_ui.jpg" alt="Dashboard Design">
+                    <figcaption>Dashboard UI</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/gallery/Portfoli_Website.jpg" alt="Portfolio Website">
+                    <figcaption>Portfolio Website</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/gallery/Corporate_Website.jpg" alt="Corporate Website">
+                    <figcaption>Corporate Website</figcaption>
+                </figure>
+            </section>
         </section>
     </main>
 
     <!-- ================= FOOTER ================= -->
     <footer>
-        <div class="container"> <!-- section ko div kiya -->
+        <article class="container"> <!-- div ko article -->
             <p>&copy; 2026 Techno Web Solutions. All Rights Reserved.</p>
-        </div>
+        </article>
     </footer>
 </body>
 

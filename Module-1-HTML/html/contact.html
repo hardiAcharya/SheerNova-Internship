@@ -12,106 +12,101 @@
 </head>
 <body>
     <!-- ================= HEADER ================= -->
-    <header>
-        <div class="container company-header">
-            <figure>
-                <img src="../images/icons/logo.jpg" alt="Techno Web Solutions Logo" class="logo">
-            </figure>
-            <div>
-                <h1>Techno Web Solutions</h1>
-                <p>Professional Website Design, Development & Digital Solutions</p>
-            </div>
-        </div>
+    <header class="container company-header">
+        <figure>
+            <img src="../images/icons/logo.jpg" alt="Techno Web Solutions Logo" class="logo">
+        </figure>
+        <header>
+            <h1>Techno Web Solutions</h1>
+            <p>Professional Website Design, Development & Digital Solutions</p>
+        </header>
 
-        <nav aria-label="Main Navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html" aria-current="page">Contact</a>
-        </nav>
+        <input type="checkbox" id="nav-toggle" class="nav__toggle">
+        <label for="nav-toggle" class="nav__burger">☰</label>
     </header>
+
+    <nav class="nav__menu" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
 
     <!-- ================= MAIN ================= -->
     <main>
         <!-- Contact Hero -->
-        <div class="page-banner">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <p>We would love to hear from you. Contact our team for your next website or software project.</p>
-            </div>
-        </div>
+        <section class="page-banner container">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you. Contact our team for your next website or software project.</p>
+        </section>
 
         <!-- Contact Information -->
-        <section class="contact-information">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <div class="cards">
-                    <div class="card">
-                        <h3>Office Address</h3>
-                        <p>Techno Web Solutions<br>Surendranagar,<br>Gujarat, India</p>
-                    </div>
-                    <div class="card">
-                        <h3>Email</h3>
-                        <p>info@technowebsolutions.com</p>
-                    </div>
-                    <div class="card">
-                        <h3>Phone</h3>
-                        <p>+91 98765 43210</p>
-                    </div>
-                    <div class="card">
-                        <h3>Business Hours</h3>
-                        <p>Monday - Saturday<br>9:00 AM - 6:00 PM</p>
-                    </div>
-                </div>
-            </div>
+        <section class="contact-information container">
+            <h2>Get In Touch</h2>
+            <section class="cards">
+                <article class="card">
+                    <h3>Office Address</h3>
+                    <p>Techno Web Solutions<br>Surendranagar,<br>Gujarat, India</p>
+                </article>
+                <article class="card">
+                    <h3>Email</h3>
+                    <p>info@technowebsolutions.com</p>
+                </article>
+                <article class="card">
+                    <h3>Phone</h3>
+                    <p>+91 98765 43210</p>
+                </article>
+                <article class="card">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Saturday<br>9:00 AM - 6:00 PM</p>
+                </article>
+            </section>
         </section>
 
         <!-- Contact Form -->
-        <section class="contact-form">
-            <div class="container">
-                <h2>Send Us a Message</h2>
-                <form action="#" method="post">
-                    <p>
-                        <label for="fullname">Full Name</label>
-                        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
-                    </p>
-                    <p>
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </p>
-                    <p>
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-                    </p>
-                    <p>
-                        <label for="service">Select Service</label>
-                        <select id="service" name="service">
-                            <option value="">Choose a Service</option>
-                            <option>Website Design</option>
-                            <option>Web Development</option>
-                            <option>Mobile Application Development</option>
-                            <option>Database Solutions</option>
-                            <option>UI / UX Design</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
-                    </p>
-                    <p>
-                        <button type="submit" class="button">Send Message</button>
-                    </p>
-                </form>
-            </div>
+        <section class="contact-form container">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </p>
+                <p>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </p>
+                <p>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </p>
+                <p>
+                    <label for="service">Select Service</label>
+                    <select id="service" name="service">
+                        <option value="">Choose a Service</option>
+                        <option>Website Design</option>
+                        <option>Web Development</option>
+                        <option>Mobile Application Development</option>
+                        <option>Database Solutions</option>
+                        <option>UI / UX Design</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+                </p>
+                <p>
+                    <button type="submit" class="button">Send Message</button>
+                </p>
+            </form>
         </section>
     </main>
 
     <!-- ================= FOOTER ================= -->
     <footer>
-        <div class="container">
+        <article class="container"> <!-- div ko article -->
             <p>&copy; 2026 Techno Web Solutions. All Rights Reserved.</p>
-        </div>
+        </article>
     </footer>
 </body>
 </html>

@@ -1,0 +1,22 @@
+For your next HTML & CSS assignment, you need to create a responsive clone of the Allbirds homepage.
+Reference Website:
+https://www.allbirds.com/
+Requirements:
+Replicate the overall layout, spacing, and visual hierarchy (do not copy assets exactly).
+Use only HTML5 and CSS3 (no JavaScript, Bootstrap, or other frameworks).
+Build a fully responsive design for Desktop, Tablet, and Mobile.
+Use semantic HTML elements.
+Implement the layout using Flexbox and CSS Grid where appropriate.
+Maintain clean, well-structured, and properly commented code.
+Follow a logical folder structure (index.html, css/, images/, assets/).
+Focus on recreating the following sections:
+Header & Navigation
+Hero Banner
+Featured Categories
+Product Showcase
+Promotional Sections
+Newsletter
+Footer
+The objective is to demonstrate strong HTML/CSS fundamentals, responsive design, proper spacing, alignment, and attention to UI details.
+Please submit your completed task by EOD.
+
