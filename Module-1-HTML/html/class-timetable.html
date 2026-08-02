@@ -3,84 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/class-timetable.css">
-    <title>Class Timetable</title>
+    <meta name="description" content="Weekly academic class timetable for Computer Science Department with lunch break and practical lab sessions.">
+    <title>Class Timetable | Computer Science</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<header>
-    <h1>BCA Semester 6 Class Timetable</h1>
-</header>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-<main>
-<table>
-    <caption>Weekly Class Timetable</caption>
-    <thead>
-        <tr>
-            <th scope="col">Time</th>
-            <th scope="col">Monday</th>
-            <th scope="col">Tuesday</th>
-            <th scope="col">Wednesday</th>
-            <th scope="col">Thursday</th>
-            <th scope="col">Friday</th>
-        </tr>
-    </thead>
+    <!-- Page Header -->
+    <header class="site-header">
+        <h1>Department of Computer Science</h1>
+        <p>Academic Schedule &ndash; Semester IV (Academic Year 2026)</p>
+    </header>
 
-    <tbody>
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <section aria-labelledby="timetable-heading">
+            <h2 id="timetable-heading" class="sr-only">Weekly Class Timetable</h2>
 
-        <tr>
-            <th scope="row">9:00 AM - 10:00 AM</th>
-            <td>HTML</td>
-            <td>Java</td>
-            <td>Python</td>
-            <td>Database</td>
-            <td>Cloud Computing</td>
-        </tr>
+            <!-- Responsive Table Wrapper -->
+            <div class="table-container">
+                <table class="timetable">
+                    <caption>Weekly Class Schedule for B.Tech Computer Science (Room 302)</caption>
+                    
+                    <thead>
+                        <tr>
+                            <th scope="col">Time / Day</th>
+                            <th scope="col" id="mon">Monday</th>
+                            <th scope="col" id="tue">Tuesday</th>
+                            <th scope="col" id="wed">Wednesday</th>
+                            <th scope="col" id="thu">Thursday</th>
+                            <th scope="col" id="fri">Friday</th>
+                        </tr>
+                    </thead>
 
-        <tr>
-            <th scope="row">10:00 AM - 11:00 AM</th>
-            <td>CSS</td>
-            <td>JavaScript</td>
-            <td>Operating System</td>
-            <td>PHP</td>
-            <td>Computer Network</td>
-        </tr>
+                    <tbody>
+                        <!-- Slot 1 -->
+                        <tr>
+                            <th scope="row">09:00 AM - 10:00 AM</th>
+                            <td>Data Structures</td>
+                            <td>Web Technologies</td>
+                            <td>Data Structures</td>
+                            <td>Operating Systems</td>
+                            <td>Computer Networks</td>
+                        </tr>
 
-        <tr>
-            <th scope="row">11:00 AM - 1:00 PM</th>
-            <td colspan="2">Java Lab (Double Period)</td>
-            <td colspan="2">Python Lab (Double Period)</td>
-            <td>Project Work</td>
-        </tr>
+                        <!-- Slot 2 -->
+                        <tr>
+                            <th scope="row">10:00 AM - 11:00 AM</th>
+                            <td>Operating Systems</td>
+                            <td>Computer Networks</td>
+                            <td>Web Technologies</td>
+                            <td>Data Structures</td>
+                            <td>Mathematics IV</td>
+                        </tr>
 
-        <tr>
-            <th scope="row">1:00 PM - 2:00 PM</th>
-            <td colspan="5">Lunch Break</td>
-        </tr>
+                        <!-- Slot 3 & 4 (Double Period Lab Session using Rowspan) -->
+                        <tr>
+                            <th scope="row">11:00 AM - 12:00 PM</th>
+                            <td rowspan="2">Web Tech Lab (Group A)<br>DS Lab (Group B)</td>
+                            <td>Mathematics IV</td>
+                            <td>Computer Networks</td>
+                            <td rowspan="2">OS &amp; Networks Lab (All Batches)</td>
+                            <td>Operating Systems</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12:00 PM - 01:00 PM</th>
+                            <td>Database Systems</td>
+                            <td>Mathematics IV</td>
+                            <td>Database Systems</td>
+                        </tr>
 
-        <tr>
-            <th scope="row">2:00 PM - 3:00 PM</th>
-            <td rowspan="2">Mini Project</td>
-            <td>SQL</td>
-            <td>Cloud Lab</td>
-            <td>HTML Practice</td>
-            <td>Soft Skills</td>
-        </tr>
+                        <!-- Lunch Break (Colspan across all 5 days) -->
+                        <tr class="break-row">
+                            <th scope="row">01:00 PM - 02:00 PM</th>
+                            <td colspan="5">LUNCH BREAK</td>
+                        </tr>
 
-        <tr>
-            <th scope="row">3:00 PM - 4:00 PM</th>
-            <td>Java Programming</td>
-            <td>Python Practice</td>
-            <td>Database Lab</td>
-            <td>Seminar</td>
-        </tr>
+                        <!-- Slot 5 -->
+                        <tr>
+                            <th scope="row">02:00 PM - 03:00 PM</th>
+                            <td>Database Systems</td>
+                            <td>Software Engg.</td>
+                            <td>Software Engg.</td>
+                            <td>Web Technologies</td>
+                            <td>Library / Self Study</td>
+                        </tr>
 
-    </tbody>
+                        <!-- Slot 6 -->
+                        <tr>
+                            <th scope="row">03:00 PM - 04:00 PM</th>
+                            <td>Software Engg.</td>
+                            <td>Mentorship Hour</td>
+                            <td>Sports / Extra-Curricular</td>
+                            <td>Database Systems</td>
+                            <td>Weekly Assessment</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 
-</table>
-</main>
-<footer>
-    <p>&copy; 2026 BCA Timetable</p>
-</footer>
+    <!-- Page Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Department of Computer Science. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>

@@ -3,97 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/restaurant-menu.css">
-    <title>Restaurant Menu</title>
+    <meta name="description" content="Royal Restaurant digital menu featuring starters, main course, desserts, and drinks in a structured table format.">
+    <title>Royal Restaurant | Digital Menu</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<header>
-    <h1>Royal Restaurant</h1>
-    <p>Fresh Food &amp; Great Taste</p>
-</header>
+    <!-- Main Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="site-branding">
+                <div class="site-title">Royal Restaurant</div>
+                <span class="navbar__subtitle">Fresh Food &amp; Great Taste</span>
+            </div>
+        </div>
+    </header>
 
-<main>
+    <!-- Main Content Container -->
+    <main id="main-content" class="container main-content">
+        
+        <section class="menu-intro">
+            <h1>Our Special Menu</h1>
+            <p>Explore our carefully crafted items prepared with top-quality ingredients.</p>
+        </section>
 
-    <!-- Starters -->
-    <section>
-        <h2>Starters</h2>
+        <!-- Table Responsive Container -->
+        <div class="table-wrapper">
+            <table class="menu-table">
+                <thead>
+                    <tr>
+                        <th class="col-sno">S.No.</th>
+                        <th class="col-item">Item Name</th>
+                        <th class="col-category">Category</th>
+                        <th class="col-desc">Description</th>
+                        <th class="col-price">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-        <article>
-            <h3>Paneer Tikka</h3>
-            <p>Grilled paneer cubes with spices.</p>
-            <p>Price: &#8377;220</p>
-        </article>
+                    <!-- STARTERS -->
+                    <tr class="category-header">
+                        <td colspan="5">Starters &amp; Appetizers</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Paneer Tikka <span class="badge-veg">VEG</span></td>
+                        <td>Starter</td>
+                        <td>Grilled paneer cubes marinated with authentic spices.</td>
+                        <td class="price-tag">&#8377;220</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Veg Spring Roll <span class="badge-veg">VEG</span></td>
+                        <td>Starter</td>
+                        <td>Crispy fried rolls filled with fresh seasonal vegetables.</td>
+                        <td class="price-tag">&#8377;180</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Hara Bhara Kabab <span class="badge-veg">VEG</span></td>
+                        <td>Starter</td>
+                        <td>Pan-fried patties made of spinach, green peas, and potatoes.</td>
+                        <td class="price-tag">&#8377;200</td>
+                    </tr>
 
-        <article>
-            <h3>Veg Spring Roll</h3>
-            <p>Crispy rolls filled with vegetables.</p>
-            <p>Price: &#8377;180</p>
-        </article>
-    </section>
+                    <!-- MAIN COURSE -->
+                    <tr class="category-header">
+                        <td colspan="5">Main Course</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Butter Paneer <span class="badge-veg">VEG</span></td>
+                        <td>Main Course</td>
+                        <td>Fresh paneer cubes cooked in a rich, creamy tomato gravy.</td>
+                        <td class="price-tag">&#8377;320</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Veg Biryani <span class="badge-veg">VEG</span></td>
+                        <td>Main Course</td>
+                        <td>Fragrant basmati rice layered with garden vegetables and aromatic spices.</td>
+                        <td class="price-tag">&#8377;280</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Dal Tadka <span class="badge-veg">VEG</span></td>
+                        <td>Main Course</td>
+                        <td>Yellow lentils cooked with garlic, spices, and butter tempering.</td>
+                        <td class="price-tag">&#8377;210</td>
+                    </tr>
 
-    <hr>
+                    <!-- DESSERTS -->
+                    <tr class="category-header">
+                        <td colspan="5">Desserts</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Gulab Jamun <span class="badge-veg">VEG</span></td>
+                        <td>Dessert</td>
+                        <td>Soft milk dumplings soaked in warm cardamom sugar syrup.</td>
+                        <td class="price-tag">&#8377;120</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Ice Cream <span class="badge-veg">VEG</span></td>
+                        <td>Dessert</td>
+                        <td>Rich vanilla ice cream topped with rich chocolate sauce.</td>
+                        <td class="price-tag">&#8377;150</td>
+                    </tr>
 
-    <!-- Main Course -->
-    <section>
-        <h2>Main Course</h2>
+                    <!-- DRINKS -->
+                    <tr class="category-header">
+                        <td colspan="5">Beverages &amp; Drinks</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Mango Shake <span class="badge-veg">VEG</span></td>
+                        <td>Beverage</td>
+                        <td>Thick and refreshing milkshake made from fresh mangoes.</td>
+                        <td class="price-tag">&#8377;140</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Cold Coffee <span class="badge-veg">VEG</span></td>
+                        <td>Beverage</td>
+                        <td>Chilled espresso blended with milk and served with vanilla ice cream.</td>
+                        <td class="price-tag">&#8377;170</td>
+                    </tr>
 
-        <article>
-            <h3>Butter Paneer</h3>
-            <p>Paneer cooked in creamy tomato gravy.</p>
-            <p>Price: &#8377;320</p>
-        </article>
+                </tbody>
+            </table>
+        </div>
 
-        <article>
-            <h3>Veg Biryani</h3>
-            <p>Fragrant rice with vegetables and spices.</p>
-            <p>Price: &#8377;280</p>
-        </article>
-    </section>
+    </main>
 
-    <hr>
-
-    <!-- Desserts -->
-    <section>
-        <h2>Desserts</h2>
-
-        <article>
-            <h3>Gulab Jamun</h3>
-            <p>Soft milk dumplings in sugar syrup.</p>
-            <p>Price: &#8377;120</p>
-        </article>
-
-        <article>
-            <h3>Ice Cream</h3>
-            <p>Vanilla ice cream with chocolate sauce.</p>
-            <p>Price: &#8377;150</p>
-        </article>
-    </section>
-
-    <hr>
-
-    <!-- Drinks -->
-    <section>
-        <h2>Drinks</h2>
-
-        <article>
-            <h3>Mango Shake</h3>
-            <p>Fresh mango milkshake.</p>
-            <p>Price: &#8377;140</p>
-        </article>
-
-        <article>
-            <h3>Cold Coffee</h3>
-            <p>Chilled coffee with ice cream.</p>
-            <p>Price: &#8377;170</p>
-        </article>
-    </section>
-
-</main>
-
-<footer>
-    <p>&copy; 2026 Royal Restaurant | Thank You!</p>
-</footer>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Royal Restaurant | Thank You!</p>
+        </div>
+    </footer>
 
 </body>
 </html>

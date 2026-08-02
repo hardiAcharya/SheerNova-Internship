@@ -1,35 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fixed Accessible Page</title>
-<link rel="stylesheet" href="../css/accessibility-fixed.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Errors Log</title>
 </head>
 <body>
-<a href="#main" class="skip-link">Skip to Content</a>
-<header>
-<h1>My Site</h1>
-<nav aria-label="Main Navigation">
-<a href="#">Home</a>
-<a href="#">About</a>
-</nav>
-</header>
-<main id="main">
-<h2>Welcome</h2> <!-- Fixed M1 -->
-<img src="../images/icons/image1.jpg" alt="Website banner showing our team working"> <!-- Fixed M2 -->
-<button type="button" onclick="alert('clicked')">Click Me</button> <!-- Fixed M3 -->
-<p class="error">Error: Form submission failed</p> <!-- Fixed M4 -->
-<label for="name">Name:</label> <!-- Fixed M5 -->
-<input type="text" id="name" name="name">
-<label for="email">Email:</label> <!-- Fixed M6 -->
-<input type="email" id="email" name="email">
-<a href="/accessibility-guide">Read our Accessibility Guide</a> <!-- Fixed M7 -->
-<h3>Important Note</h3> <!-- Fixed M10 -->
-<p>Read this</p>
-</main>
-<footer> <!-- Fixed M8 -->
-<p>Copyright 2026</p>
-</footer>
+
+    <main id="main-content">
+        <section class="audit-section">
+            <h1>Accessibility Audit & Error Log</h1>
+            <p>Yeh table website me paaye gaye WCAG violations aur unke correct HTML solutions ko show karti hai.</p>
+
+            <table class="audit-table">
+                <caption>WCAG 2.1 AA Compliance Audit Log</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Issue Description</th>
+                        <th scope="col">WCAG Guideline</th>
+                        <th scope="col">Incorrect HTML</th>
+                        <th scope="col">Fixed HTML Solution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">M1</th>
+                        <td>Skipped Heading Levels</td>
+                        <td>1.3.1 Info & Relationships</td>
+                        <td><code>&lt;h1&gt;...&lt;/h1&gt; &lt;h4&gt;...&lt;/h4&gt;</code></td>
+                        <td><code>&lt;h1&gt;...&lt;/h1&gt; &lt;h2&gt;...&lt;/h2&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">M2</th>
+                        <td>Missing Form Labels</td>
+                        <td>3.3.2 Labels or Instructions</td>
+                        <td><code>&lt;input type="text" placeholder="Name"&gt;</code></td>
+                        <td><code>&lt;label for="name"&gt;Name&lt;/label&gt;&lt;input id="name" type="text"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">M3</th>
+                        <td>Non-semantic Buttons</td>
+                        <td>4.1.2 Name, Role, Value</td>
+                        <td><code>&lt;div onclick="submit()"&gt;Submit&lt;/div&gt;</code></td>
+                        <td><code>&lt;button type="submit"&gt;Submit&lt;/button&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">M4</th>
+                        <td>Missing Image Alt Text</td>
+                        <td>1.1.1 Non-text Content</td>
+                        <td><code>&lt;img src="logo.png"&gt;</code></td>
+                        <td><code>&lt;img src="logo.png" alt="Company Logo"&gt;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 </body>
 </html>

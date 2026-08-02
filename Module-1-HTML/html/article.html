@@ -3,91 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Page</title>
-    <link rel="stylesheet" href="../css/article.css">
+    <meta name="description" content="Personal Profile Page built strictly with semantic HTML elements and zero div tags.">
+    <title>Personal Profile | Web Developer</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body id="top">
+<body>
 
-    <header>
-        <h1>Web Development</h1>
-        <p>Simple article about web development.</p>
+    <!-- Skip Link for Keyboard Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <h1>Rahul Sharma</h1>
+        <p>Full Stack Web Developer &amp; Accessibility Enthusiast</p>
+
+        <!-- Navigation Bar -->
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <h2>Table of Contents</h2>
-        <ol>
-            <li><a href="#intro">Introduction</a></li>
-            <li><a href="#frontend">Frontend</a></li>
-            <li><a href="#backend">Backend</a></li>
-            <li><a href="#benefits">Benefits</a></li>
-            <li><a href="#conclusion">Conclusion</a></li>
-        </ol>
-    </nav>
+    <!-- Main Content Area -->
+    <main id="main-content">
 
-    <main>
-
-        <section id="intro">
-            <h2>Introduction</h2>
-
-            <p>
-                Web development is the process of creating websites and web
-                applications using different technologies.
-            </p>
-
-            <a href="#top">Back to Top</a>
+        <!-- About Section -->
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <p>Hello! I am a passionate Web Developer with expertise in building semantic, accessible, and high-performance web applications. I focus on clean code structure, responsive user interfaces, and core web standards.</p>
         </section>
 
-        <section id="frontend">
-            <h2>Frontend</h2>
+        <!-- Work Experience Section -->
+        <section id="experience" aria-labelledby="exp-heading">
+            <h2 id="exp-heading">Work Experience</h2>
+            
+            <article>
+                <h3>Senior Frontend Developer</h3>
+                <p><strong>Techno Web Solutions</strong> | <time datetime="2024-01">January 2024</time> &ndash; Present</p>
+                <ul>
+                    <li>Developed responsive and accessible web components using modern CSS and vanilla JavaScript.</li>
+                    <li>Reduced overall page load time by 35% through image optimization and semantic layout refactoring.</li>
+                </ul>
+            </article>
 
-            <h3>HTML, CSS and JavaScript</h3>
-
-            <p>
-                Frontend development creates the design and layout that users
-                see in a web browser.
-            </p>
-
-            <a href="#top">Back to Top</a>
+            <article>
+                <h3>Junior Web Developer</h3>
+                <p><strong>Digital Agency Ltd.</strong> | <time datetime="2022-06">June 2022</time> &ndash; <time datetime="2023-12">December 2023</time></p>
+                <ul>
+                    <li>Assisted in building custom HTML/CSS layouts conforming strictly to W3C standards.</li>
+                    <li>Handled cross-browser testing and fixed accessibility issues reported by screen-reader audits.</li>
+                </ul>
+            </article>
         </section>
 
-        <section id="backend">
-            <h2>Backend</h2>
+        <!-- Featured Projects Section -->
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Key Projects</h2>
+            
+            <article>
+                <h3>W3C Validated E-commerce Template</h3>
+                <p>A multi-page responsive web layout built with clean semantics, full keyboard navigation, and zero CSS frameworks.</p>
+            </article>
 
-            <h3>Server and Database</h3>
-
-            <p>
-                Backend development manages data, servers, and application
-                logic behind a website.
-            </p>
-
-            <a href="#top">Back to Top</a>
+            <article>
+                <h3>Accessible Form Component Suite</h3>
+                <p>A set of high-contrast, accessible HTML5 forms featuring native validation and ARIA landmark setups.</p>
+            </article>
         </section>
 
-        <section id="benefits">
-            <h2>Benefits</h2>
-
-            <h3>Why Learn Web Development?</h3>
-
+        <!-- Aside (Sidebar Content) -->
+        <aside aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Technical Skills</h2>
             <ul>
-                <li>Create websites</li>
-                <li>Build projects</li>
-                <li>Improve coding skills</li>
-                <li>Career opportunities</li>
+                <li>Semantic HTML5 &amp; Accessibility (WCAG)</li>
+                <li>CSS Grid, Flexbox &amp; Responsive Layouts</li>
+                <li>Vanilla JavaScript (ES6+)</li>
+                <li>Version Control (Git &amp; GitHub)</li>
             </ul>
 
-            <a href="#top">Back to Top</a>
-        </section>
+            <h3>Quick Contact</h3>
+            <address>
+                Email: <a href="mailto:rahul@example.com">rahul@example.com</a><br>
+                Location: Gujarat, India
+            </address>
+        </aside>
 
-        <section id="conclusion">
-            <h2>Conclusion</h2>
-
-            <p> Learning web development starts with HTML, CSS, and JavaScript.Regular practice helps improve your skills. </p>
-
-            <a href="#top">Back to Top</a>
-        </section>
     </main>
-    <footer>
-        <p>&copy; 2026 Article Page</p>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="site-footer">
+        <p>&copy; 2026 Rahul Sharma. All Rights Reserved.</p>
+        <p><a href="#main-content">Back to Top</a></p>
     </footer>
+
 </body>
 </html>

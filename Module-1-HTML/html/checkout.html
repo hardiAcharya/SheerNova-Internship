@@ -1,87 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Checkout</title>
-<link rel="stylesheet" href="../css/new-style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A three-step e-commerce checkout form featuring delivery, payment, and confirmation fieldset groups with precise autocomplete attributes.">
+    <title>Secure Checkout | E-Commerce Store</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<header>
-<h1>Checkout Form</h1>
-</header>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-<main>
-<form>
-<fieldset>
-<legend>Delivery</legend>
+    <!-- Site Header -->
+    <header class="site-header">
+        <h1>Secure Checkout</h1>
+        <p>Complete your order details in three simple steps.</p>
+    </header>
 
-<label for="name">Name:
-<input type="text" id="name" name="name" autocomplete="name" required>
-</label>
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <form action="#" method="POST" aria-labelledby="checkout-heading">
+            <h2 id="checkout-heading" class="sr-only">Order Checkout Form</h2>
 
-<label for="email">Email:
-<input type="email" id="email" name="email" autocomplete="email" required>
-</label>
+            <!-- STEP 1: Delivery Information -->
+            <fieldset>
+                <legend>Step 1: Shipping &amp; Delivery Address</legend>
 
-<label for="phone">Phone:
-<input type="tel" id="phone" name="phone" autocomplete="tel" required>
-</label>
+                <p>
+                    <label for="ship-name">Full Name</label>
+                    <input type="text" id="ship-name" name="ship_name" required autocomplete="shipping name" placeholder="Rahul Sharma">
+                </p>
 
-<label for="address">Address:
-<input type="text" id="address" name="address" autocomplete="address-line1" required>
-</label>
+                <p>
+                    <label for="ship-phone">Contact Phone Number</label>
+                    <input type="tel" id="ship-phone" name="ship_phone" required pattern="[6-9][0-9]{9}" autocomplete="shipping tel" placeholder="9876543210">
+                </p>
 
-<label for="city">City:
-<input type="text" id="city" name="city" autocomplete="address-level2" required>
-</label>
+                <p>
+                    <label for="ship-address">Street Address</label>
+                    <input type="text" id="ship-address" name="ship_address" required autocomplete="shipping address-line1" placeholder="123 Main Street, Apt 4B">
+                </p>
 
-<label for="postal">Postal Code:
-<input type="text" id="postal" name="postal" autocomplete="postal-code" required>
-</label>
-</fieldset>
+                <p>
+                    <label for="ship-city">City</label>
+                    <input type="text" id="ship-city" name="ship_city" required autocomplete="shipping address-level2" placeholder="Ahmedabad">
+                </p>
 
-<fieldset>
-<legend>Payment</legend>
+                <p>
+                    <label for="ship-state">State / Province</label>
+                    <input type="text" id="ship-state" name="ship_state" required autocomplete="shipping address-level1" placeholder="Gujarat">
+                </p>
 
-<label for="ccname">Card Name:
-<input type="text" id="ccname" name="ccname" autocomplete="cc-name" required>
-</label>
+                <p>
+                    <label for="ship-zip">PIN / Postal Code</label>
+                    <input type="text" id="ship-zip" name="ship_zip" required pattern="[0-9]{6}" autocomplete="shipping postal-code" placeholder="380001">
+                </p>
 
-<label for="ccnumber">Card Number:
-<input type="text" id="ccnumber" name="ccnumber" autocomplete="cc-number" inputmode="numeric" maxlength="19" required>
-</label>
+                <p>
+                    <label for="ship-country">Country</label>
+                    <select id="ship-country" name="ship_country" required autocomplete="shipping country">
+                        <option value="">-- Select Country --</option>
+                        <option value="IN" selected>India</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                    </select>
+                </p>
+            </fieldset>
 
-<label for="ccexp">Expiry:
-<input type="month" id="ccexp" name="ccexp" autocomplete="cc-exp" required>
-</label>
+            <!-- STEP 2: Payment Details -->
+            <fieldset>
+                <legend>Step 2: Payment Method Details</legend>
 
-<label for="cvv">CVV:
-<input type="password" id="cvv" name="cvv" autocomplete="cc-csc" maxlength="4" required>
-</label>
-</fieldset>
+                <fieldset>
+                    <legend>Select Payment Type</legend>
+                    <p>
+                        <input type="radio" id="pay-card" name="payment_type" value="card" checked required>
+                        <label for="pay-card">Credit / Debit Card</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="pay-upi" name="payment_type" value="upi">
+                        <label for="pay-upi">UPI / Net Banking</label>
+                    </p>
+                </fieldset>
 
-<fieldset>
-<legend>Confirmation</legend>
+                <p>
+                    <label for="card-name">Name on Card</label>
+                    <input type="text" id="card-name" name="card_name" required autocomplete="cc-name" placeholder="Rahul Sharma">
+                </p>
 
-<label for="notes">Order Notes:
-<textarea id="notes" name="notes" placeholder="Any special instructions"></textarea>
-</label>
+                <p>
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card_number" required pattern="[0-9]{16}" autocomplete="cc-number" placeholder="4532XXXXXXXX1234">
+                </p>
 
-<label for="terms">
-<input type="checkbox" id="terms" name="terms" required>
-Accept Terms and Conditions
-</label>
+                <p>
+                    <label for="card-exp">Expiration Date (MM/YY)</label>
+                    <input type="text" id="card-exp" name="card_exp" required pattern="(0[1-9]|1[0-2])\/[0-9]{2}" autocomplete="cc-exp" placeholder="12/28">
+                </p>
 
-<button type="submit">Place Order</button>
-</fieldset>
-</form>
-</main>
+                <p>
+                    <label for="card-csc">CVV / Security Code</label>
+                    <input type="text" id="card-csc" name="card_csc" required pattern="[0-9]{3,4}" minlength="3" maxlength="4" autocomplete="cc-csc" placeholder="123">
+                </p>
+            </fieldset>
 
-<footer>
-<p>&copy; 2026 Checkout</p>
-</footer>
+            <!-- STEP 3: Order Confirmation & Terms -->
+            <fieldset>
+                <legend>Step 3: Review &amp; Confirmation</legend>
+
+                <p>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I have read and agree to the <a href="#privacy">Terms of Service</a> and <a href="#privacy">Privacy Policy</a></label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="save-info" name="save_info">
+                    <label for="save-info">Save shipping details for future purchases</label>
+                </p>
+
+                <p>
+                    <label for="order-notes">Special Delivery Instructions (Optional)</label><br>
+                    <textarea id="order-notes" name="order_notes" rows="3" cols="40" placeholder="Gate code, landmark details, etc."></textarea>
+                </p>
+            </fieldset>
+
+            <!-- Action Controls -->
+            <p>
+                <button type="submit">Place Order &amp; Pay Now</button>
+            </p>
+
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 E-Commerce Store. All Rights Reserved. Encrypted via 256-bit SSL.</p>
+    </footer>
 
 </body>
 </html>

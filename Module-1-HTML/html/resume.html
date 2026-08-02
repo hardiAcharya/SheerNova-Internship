@@ -1,183 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/resume.css">
-    <title>My Resume</title>
-
-    <style>
-        @media print {
-            body {
-                font-size: 12pt;
-            }
-
-            button {
-                display: none;
-            }
-        }
-    </style>
-
+    <meta name="description" content="Professional Resume of Hardi Acharya - BCA Graduate & Web Developer">
+    <title>Hardi Acharya | Resume</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>Hardi Acharya</h1>
-    <h2>BCA Graduate</h2>
-</header>
+    <header class="resume-header">
+        <div class="container">
+            <h1 class="candidate-name">Hardi Acharya</h1>
+            <p class="candidate-title">BCA Graduate &amp; Web Developer</p>
+            <div class="contact-bar">
+                <span>Email: <a href="mailto:achhardi05@example.com">achhardi05@example.com</a></span> |
+                <span>Location: Gujarat, India</span>
+            </div>
+        </div>
+    </header>
 
+    <main id="main-content" class="container resume-layout">
 
-<main>
-
-    <!-- Contact Details -->
-    <section>
-        <h2>Contact Information</h2>
-
-        <address>
-            Email:
-            <a href="mailto:achhardi05@gmail.com">
-                achhardi05@gmail.com
-            </a>
-            <br>
-
-            Phone: +91 98765 43210
-            <br>
-
-            Location: Surendranagar, Gujarat, India
-        </address>
-
-    </section>
-
-
-    <hr>
-
-
-    <!-- Objective -->
-    <section>
-        <h2>Career Objective</h2>
-
-        <p>
-            BCA graduate seeking an opportunity to improve my
-            programming skills and build a career in software development.
-        </p>
-
-    </section>
-
-
-    <hr>
-
-
-    <!-- Education -->
-    <section>
-
-        <h2>Education</h2>
-
-        <article>
-
-            <h3>Bachelor of Computer Applications (BCA)</h3>
-
+        <!-- Summary -->
+        <section class="resume-section" aria-labelledby="summary-heading">
+            <h2 id="summary-heading" class="section-title">Professional Summary</h2>
             <p>
-                SMT S. J. Varmora BBA & BCA Mahila College
+                Enthusiastic BCA Graduate with a strong foundation in computer applications, web development, and database management. Passionate about writing clean code and creating user-friendly web solutions.
             </p>
+        </section>
 
-            <p>
-                Duration:
-                <time datetime="2023">2023</time>
-                -
-                <time datetime="2026">2026</time>
-            </p>
+        <!-- Education -->
+        <section class="resume-section" aria-labelledby="education-heading">
+            <h2 id="education-heading" class="section-title">Education</h2>
+            <article class="resume-item">
+                <header class="item-header">
+                    <h3 class="item-title">Bachelor of Computer Applications (BCA)</h3>
+                    <span class="item-meta">Saurashtra University</span>
+                </header>
+            </article>
+        </section>
 
-        </article>
+        <!-- Technical Skills -->
+        <section class="resume-section" aria-labelledby="skills-heading">
+            <h2 id="skills-heading" class="section-title">Technical Skills</h2>
+            <ul class="skills-grid">
+                <li><strong>Languages:</strong> HTML, CSS, JavaScript, Java</li>
+                <li><strong>Database:</strong> SQL, MySQL</li>
+                <li><strong>Core Concepts:</strong> Web Development, Database Management</li>
+            </ul>
+        </section>
 
-    </section>
+        <!-- Projects -->
+        <section class="resume-section" aria-labelledby="projects-heading">
+            <h2 id="projects-heading" class="section-title">Key Projects</h2>
+            
+            <article class="resume-item">
+                <header class="item-header">
+                    <h3 class="item-title">Hospital Management Database</h3>
+                </header>
+                <p>Designed and managed a structured relational database using MySQL for tracking hospital records efficiently.</p>
+            </article>
 
+            <article class="resume-item">
+                <header class="item-header">
+                    <h3 class="item-title">Personal Portfolio Website</h3>
+                </header>
+                <p>Developed a responsive, modern personal profile and portfolio website using clean HTML5 and CSS3.</p>
+            </article>
+        </section>
 
-    <hr>
+    </main>
 
-
-    <!-- Experience -->
-    <section>
-
-        <h2>Experience</h2>
-
-        <article>
-
-            <h3>PHP Internship - Perfetto Solutions</h3>
-
-            <p>
-                Duration:
-                <time datetime="2025-12">December 2025</time>
-                -
-                <time datetime="2026-01">January 2026</time>
-            </p>
-
-            <p>
-                Learned PHP programming and software development concepts.
-            </p>
-
-        </article>
-
-    </section>
-
-
-    <hr>
-
-
-    <!-- Skills -->
-    <section>
-
-        <h2>Skills</h2>
-
-        <ul>
-            <li>HTML & CSS</li>
-            <li>Java Programming</li>
-            <li>Python</li>
-            <li>SQL & Database</li>
-            <li>PHP</li>
-            <li>Kotlin Android Development</li>
-            <li>Cloud & DevOps Basics</li>
-        </ul>
-
-    </section>
-
-
-    <hr>
-
-
-    <!-- Languages -->
-    <section>
-
-        <h2>Languages</h2>
-
-        <ul>
-            <li>English</li>
-            <li>Hindi</li>
-            <li>Gujarati</li>
-        </ul>
-
-    </section>
-
-
-</main>
-
-
-<footer>
-
-    <p>
-        Last Updated:
-        <time datetime="2026-07-24">
-            24 July 2026
-        </time>
-    </p>
-
-    <button onclick="window.print()">
-        Print Resume
-    </button>
-
-</footer>
-
+    <footer class="resume-footer">
+        <div class="container">
+            <p>&copy; 2026 Hardi Acharya. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

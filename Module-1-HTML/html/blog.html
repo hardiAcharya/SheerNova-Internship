@@ -1,66 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>My Blog</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+     <!-- Main Style Sheet Link -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<a href="#main" class="skip-link">Skip to Content</a>
 
-<header>
-<h1><a href="#">MyBlog</a></h1>
-<nav aria-label="Main Navigation">
-<a href="#">Home</a>
-<a href="#">Tech</a>
-<a href="#">Coding</a>
-<a href="#">About</a>
-</nav>
-</header>
+    <main id="main-content" class="blog-grid">
+        <!-- Main Blog Posts Container -->
+        <div class="blog-posts">
+            <article class="post-card">
+                <h1>Modern HTML Architecture</h1>
+                <p class="post-meta">By Dev Team on <time datetime="2026-07-28">July 28, 2026</time></p>
+                
+                <p>Clean HTML architecture aur CSS Custom Properties web development me code maintainability ko boost karte hain.</p>
+                
+                <blockquote cite="https://w3.org">
+                    "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect."
+                </blockquote>
 
-<main id="main">
-<section class="blog-grid">
-<article>
-<h2><a href="#">How to Learn Web Development in 2026</a></h2>
-<p>Start with HTML, CSS and JavaScript. Build small projects and learn step by step. Consistency is the key to become a good developer.</p>
-<small>By Admin - 27 July 2026</small>
-</article>
+                <pre><code>// Example Code Snippet
+const initApp = () =&gt; {
+    console.log("App initialized cleanly.");
+};</code></pre>
+            </article>
+        </div>
 
-<article>
-<span class="tag">Tech</span>
-<h2><a href="#">Top 5 AI Tools Every Developer Should Use</a></h2>
-<p>AI is changing how we code. From GitHub Copilot to ChatGPT, here are the tools that will save you hours of work every week.</p>
-<small>By Admin - 25 July 2026</small>
-</article>
-
-<article>
-<span class="tag">Design</span>
-<h2><a href="#">Responsive Design: CSS Tips for Beginners</a></h2>
-<p>Learn flexbox, grid and media queries to make your website look perfect on mobile, tablet and desktop. No framework needed.</p>
-<small>By Admin - 22 July 2026</small>
-</article>
-</section>
-
-<aside>
-<section>
-<h3>About Me</h3>
-<p>Hi! I write about web development, tech news and coding tips. Follow for weekly articles.</p>
-</section>
-<section>
-<h3>Categories</h3>
-<ul>
-<li><a href="#">Coding</a></li>
-<li><a href="#">Tech</a></li>
-<li><a href="#">Design</a></li>
-<li><a href="#">Career</a></li>
-</ul>
-</section>
-</aside>
-</main>
-
-<footer>
-<p>&copy; 2026 MyBlog. All rights reserved.</p>
-</footer>
+        <!-- Sidebar Section -->
+        <aside class="sidebar" aria-label="Blog Sidebar">
+            <section class="widget">
+                <h3>About the Author</h3>
+                <p>Frontend developers dedicated to writing clean, accessible, and high-performance HTML/CSS code.</p>
+            </section>
+            
+            <section class="widget">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">HTML5 & Semantics</a></li>
+                    <li><a href="#">Accessibility (WCAG)</a></li>
+                    <li><a href="#">CSS Architecture</a></li>
+                </ul>
+            </section>
+        </aside>
+    </main>
 </body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,88 +7,89 @@
     <meta name="keywords" content="Techno Web Solutions Services, Web Design, Web Development, IT Services">
     <meta name="author" content="Techno Web Solutions">
     <title>Techno Web Solutions | Services</title>
+    
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="../images/icons/logo.jpg" type="image/jpeg">
 </head>
-
 <body>
-    <!-- ================= HEADER ================= -->
-    <header>
-        <div class="container company-header"> <!-- section ko div kiya -->
-            <figure>
-                <img src="../images/icons/logo.jpg" alt="Techno Web Solutions Logo" class="logo">
-            </figure>
-            <div> <!-- article ko div kiya -->
-                <h1>Techno Web Solutions</h1>
-                <p>Professional Website Design, Development & Digital Solutions</p>
-            </div>
-        </div>
+<header class="site-header">
+  <div class="container header-inner">
+    
+    <!-- Top Block: Logo + Title Side-by-Side -->
+    <a href="index.html" class="site-branding">
+      <img src="../images/logo.jpg" alt="Techno Web Solutions Logo" class="site-logo">
+      <div>
+        <span class="site-title">Techno Web Solutions</span>
+        <span class="navbar__subtitle">Web Development & Digital Solutions</span>
+      </div>
+    </a>
 
-        <nav aria-label="Main Navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html" aria-current="page">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <!-- Mobile Menu Toggle Button (For Responsive) -->
+    <input type="checkbox" id="nav-toggle" class="navbar__checkbox">
+    <label for="nav-toggle" class="navbar__toggler">&#9776;</label>
 
+    <!-- Bottom Block: Menus Underneath Logo & Title -->
+    <nav class="navbar__nav">
+      <ul class="nav-links">
+        <li><a href="index.html" class="navbar__link active">Home</a></li>
+        <li><a href="about.html" class="navbar__link">About</a></li>
+        <li><a href="services.html" class="navbar__link">Services</a></li>
+        <li><a href="gallery.html" class="navbar__link">Gallery</a></li>
+        <li><a href="contact.html" class="navbar__link">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
     <!-- ================= MAIN ================= -->
     <main>
         <!-- Services Banner -->
-        <div class="page-banner"> <!-- section ko div kiya -->
-            <div class="container"> <!-- article ko div kiya -->
-                <h2>Our Services</h2>
-                <p>
-                    We provide innovative digital solutions that
-                    help businesses build a strong online presence
-                    and achieve long-term success.
-                </p>
+        <section class="page-banner">
+            <div class="container">
+                <h1>Our Services</h1>
+                <p>We provide innovative digital solutions that help businesses build a strong online presence and achieve long-term success.</p>
             </div>
-        </div>
+        </section>
 
-        <!-- Services -->
-        <section class="services">
-            <div class="container"> <!-- article ko div kiya -->
-                <h2>Our Professional Services</h2> <!-- heading add ki -->
-                <div class="cards"> <!-- section ko div kiya -->
-                    <!-- Row 1 -->
-                    <div class="card"> <!-- article ko div kiya -->
+        <!-- Services Cards -->
+        <section class="section">
+            <div class="container">
+                <h2>Our Professional Services</h2>
+                <div class="cards-grid">
+                    <article class="card">
                         <h3>Website Design</h3>
                         <p>Modern, responsive and attractive website designs for every business.</p>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="card">
                         <h3>Web Development</h3>
                         <p>Secure, scalable and high-performance websites using modern technologies.</p>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="card">
                         <h3>Mobile App Development</h3>
                         <p>Android applications with clean design and smooth user experience.</p>
-                    </div>
-                    <!-- Row 2 -->
-                    <div class="card">
+                    </article>
+                    <article class="card">
                         <h3>Database Solutions</h3>
                         <p>Reliable database design, management and optimization for businesses.</p>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="card">
                         <h3>UI / UX Design</h3>
                         <p>Creative and user-friendly interfaces for better customer engagement.</p>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="card">
                         <h3>Technical Support</h3>
                         <p>Website maintenance, updates and continuous technical assistance.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- ================= FOOTER ================= -->
-    <footer>
-        <div class="container"> <!-- section ko div kiya -->
+    <footer class="site-footer">
+        <div class="container">
             <p>&copy; 2026 Techno Web Solutions. All Rights Reserved.</p>
         </div>
     </footer>
-</body>
 
+</body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,87 +7,66 @@
     <meta name="keywords" content="Techno Web Solutions, Web Design, Web Development, Mobile Application, Database, IT Company">
     <meta name="author" content="Techno Web Solutions">
     <title>Techno Web Solutions | Home</title>
+    <link rel="icon" href="../images/logo.jpg" type="image/jpeg">
     <link rel="stylesheet" href="../css/style.css">
-    
 </head>
-
 <body>
-    <!-- ================= HEADER ================= -->
-    <header class="header">
-        <div class="container company-header"> <!-- container ke liye 1 div rehna padega warna layout tootega -->
-            
-            <!-- Logo + Name -->
-            <figure>
-                <img src="../images/icons/logo.jpg" alt="Techno Web Solutions Logo" class="logo">
-            </figure>
-            <header> <!-- div ki jagah header -->
-                <h1>Techno Web Solutions</h1>
-                <p>Professional Website Design, Development & Digital Solutions</p>
-            </header>
+<header class="site-header">
+  <div class="container header-inner">
+    
+    <!-- Top Block: Logo + Title Side-by-Side -->
+    <a href="index.html" class="site-branding">
+      <img src="../images/logo.jpg" alt="Techno Web Solutions Logo" class="site-logo">
+      <div>
+        <span class="site-title">Techno Web Solutions</span>
+        <span class="navbar__subtitle">Web Development & Digital Solutions</span>
+      </div>
+    </a>
 
-            <!-- Mobile ke liye -->
-            <input type="checkbox" id="nav-toggle" class="nav__toggle">
-            <label for="nav-toggle" class="nav__burger">☰</label>
+    <!-- Mobile Menu Toggle Button (For Responsive) -->
+    <input type="checkbox" id="nav-toggle" class="navbar__checkbox">
+    <label for="nav-toggle" class="navbar__toggler">&#9776;</label>
 
-        </div>
+    <!-- Bottom Block: Menus Underneath Logo & Title -->
+    <nav class="navbar__nav">
+      <ul class="nav-links">
+        <li><a href="index.html" class="navbar__link active">Home</a></li>
+        <li><a href="about.html" class="navbar__link">About</a></li>
+        <li><a href="services.html" class="navbar__link">Services</a></li>
+        <li><a href="gallery.html" class="navbar__link">Gallery</a></li>
+        <li><a href="contact.html" class="navbar__link">Contact</a></li>
+      </ul>
+    </nav>
 
-        <nav class="nav__menu" aria-label="Main Navigation">
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
+  </div>
+</header>
     <!-- ================= MAIN ================= -->
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <article class="container"> <!-- div ko article -->
-                <h2>Transform Your Business With Modern Technology</h2>
-                <p>
-                    Techno Web Solutions creates beautiful,
-                    responsive and secure websites that help
-                    businesses grow online. We provide complete
-                    web development, mobile application and
-                    database solutions with professional quality.
-                </p>
-                <p>
-                    Our goal is to deliver innovative digital
-                    products that improve customer experience
-                    and business performance.
-                </p>
+        <section class="hero-banner">
+            <div class="container">
+                <h1>Transform Your Business With Modern Technology</h1>
+                <p>Techno Web Solutions creates beautiful, responsive and secure websites that help businesses grow online. We provide complete web development, mobile application and database solutions with professional quality.</p>
+                <p>Our goal is to deliver innovative digital products that improve customer experience and business performance.</p>
                 <a href="services.html" class="button">Explore Our Services</a>
-            </article>
+            </div>
         </section>
 
-        <!-- About -->
-        <section class="about">
-            <article class="container"> <!-- div ko article -->
+        <!-- About Intro Section -->
+        <section class="section about-intro">
+            <div class="container">
                 <h2>Who We Are</h2>
-                <p>
-                    Techno Web Solutions is a modern IT company
-                    focused on creating innovative digital
-                    experiences. We combine creativity,
-                    technology and industry standards to
-                    deliver professional solutions for
-                    startups, small businesses and enterprises.
-                </p>
-                <p>
-                    We believe every business deserves a
-                    professional online presence that reflects
-                    its brand and builds customer trust.
-                </p>
-            </article>
+                <p>Techno Web Solutions is a modern IT company focused on creating innovative digital experiences. We combine creativity, technology and industry standards to deliver professional solutions for startups, small businesses and enterprises.</p>
+                <p>We believe every business deserves a professional online presence that reflects its brand and builds customer trust.</p>
+            </div>
         </section>
 
-        <!-- Services -->
-        <section class="services">
-            <article class="container"> <!-- div ko article -->
+        <!-- Services Section -->
+        <section class="section services-section">
+            <div class="container">
                 <h2>Our Professional Services</h2>
-                <section class="cards"> <!-- section ko section hi rehne do -->
-                    <article class="card"> <!-- article -->
+                <div class="cards-grid">
+                    <article class="card">
                         <h3>Website Design</h3>
                         <p>Modern, attractive and responsive website layouts designed to improve user experience.</p>
                     </article>
@@ -112,15 +90,15 @@
                         <h3>Technical Support</h3>
                         <p>Reliable maintenance, website updates and technical assistance whenever you need it.</p>
                     </article>
-                </section>
-            </article>
+                </div>
+            </div>
         </section>
 
-        <!-- Why Choose -->
-        <section class="why-us">
-            <article class="container"> <!-- div ko article -->
+        <!-- Why Choose Us -->
+        <section class="section why-us-section">
+            <div class="container">
                 <h2>Why Choose Techno Web Solutions?</h2>
-                <ul>
+                <ul class="feature-list">
                     <li>Professional Website Design</li>
                     <li>Responsive Development</li>
                     <li>Fast Loading Websites</li>
@@ -132,39 +110,39 @@
                     <li>Reliable Technical Support</li>
                     <li>On-Time Project Delivery</li>
                 </ul>
-            </article>
+            </div>
         </section>
 
         <!-- Company Statistics -->
-        <section class="statistics">
-            <article class="container"> <!-- div ko article -->
+        <section class="section stats-section">
+            <div class="container">
                 <h2>Our Achievements</h2>
-                <section class="cards"> <!-- section -->
-                    <article class="card"> <!-- article -->
+                <div class="cards-grid stats-grid">
+                    <article class="card stat-card">
                         <h3>100+</h3>
                         <p>Projects Completed</p>
                     </article>
-                    <article class="card">
+                    <article class="card stat-card">
                         <h3>80+</h3>
                         <p>Happy Clients</p>
                     </article>
-                    <article class="card">
+                    <article class="card stat-card">
                         <h3>24/7</h3>
                         <p>Customer Support</p>
                     </article>
-                    <article class="card">
+                    <article class="card stat-card">
                         <h3>5+</h3>
                         <p>Years Experience</p>
                     </article>
-                </section>
-            </article>
+                </div>
+            </div>
         </section>
 
         <!-- Process -->
-        <section class="process">
-            <article class="container"> <!-- div ko article -->
+        <section class="section process-section">
+            <div class="container">
                 <h2>Our Working Process</h2>
-                <ol>
+                <ol class="process-list">
                     <li>Requirement Analysis</li>
                     <li>Planning & Strategy</li>
                     <li>Design & Development</li>
@@ -172,25 +150,25 @@
                     <li>Project Deployment</li>
                     <li>Maintenance & Support</li>
                 </ol>
-            </article>
+            </div>
         </section>
 
         <!-- Call To Action -->
-        <section class="cta">
-            <article class="container"> <!-- div ko article -->
+        <section class="section cta-section">
+            <div class="container">
                 <h2>Ready To Build Your Next Project?</h2>
                 <p>Let's create a professional digital solution that helps your business grow faster.</p>
                 <a href="contact.html" class="button">Contact Our Team</a>
-            </article>
+            </div>
         </section>
     </main>
 
     <!-- ================= FOOTER ================= -->
-    <footer>
-        <article class="container"> <!-- div ko article -->
+    <footer class="site-footer">
+        <div class="container">
             <p>&copy; 2026 Techno Web Solutions. All Rights Reserved.</p>
-        </article>
+        </div>
     </footer>
-</body>
 
+</body>
 </html>

@@ -3,101 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/faq.css">
-    <title>FAQ Page</title>
+    <meta name="description" content="Frequently Asked Questions about web development, platform features, accessibility, and account management.">
+    <title>Frequently Asked Questions | Help Center</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<header>
-    <h1>Frequently Asked Questions</h1>
-</header>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-<main>
+    <!-- Page Header -->
+    <header class="site-header">
+        <h1>Help &amp; Frequently Asked Questions</h1>
+        <p>Find answers to common questions about our platform, accessibility standards, and web development topics.</p>
+    </header>
 
-    <!-- General Questions -->
-    <section>
-        <h2>General Questions</h2>
+    <!-- Main Content Container -->
+    <main id="main-content">
 
-        <details>
-            <summary>1. What is HTML?</summary>
-            <p>HTML is the standard markup language used to create web pages.</p>
-        </details>
+        <!-- CATEGORY 1: Account & Registration -->
+        <section aria-labelledby="cat-account">
+            <h2 id="cat-account">Account &amp; Registration</h2>
 
-        <details>
-            <summary>2. What is CSS?</summary>
-            <p>CSS is used to style and design HTML web pages.</p>
-        </details>
+            <details open>
+                <summary>How do I create a new account on the platform?</summary>
+                <p>You can create an account by visiting our <a href="register.html">Registration Page</a>, filling out the required personal and contact details, and clicking "Complete Registration".</p>
+            </details>
 
-        <details>
-            <summary>3. What is JavaScript?</summary>
-            <p>JavaScript is a programming language that adds interactivity to websites.</p>
-        </details>
+            <details>
+                <summary>Is my personal phone number and email secure?</summary>
+                <p>Yes, all submitted personal data is encrypted and handled strictly according to standard data protection regulations and privacy guidelines.</p>
+            </details>
 
-        <details>
-            <summary>4. Which browser is recommended?</summary>
-            <p>Google Chrome, Microsoft Edge, Firefox, and Safari are all supported.</p>
-        </details>
-    </section>
+            <details>
+                <summary>Can I update my profile details after signing up?</summary>
+                <p>Absolutely. You can update your profile information, tech preferences, and contact details anytime through your Account Dashboard settings.</p>
+            </details>
 
-    <hr>
+            <details>
+                <summary>What should I do if I forget my account password?</summary>
+                <p>Click on the "Forgot Password" link on the login page to receive a password reset link via your registered email address.</p>
+            </details>
+        </section>
 
-    <!-- Account Questions -->
-    <section>
-        <h2>Account & Registration</h2>
+        <!-- CATEGORY 2: Web Standards & Accessibility -->
+        <section aria-labelledby="cat-standards">
+            <h2 id="cat-standards">Web Standards &amp; Accessibility</h2>
 
-        <details>
-            <summary>5. How do I create an account?</summary>
-            <p>Fill out the registration form and submit your details.</p>
-        </details>
+            <details>
+                <summary>What is W3C Validation and why is it essential?</summary>
+                <p>W3C Validation ensures that HTML code adheres to official syntax standards set by the World Wide Web Consortium, improving browser compatibility and site accessibility.</p>
+            </details>
 
-        <details>
-            <summary>6. I forgot my password. What should I do?</summary>
-            <p>Use the "Forgot Password" option to reset your password.</p>
-        </details>
+            <details>
+                <summary>How does keyboard navigation work on this site?</summary>
+                <p>You can use the <code>Tab</code> key to move through links, form controls, and interactive elements. Press <code>Enter</code> or <code>Space</code> to activate buttons or toggle details sections.</p>
+            </details>
 
-        <details>
-            <summary>7. Can I update my profile later?</summary>
-            <p>Yes, you can edit your profile after logging in.</p>
-        </details>
+            <details>
+                <summary>What are ARIA attributes used for?</summary>
+                <p>Accessible Rich Internet Applications (ARIA) attributes help communicate state, roles, and properties to assistive technologies like screen readers when standard HTML is insufficient.</p>
+            </details>
 
-        <details>
-            <summary>8. Is my personal information secure?</summary>
-            <p>Yes, we keep your information secure and confidential.</p>
-        </details>
-    </section>
+            <details>
+                <summary>Why are skip links included at the top of pages?</summary>
+                <p>Skip links allow keyboard and screen reader users to bypass repetitive navigation menus and jump straight to the main page content.</p>
+            </details>
+        </section>
 
-    <hr>
+        <!-- CATEGORY 3: E-Commerce & Checkout -->
+        <section aria-labelledby="cat-checkout">
+            <h2 id="cat-checkout">E-Commerce &amp; Checkout Process</h2>
 
-    <!-- Payment Questions -->
-    <section>
-        <h2>Payment & Orders</h2>
+            <details>
+                <summary>Which payment methods are accepted on the checkout page?</summary>
+                <p>We accept major credit and debit cards, UPI payments, and net banking options through our secure payment gateway.</p>
+            </details>
 
-        <details>
-            <summary>9. Which payment methods are accepted?</summary>
-            <p>We accept Credit Cards, Debit Cards, UPI, and Net Banking.</p>
-        </details>
+            <details>
+                <summary>How can I track the delivery status of my order?</summary>
+                <p>Once your order is processed, a tracking number and link will be sent to your registered email address for real-time updates.</p>
+            </details>
 
-        <details>
-            <summary>10. Can I cancel my order?</summary>
-            <p>Yes, before the order is shipped.</p>
-        </details>
+            <details>
+                <summary>Can I save my shipping address for future orders?</summary>
+                <p>Yes, checking the "Save shipping details" option during checkout securely stores your address for faster checkouts in the future.</p>
+            </details>
 
-        <details>
-            <summary>11. How can I track my order?</summary>
-            <p>You can track your order from your account dashboard.</p>
-        </details>
+            <details>
+                <summary>What is your policy on returns and refunds?</summary>
+                <p>Orders can be returned or refunded within 14 days of delivery, provided the items remain unused and in original packaging.</p>
+            </details>
+        </section>
 
-        <details>
-            <summary>12. Do you offer refunds?</summary>
-            <p>Yes, refunds are available according to our refund policy.</p>
-        </details>
-    </section>
+    </main>
 
-</main>
-
-<footer>
-    <p>&copy; 2026 FAQ Page</p>
-</footer>
+    <!-- Page Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Help Center Platform. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>

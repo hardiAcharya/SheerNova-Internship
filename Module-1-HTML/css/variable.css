@@ -1,0 +1,37 @@
+/* ==========================================================================
+   1. DESIGN TOKENS & COLOR PALETTE
+   ========================================================================== */
+:root {
+    --primary-color: #1e3a8a;       /* Deep Navy Blue */
+    --primary-hover: #1d4ed8;       /* Rich Royal Blue */
+    --accent-color: #6366f1;        /* Modern Indigo Accent */
+    --accent-hover: #4f46e5;
+    
+    --secondary-color: #475569;      /* Slate Grey */
+    --success-color: #059669;        /* Emerald Green */
+    --danger-color: #dc2626;         /* Vivid Red */
+
+    --bg-main: #f8fafc;              /* Light Slate Neutral BG */
+    --bg-card: #ffffff;              /* Pure White Cards */
+    --border-color: #e2e8f0;         /* Clean Light Border */
+    --text-main: #0f172a;            /* Dark Slate Text */
+    --text-muted: #64748b;           /* Muted Grey Text */
+
+    --font-primary: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-main: #0f172a;
+        --bg-card: #1e293b;
+        --border-color: #334155;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --primary-color: #3b82f6;
+        --primary-hover: #60a5fa;
+    }
+}

@@ -1,62 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern Nested Nav</title>
-<link rel="stylesheet" href="nav.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A three-level nested navigation menu built strictly using HTML nested lists.">
+    <title>3-Level Nested Navigation Menu</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<nav class="navbar">
-<div class="container">
-<a href="#" class="logo">Brand</a>
-<ul class="nav-menu">
-<li class="nav-item">
-<a href="#" class="nav-link">Products</a>
-<ul class="dropdown">
-<li>
-<a href="#">Electronics</a>
-<ul class="dropdown">
-<li><a href="#">Mobile Phones</a></li>
-<li><a href="#">Laptops</a></li>
-<li><a href="#">Gaming</a></li>
-<li><a href="#">Audio</a></li>
-</ul>
-</li>
-<li>
-<a href="#">Fashion</a>
-<ul class="dropdown">
-<li><a href="#">Men</a></li>
-<li><a href="#">Women</a></li>
-<li><a href="#">Kids</a></li>
-<li><a href="#">Footwear</a></li>
-</ul>
-</li>
-<li><a href="#">Home & Living</a></li>
-<li><a href="#">Beauty</a></li>
-</ul>
-</li>
+    <!-- Skip Link for Keyboard Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-<li class="nav-item">
-<a href="#" class="nav-link">Solutions</a>
-<ul class="dropdown">
-<li>
-<a href="#">For Business</a>
-<ul class="dropdown">
-<li><a href="#">Startups</a></li>
-<li><a href="#">Enterprises</a></li>
-</ul>
-</li>
-<li><a href="#">For Developers</a></li>
-</ul>
-</li>
+    <!-- Main Header -->
+    <header class="site-header">
+        <h1>Tech Product Catalog Navigation</h1>
+        <p>Browse through categories, subcategories, and specific product items.</p>
+    </header>
 
-<li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-<li class="nav-item"><a href="#" class="nav-link">About</a></li>
-</ul>
-</div>
-</nav>
+    <!-- Main Navigation Container -->
+    <main id="main-content">
+        <nav aria-label="Product Catalog Directory">
+            <h2 class="sr-only">Main Catalog Tree</h2>
+            
+            <!-- LEVEL 1: Main Categories -->
+            <ul class="nav-level-1">
+                
+                <!-- Category 1 -->
+                <li>
+                    <a href="#electronics">Electronics &amp; Gadgets</a>
+                    
+                    <!-- LEVEL 2: Subcategories -->
+                    <ul class="nav-level-2">
+                        <li>
+                            <a href="#computers">Computers &amp; Laptops</a>
+                            
+                            <!-- LEVEL 3: Individual Items -->
+                            <ul class="nav-level-3">
+                                <li><a href="#gaming-laptops">Gaming Laptops</a></li>
+                                <li><a href="#ultrabooks">Ultrabooks</a></li>
+                                <li><a href="#desktop-pcs">Desktop PCs</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#mobile-devices">Mobile Devices</a>
+                            
+                            <!-- LEVEL 3: Individual Items -->
+                            <ul class="nav-level-3">
+                                <li><a href="#smartphones">Smartphones</a></li>
+                                <li><a href="#tablets">Tablets</a></li>
+                                <li><a href="#smartwatches">Smartwatches</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Category 2 -->
+                <li>
+                    <a href="#software">Software &amp; Services</a>
+                    
+                    <!-- LEVEL 2: Subcategories -->
+                    <ul class="nav-level-2">
+                        <li>
+                            <a href="#dev-tools">Development Tools</a>
+                            
+                            <!-- LEVEL 3: Individual Items -->
+                            <ul class="nav-level-3">
+                                <li><a href="#code-editors">Code Editors</a></li>
+                                <li><a href="#version-control">Version Control Software</a></li>
+                                <li><a href="#database-tools">Database Management Systems</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#cloud-services">Cloud Infrastructure</a>
+                            
+                            <!-- LEVEL 3: Individual Items -->
+                            <ul class="nav-level-3">
+                                <li><a href="#web-hosting">Web Hosting Services</a></li>
+                                <li><a href="#cloud-storage">Cloud Storage Options</a></li>
+                                <li><a href="#cdn-providers">Content Delivery Networks</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Category 3 -->
+                <li>
+                    <a href="#accessories">Accessories &amp; Peripherals</a>
+                    
+                    <!-- LEVEL 2: Subcategories -->
+                    <ul class="nav-level-2">
+                        <li>
+                            <a href="#audio-gear">Audio Equipment</a>
+                            
+                            <!-- LEVEL 3: Individual Items -->
+                            <ul class="nav-level-3">
+                                <li><a href="#noise-cancelling">Noise-Cancelling Headphones</a></li>
+                                <li><a href="#wireless-earbuds">Wireless Earbuds</a></li>
+                                <li><a href="#studio-mics">Studio Microphones</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Tech Catalog Inc. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>

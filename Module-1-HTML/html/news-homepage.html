@@ -1,80 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Latest news and updates from around the world.">
-<link rel="icon" href="data:,">
-<link rel="stylesheet" href="../css/news-homepage.css">
-<title>Daily News Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest news and updates from around the world including technology, sports, and business.">
+    <title>Daily News | Homepage</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<header class="site-header">
-<div class="container">
-<h1>Daily News</h1>
-<p class="tagline">Latest Updates | World | Technology | Sports</p>
-<nav aria-label="News Navigation">
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">World</a></li>
-<li><a href="#">Technology</a></li>
-<li><a href="#">Sports</a></li>
-</ul>
-</nav>
-</div>
-</header>
+    <!-- Header Block -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="site-branding">
+                <div>
+                    <h1 class="site-title">Daily News</h1>
+                    <span class="navbar__subtitle">Latest Updates | World | Technology | Sports</span>
+                </div>
+            </a>
 
-<main class="container">
-<div class="grid">
-<section class="main-story">
-<h2>Main Story</h2>
-<article class="card featured">
-<img src="https://picsum.photos/800/400?tech" alt="Technology News">
-<div class="card-content">
-<h3>New Technology Changes The Future</h3>
-<p>Technology is improving daily life with new innovations and solutions in AI, health, and education.</p>
-<time datetime="2026-07-24">24 July 2026</time>
-</div>
-</article>
-</section>
+            <nav class="navbar__nav" aria-label="News Navigation">
+                <ul class="nav-links">
+                    <li><a href="#" class="navbar__link active">Home</a></li>
+                    <li><a href="#" class="navbar__link">World</a></li>
+                    <li><a href="#" class="navbar__link">Technology</a></li>
+                    <li><a href="#" class="navbar__link">Sports</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<section class="secondary-stories">
-<h2>Secondary Stories</h2>
-<div class="card-grid">
-<article class="card">
-<h3>New Education Trends</h3>
-<p>Digital learning is growing worldwide with online courses and AI tutors.</p>
-</article>
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Main Hero Story Block (Structured for .news-hero) -->
+        <section aria-labelledby="featured-heading">
+            <h2 id="featured-heading">Main Story</h2>
+            <article class="news-hero">
+                <img src="../images/technology.jpg" alt="Technology Innovation Illustrated" loading="eager">
+                <div class="card-body">
+                    <h2>New Technology Changes The Future</h2>
+                    <p>Technology is improving daily life with new innovations and solutions in AI, health, and education.</p>
+                    <small><time datetime="2026-07-24">24 July 2026</time></small>
+                </div>
+            </article>
+        </section>
 
-<article class="card">
-<h3>Sports Highlights</h3>
-<p>Latest sports news and match updates from cricket, football and Olympics.</p>
-</article>
+        <!-- Secondary Stories Section (Grid) -->
+        <section aria-labelledby="secondary-heading">
+            <h2 id="secondary-heading">Secondary Stories</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <div class="card-body">
+                        <h3>New Education Trends</h3>
+                        <p>Digital learning is growing worldwide with online courses and AI tutors.</p>
+                    </div>
+                </article>
 
-<article class="card">
-<h3>Business Updates</h3>
-<p>New business opportunities and markets opening in renewable energy sector.</p>
-</article>
-</div>
-</section>
+                <article class="card">
+                    <div class="card-body">
+                        <h3>Sports Highlights</h3>
+                        <p>Latest sports news and match updates from cricket, football, and Olympics.</p>
+                    </div>
+                </article>
 
-<aside class="sidebar">
-<h2>Popular News</h2>
-<ul class="popular-list">
-<li><a href="#">Weather Updates</a></li>
-<li><a href="#">Technology News</a></li>
-<li><a href="#">Health Updates</a></li>
-</ul>
-</aside>
-</div>
-</main>
+                <article class="card">
+                    <div class="card-body">
+                        <h3>Business Updates</h3>
+                        <p>New business opportunities and markets opening in the renewable energy sector.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-<footer class="site-footer">
-<div class="container">
-<p>&copy; 2026 Daily News. All Rights Reserved.</p>
-</div>
-</footer>
+        <!-- Sidebar / Popular News -->
+        <aside class="card" style="margin-bottom: 2rem;" aria-labelledby="popular-heading">
+            <div class="card-body">
+                <h2 id="popular-heading">Popular News</h2>
+                <ul style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <li><a href="#">Weather Updates</a></li>
+                    <li><a href="#">Technology News</a></li>
+                    <li><a href="#">Health Updates</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Daily News. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

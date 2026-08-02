@@ -1,0 +1,36 @@
+/* ==========================================================================
+   6. PRINT STYLESHEET
+   ========================================================================== */
+@media print {
+    *,
+    *::before,
+    *::after {
+        background: transparent !important;
+        color: #000000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        background: #ffffff;
+    }
+
+    header, footer, .navbar__toggler, .navbar__checkbox, button, .button, .btn {
+        display: none !important;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8rem;
+    }
+
+    table {
+        border-collapse: collapse !important;
+    }
+
+    th, td {
+        border: 1px solid #000000 !important;
+    }
+}

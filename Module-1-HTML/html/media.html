@@ -1,61 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:,">
-<link rel="stylesheet" href="nav.css">
-<title>Navigation Menu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A multimedia showcase presenting responsive audio, video, picture elements, lazy-loaded photo gallery, and embedded maps.">
+    <title>Multimedia &amp; Embedded Content Showcase</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<header class="navbar">
-<div class="logo">HTML Hub</div>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-<input type="checkbox" id="menu-toggle">
-<label for="menu-toggle" class="hamburger">&#9776;</label>
+    <!-- Page Header -->
+    <header class="site-header">
+        <h1>HTML5 Media &amp; Embedded Content Showcase</h1>
+        <p>Demonstrating responsive media delivery, accessible video controls, and interactive embeds.</p>
+    </header>
 
-<nav>
-<ul class="menu">
-<li><a href="index.html">Home</a></li>
+    <!-- Main Content Area -->
+    <main id="main-content">
 
-<li class="dropdown">
-<a href="#">Profile ▾</a>
-<ul class="dropdown-menu">
-<li><a href="profile.html">Personal Profile</a></li>
-<li><a href="resume.html">Resume</a></li>
-</ul>
-</li>
+        <!-- SECTION 1: Video with Subtitles & Poster -->
+        <section aria-labelledby="video-section-title">
+            <h2 id="video-section-title">1. HTML5 Video Player with Captions</h2>
+            <figure>
+                <video controls poster="../images/nature.jpg" width="800" height="450">
+                    <source src="../media/sample_video-1.mp4" type="video/mp4">
+                    <source src="../assets/videos/sample-video.webm" type="video/webm">
+                </video>
+                <figcaption>Video Overview: Web Development Fundamentals (1080p HD)</figcaption>
+            </figure>
+        </section>
 
-<li class="dropdown">
-<a href="#">HTML Examples ▾</a>
-<ul class="dropdown-menu">
-<li class="dropdown-sub">
-<a href="#">Text ▸</a>
-<ul class="dropdown-menu">
-<li><a href="text-formatting.html">Text Formatting</a></li>
-<li><a href="description-list.html">Description List</a></li>
-</ul>
-</li>
-<li class="dropdown-sub">
-<a href="#">Lists ▸</a>
-<ul class="dropdown-menu">
-<li><a href="nested-menu.html">Nested Menu</a></li>
-<li><a href="timetable.html">Time Table</a></li>
-</ul>
-</li>
-</ul>
-</li>
+        <!-- SECTION 2: Audio Player -->
+        <section aria-labelledby="audio-section-title">
+            <h2 id="audio-section-title">2. HTML5 Audio Player</h2>
+            <figure>
+                <audio controls preload="metadata">
+                    <source src="../media/Ganga_Ke_Kinare.mp3" type="audio/ogg">
+                    Your browser does not support the audio element.
+                </audio>
+                <figcaption>Podcast Episode 104: The Evolution of Web Standards</figcaption>
+            </figure>
+        </section>
 
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</header>
+        <!-- SECTION 3: Responsive Picture Element -->
+        <section aria-labelledby="picture-section-title">
+            <h2 id="picture-section-title">3. Responsive Image Art Direction (`&lt;picture&gt;`)</h2>
+            <figure>
+                <picture>
+                    <!-- Wide Viewports (Desktop) -->
+                    <source media="(min-width: 1024px)" srcset="../images/developer.jpg">
+                    <!-- Medium Viewports (Tablets) -->
+                    <source media="(min-width: 600px)" srcset="../images/dark_theme.jpg">
+                    <!-- Default Mobile Image -->
+                    <img src="../images/flexbox.png" alt="A modern developer workstation with dual monitors showing code editor" width="400" height="300">
+                </picture>
+                <figcaption>Adaptive Web Development Workspace Layout</figcaption>
+            </figure>
+        </section>
 
-<main>
-<h1>Welcome to HTML Hub</h1>
-<p>Use the navigation above to explore.</p>
-</main>
+        <!-- SECTION 4: Lazy-Loaded Photo Gallery -->
+        <section aria-labelledby="gallery-section-title">
+            <h2 id="gallery-section-title">4. Lazy-Loaded Image Gallery</h2>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="../images/clean_code.jpg" alt="Minimalist HTML code on a dark theme editor" width="300" height="200" loading="lazy">
+                    <figcaption>Clean Code Structure</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/flexbox.png" alt="CSS Flexbox layout diagram displayed on a tablet screen" width="300" height="200" loading="lazy">
+                    <figcaption>Flexible Box Layouts</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/script.png" alt="JavaScript engine processing execution stack diagram" width="300" height="200" loading="lazy">
+                    <figcaption>Script Execution</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/audit.jpg" alt="Accessibility screen reader audit report score overview" width="300" height="200" loading="lazy">
+                    <figcaption>Web Accessibility Audit</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Embedded Google Map -->
+        <section aria-labelledby="map-section-title">
+            <h2 id="map-section-title">5. Embedded Interactive Map</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.6917631317075!2d72.54146197592476!3d23.03508111586523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84eb3b762391%3A0x6b4f3a763d59e354!2sGujarat%20University!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade" 
+                    title="Google Maps Location of Gujarat University Main Campus">
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Page Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Web Media Showcase. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>

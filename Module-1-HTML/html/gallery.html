@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,94 +8,101 @@
     <meta name="author" content="Techno Web Solutions">
     <title>Techno Web Solutions | Gallery</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="../images/icons/logo.jpg" type="image/jpeg">
 </head>
-
 <body>
-    <!-- ================= HEADER ================= -->
-    <header class="container company-header">
-        <figure>
-            <img src="../images/icons/logo.jpg" alt="Techno Web Solutions Logo" class="logo">
-        </figure>
-        <header>
-            <h1>Techno Web Solutions</h1>
-            <p>Professional Website Design, Development & Digital Solutions</p>
-        </header>
 
-        <input type="checkbox" id="nav-toggle" class="nav__toggle">
-        <label for="nav-toggle" class="nav__burger">☰</label>
-    </header>
+<header class="site-header">
+  <div class="container header-inner">
+    
+    <!-- Top Block: Logo + Title Side-by-Side -->
+    <a href="index.html" class="site-branding">
+      <img src="../images/logo.jpg" alt="Techno Web Solutions Logo" class="site-logo">
+      <div>
+        <span class="site-title">Techno Web Solutions</span>
+        <span class="navbar__subtitle">Web Development & Digital Solutions</span>
+      </div>
+    </a>
 
-    <nav class="nav__menu" aria-label="Main Navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html" aria-current="page">Gallery</a>
-        <a href="contact.html">Contact</a>
+    <!-- Mobile Menu Toggle Button (For Responsive) -->
+    <input type="checkbox" id="nav-toggle" class="navbar__checkbox">
+    <label for="nav-toggle" class="navbar__toggler">&#9776;</label>
+
+    <!-- Bottom Block: Menus Underneath Logo & Title -->
+    <nav class="navbar__nav">
+      <ul class="nav-links">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="about.html" class="navbar__link">About</a></li>
+        <li><a href="services.html" class="navbar__link">Services</a></li>
+        <li><a href="gallery.html" class="navbar__link active">Gallery</a></li>
+        <li><a href="contact.html" class="navbar__link">Contact</a></li>
+      </ul>
     </nav>
 
-    <!-- ================= MAIN ================= -->
-    <main>
-        <!-- Gallery Banner -->
-        <section class="page-banner container">
-            <h2>Our Gallery</h2>
-            <p>
-                Explore some of our featured work including
-                website designs, web applications, mobile
-                applications and business solutions.
-            </p>
-        </section>
+  </div>
+</header>
 
-        <!-- Gallery -->
-        <section class="gallery container">
+<!-- ================= MAIN ================= -->
+<main>
+    <!-- Gallery Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>Explore some of our featured work including website designs, web applications, mobile applications and business solutions.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid (Class fixed to match CSS .gallery) -->
+    <section class="section">
+        <div class="container">
             <h2>Featured Projects</h2>
-            <section class="gallery-grid">
-                <figure>
-                    <img src="../images/gallery/website_development.jpg" alt="Website Development Project">
+            <div class="gallery">
+                <figure class="gallery-item">
+                    <img src="../images/website_development.jpg" alt="Website Development Project">
                     <figcaption>Website Development</figcaption>
                 </figure>
-                <figure>
-                    <img src="../images/gallery/resposive_web_design.jpg" alt="Responsive Website Design">
+                <figure class="gallery-item">
+                    <img src="../images/resposive_web_design.jpg" alt="Responsive Website Design">
                     <figcaption>Responsive Web Design</figcaption>
                 </figure>
-                <figure>
-                    <img src="../images/gallery/business_web_design.jpg" alt="Business Website">
+                <figure class="gallery-item">
+                    <img src="../images/business_web_design.jpg" alt="Business Website">
                     <figcaption>Business Website</figcaption>
                 </figure>
-                <figure>
-                    <img src="../images/gallery/ecommerce_solutions.jpg" alt="E-Commerce Website">
+                <figure class="gallery-item">
+                    <img src="../images/ecommerce_solutions.jpg" alt="E-Commerce Website">
                     <figcaption>E-Commerce Solution</figcaption>
                 </figure>
-                <figure>
-                    <img src="../images/gallery/mobile_application.jpg" alt="Mobile Application">
+                <figure class="gallery-item">
+                    <img src="../images/mobile_application.jpg" alt="Mobile Application">
                     <figcaption>Mobile Application</figcaption>
                 </figure>
-                <figure>
-                    <img src="../images/gallery/database_management.jpg" alt="Database Project">
+                <figure class="gallery-item">
+                    <img src="../images/database_management.jpg" alt="Database Project">
                     <figcaption>Database Management</figcaption>
                 </figure>
-                <figure>
-                    <img src="../images/gallery/dashboard_ui.jpg" alt="Dashboard Design">
+                <figure class="gallery-item">
+                    <img src="../images/dashboard_ui.jpg" alt="Dashboard Design">
                     <figcaption>Dashboard UI</figcaption>
                 </figure>
-                <figure>
-                    <img src="../images/gallery/Portfoli_Website.jpg" alt="Portfolio Website">
+                <figure class="gallery-item">
+                    <img src="../images/Portfoli_Website.jpg" alt="Portfolio Website">
                     <figcaption>Portfolio Website</figcaption>
                 </figure>
-                <figure>
-                    <img src="../images/gallery/Corporate_Website.jpg" alt="Corporate Website">
+                <figure class="gallery-item">
+                    <img src="../images/Corporate_Website.jpg" alt="Corporate Website">
                     <figcaption>Corporate Website</figcaption>
                 </figure>
-            </section>
-        </section>
-    </main>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <article class="container"> <!-- div ko article -->
-            <p>&copy; 2026 Techno Web Solutions. All Rights Reserved.</p>
-        </article>
-    </footer>
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 Techno Web Solutions. All Rights Reserved.</p>
+    </div>
+</footer>
+
 </body>
-
 </html>

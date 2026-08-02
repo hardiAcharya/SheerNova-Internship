@@ -3,58 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/description-list.css">
+    <meta name="description" content="A comprehensive reference guide documenting fifteen fundamental HTML elements using description lists.">
+    <title>HTML5 Element Reference Guide</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<h1>HTML Elements Description List</h1>
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-<dl>
+    <!-- Page Header -->
+    <header class="site-header">
+        <h1>HTML5 Elements Dictionary</h1>
+        <p>A structured technical documentation of fifteen core HTML markup tags.</p>
+    </header>
 
-    <dt>&lt;html&gt;</dt>
-    <dd>Defines the root element of an HTML document.</dd>
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <section aria-labelledby="dict-heading">
+            <h2 id="dict-heading">Core HTML Tag Documentation</h2>
 
-    <dt>&lt;head&gt;</dt>
-    <dd>Contains metadata such as title, styles, and links.</dd>
+            <dl class="element-dictionary">
 
-    <dt>&lt;title&gt;</dt>
-    <dd>Sets the title shown in the browser tab.</dd>
+                <!-- Element 1 -->
+                <dt><code>&lt;header&gt;</code></dt>
+                <dd>Represents introductory content or a set of navigational links for its nearest ancestor sectioning element or page root.</dd>
 
-    <dt>&lt;body&gt;</dt>
-    <dd>Contains all the visible content of a web page.</dd>
+                <!-- Element 2 -->
+                <dt><code>&lt;nav&gt;</code></dt>
+                <dd>Defines a section of a page whose purpose is to provide navigation links, either within the current document or to other documents.</dd>
 
-    <dt>&lt;h1&gt;</dt>
-    <dd>Defines the main heading of a page.</dd>
+                <!-- Element 3 -->
+                <dt><code>&lt;main&gt;</code></dt>
+                <dd>Specifies the dominant, central content unique to the body of a document. A page must not contain more than one visible main element.</dd>
 
-    <dt>&lt;p&gt;</dt>
-    <dd>Represents a paragraph of text.</dd>
+                <!-- Element 4 -->
+                <dt><code>&lt;article&gt;</code></dt>
+                <dd>Represents a self-contained composition in a document that is intended to be independently reusable or distributable (e.g., blog posts, news stories).</dd>
 
-    <dt>&lt;a&gt;</dt>
-    <dd>Creates a hyperlink to another page or resource.</dd>
+                <!-- Element 5 -->
+                <dt><code>&lt;section&gt;</code></dt>
+                <dd>Represents a generic standalone section of a document that lacks a more specific semantic element to represent it, typically featuring a heading.</dd>
 
-    <dt>&lt;img&gt;</dt>
-    <dd>Displays an image on the web page.</dd>
+                <!-- Element 6 -->
+                <dt><code>&lt;aside&gt;</code></dt>
+                <dd>Represents a portion of a document whose content is only indirectly related to the document's main content (e.g., sidebars, callout boxes).</dd>
 
-    <dt>&lt;ul&gt;</dt>
-    <dd>Creates an unordered (bulleted) list.</dd>
+                <!-- Element 7 -->
+                <dt><code>&lt;footer&gt;</code></dt>
+                <dd>Represents a footer for its nearest sectioning content or sectioning root, usually containing metadata, copyright notices, or author details.</dd>
 
-    <dt>&lt;ol&gt;</dt>
-    <dd>Creates an ordered (numbered) list.</dd>
+                <!-- Element 8 -->
+                <dt><code>&lt;figure&gt;</code></dt>
+                <dd>Represents self-contained content, optionally with a caption, that is referenced as a single unit from the main flow of the document.</dd>
 
-    <dt>&lt;li&gt;</dt>
-    <dd>Represents a list item inside a list.</dd>
+                <!-- Element 9 -->
+                <dt><code>&lt;figcaption&gt;</code></dt>
+                <dd>Represents a caption or legend describing the rest of the contents of its parent figure element.</dd>
 
-    <dt>&lt;table&gt;</dt>
-    <dd>Creates a table to display data in rows and columns.</dd>
+                <!-- Element 10 -->
+                <dt><code>&lt;picture&gt;</code></dt>
+                <dd>Serves as a wrapper container containing zero or more source elements and one image element to offer alternate visual representations for different devices.</dd>
 
-    <dt>&lt;tr&gt;</dt>
-    <dd>Defines a row inside a table.</dd>
+                <!-- Element 11 -->
+                <dt><code>&lt;time&gt;</code></dt>
+                <dd>Represents a specific period in time or a precise date, enabling search engines and scripts to parse temporal information accurately via the datetime attribute.</dd>
 
-    <dt>&lt;th&gt;</dt>
-    <dd>Represents a header cell in a table.</dd>
+                <!-- Element 12 -->
+                <dt><code>&lt;address&gt;</code></dt>
+                <dd>Indicates that the enclosed HTML provides contact information for a person or people, or for an entire organization.</dd>
 
-    <dt>&lt;td&gt;</dt>
-    <dd>Represents a standard data cell in a table.</dd>
-</dl>
+                <!-- Element 13 -->
+                <dt><code>&lt;blockquote&gt;</code></dt>
+                <dd>Indicates that the enclosed text is an extended quotation from another source, typically accompanied by a citation source via the cite attribute.</dd>
+
+                <!-- Element 14 -->
+                <dt><code>&lt;fieldset&gt;</code></dt>
+                <dd>Used to group several controls as well as labels within a web form to establish clear semantic visual and screen-reader relationships.</dd>
+
+                <!-- Element 15 -->
+                <dt><code>&lt;legend&gt;</code></dt>
+                <dd>Represents a caption for the content of its parent fieldset element, clarifying the purpose of grouped form controls.</dd>
+
+            </dl>
+        </section>
+    </main>
+
+    <!-- Page Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Web Standards Documentation Project.</p>
+    </footer>
+
 </body>
 </html>

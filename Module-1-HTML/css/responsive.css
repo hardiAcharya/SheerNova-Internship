@@ -1,0 +1,62 @@
+/* ==========================================================================
+   5. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* Tablet Screens (<= 992px) */
+@media (max-width: 992px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Screens (<= 768px) */
+@media (max-width: 768px) {
+    .header-inner { 
+        position: relative; 
+    }
+
+    .navbar__toggler {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 4px;
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: var(--primary-color);
+    }
+
+    .navbar__nav, header nav {
+        display: none;
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .navbar__checkbox:checked ~ .navbar__nav,
+    .navbar__checkbox:checked ~ nav { 
+        display: block; 
+    }
+
+    .navbar__menu, header nav ul { 
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .news-hero, .featured-news { 
+        grid-template-columns: 1fr; 
+    }
+
+    .news-hero img, .featured-news img { 
+        height: 220px; 
+    }
+}
+
+/* Small Mobile Screens (<= 576px) */
+@media (max-width: 576px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+}

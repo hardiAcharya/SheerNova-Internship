@@ -1,35 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fixed Accessible Page</title>
-<link rel="stylesheet" href="../css/accessibility-fixed.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Fixed Demo</title>
+    <!-- Main Style Sheet Link -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<a href="#main" class="skip-link">Skip to Content</a>
-<header>
-<h1>My Site</h1>
-<nav aria-label="Main Navigation">
-<a href="#">Home</a>
-<a href="#">About</a>
-</nav>
-</header>
-<main id="main">
-<h2>Welcome</h2> <!-- Fixed M1 -->
-<img src="banner.jpg" alt="Website banner showing our team working"> <!-- Fixed M2 -->
-<button type="button" onclick="alert('clicked')">Click Me</button> <!-- Fixed M3 -->
-<p class="error-message">Error: Form submission failed</p> <!-- Fixed M4 -->
-<label for="name">Name:</label> <!-- Fixed M5 -->
-<input type="text" id="name" name="name">
-<label for="email">Email:</label> <!-- Fixed M6 -->
-<input type="email" id="email" name="email">
-<a href="/accessibility-guide">Read our Accessibility Guide</a> <!-- Fixed M7 -->
-<h3>Important Note</h3> <!-- Fixed M10 -->
-<p>Read this</p>
-</main>
-<footer> <!-- Fixed M8 -->
-<p>Copyright 2026</p>
-</footer>
+
+    <main id="main-content">
+        <section class="demo-container">
+            <h1>Accessible Components Demo</h1>
+            
+            <!-- Accessible Figure -->
+            <figure class="accessible-card">
+                <img src="../images/chart.png" alt="Bar chart showing 2026 accessibility compliance growth by 45%">
+                <figcaption>Figure 1: Annual Accessibility Compliance Report Data.</figcaption>
+            </figure>
+
+            <!-- Accessible Form -->
+            <form class="accessible-form" aria-labelledby="form-title">
+                <h2 id="form-title">Feedback Form</h2>
+                
+                <div class="form-group">
+                    <label for="user-name">Full Name <span class="required" aria-hidden="true">*</span></label>
+                    <input type="text" id="user-name" name="fullname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-email">Email Address <span class="required" aria-hidden="true">*</span></label>
+                    <input type="email" id="user-email" name="email" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Submit Feedback</button>
+                <div role="alert" class="form-status" aria-live="polite"></div>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
