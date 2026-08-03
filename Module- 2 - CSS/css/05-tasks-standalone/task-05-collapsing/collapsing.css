@@ -1,0 +1,35 @@
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background-color: #fafafa;
+}
+
+.demo-section {
+  background-color: #fff;
+  border: 1px dashed #ccc;
+  padding: 10px;
+  margin-bottom: 2rem;
+}
+
+.box-a {
+  background-color: #ffcdd2;
+  margin-bottom: 40px;
+  padding: 15px;
+}
+
+.box-b {
+  background-color: #c8e6c9;
+  margin-top: 30px;
+  padding: 15px;
+}
+
+.parent-prevent {
+  background-color: #e1f5fe;
+  padding-top: 1px;
+}
+
+.child {
+  background-color: #81d4fa;
+  margin-top: 30px;
+  padding: 15px;
+}

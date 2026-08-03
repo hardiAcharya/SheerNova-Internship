@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 2 - Registration Form</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo">WebDev Hub</a>
+      <ul class="navbar__list">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="cv.html" class="navbar__link">CV</a></li>
+        <li><a href="registration.html" class="navbar__link navbar__link--active">Register</a></li>
+        <li><a href="comparison.html" class="navbar__link">Pricing</a></li>
+        <li><a href="dashboard.html" class="navbar__link">Dashboard</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main style="max-width: 600px; margin: 3rem auto; padding: 2rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg);">
+    <h1 style="margin-bottom: 1.5rem; text-align: center;">Create an Account</h1>
+    
+    <form>
+      <div class="form-group">
+        <label for="fullname" class="form-label">Full Name</label>
+        <input type="text" id="fullname" class="form-input" placeholder="John Doe" required minlength="3">
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" id="email" class="form-input" placeholder="john@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="role" class="form-label">Select Role</label>
+        <select id="role" class="form-input">
+          <option value="developer">Developer</option>
+          <option value="designer">Designer</option>
+          <option value="student">Student</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: 1rem;">Register Now</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div style="text-align: center;">
+      <p>&copy; 2026 WebDev Hub</p>
+    </div>
+  </footer>
+
+</body>
+</html>

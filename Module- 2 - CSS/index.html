@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 2 - Homepage</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+  <!-- Responsive Navbar (Task 11) -->
+  <header class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo">WebDev Hub</a>
+      <input type="checkbox" id="nav-toggle" class="navbar__toggle">
+      <label for="nav-toggle" class="navbar__toggle-label">☰</label>
+      <ul class="navbar__list">
+        <li><a href="index.html" class="navbar__link navbar__link--active">Home</a></li>
+        <li><a href="cv.html" class="navbar__link">CV</a></li>
+        <li><a href="registration.html" class="navbar__link">Register</a></li>
+        <li><a href="comparison.html" class="navbar__link">Pricing</a></li>
+        <li><a href="dashboard.html" class="navbar__link">Dashboard</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container section" style="padding: 3rem 1.5rem; max-width: 1200px; margin: 0 auto;">
+    <section class="hero" style="text-align: center; margin-bottom: 3rem;">
+      <h1 style="font-size: var(--text-3xl); margin-bottom: 1rem;">Mastering Modern CSS Architecture</h1>
+      <p style="color: var(--color-text-muted); max-width: 60ch; margin: 0 auto 1.5rem auto;">
+        Welcome to Module 2 showcase page featuring BEM architecture, CSS Grid, Flexbox, and Custom Properties.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="#modal-demo" class="btn btn--primary" data-tooltip="Opens CSS Modal">Open Modal</a>
+        <a href="registration.html" class="btn btn--secondary">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Component Cards Grid -->
+    <section class="product-grid">
+      <!-- Fixed Local Image 1 -->
+      <article class="card">
+        <img src="./assets/images/Design_System_Tokens.jpg" alt="Design System" class="card__image">
+        <div class="card__body">
+          <h3 class="card__title">Design System Tokens</h3>
+          <p style="color: var(--color-text-muted); font-size: var(--text-sm);">
+            Centralized CSS custom properties powering fluid typography, color schemes, and spacing.
+          </p>
+        </div>
+        <div class="card__footer">
+          <button class="btn btn--outline" style="width: 100%;">Learn More</button>
+        </div>
+      </article>
+
+      <!-- Fixed Local Image 2 -->
+      <article class="card">
+        <img src="./assets/images/layouts.jpg" alt="Flexbox & Grid" class="card__image">
+        <div class="card__body">
+          <h3 class="card__title">2D & 1D Layouts</h3>
+          <p style="color: var(--color-text-muted); font-size: var(--text-sm);">
+            Combining Flexbox for alignment and CSS Grid for macro structural layouts.
+          </p>
+        </div>
+        <div class="card__footer">
+          <button class="btn btn--outline" style="width: 100%;">Learn More</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- CSS Accordion (Task 24) -->
+    <section style="margin-top: 3rem;">
+      <h2>Frequently Asked Questions</h2>
+      <details class="accordion">
+        <summary class="accordion__summary">How does the CSS-only menu work?</summary>
+        <div class="accordion__content">
+          It uses an HTML checkbox input and the CSS <code>:checked</code> pseudo-class to toggle visibility without JavaScript.
+        </div>
+      </details>
+      <details class="accordion">
+        <summary class="accordion__summary">Is dark mode supported?</summary>
+        <div class="accordion__content">
+          Yes, via media query <code>prefers-color-scheme</code> and root class variables.
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <!-- CSS-Only Modal Target (Task 29) -->
+  <div id="modal-demo" class="lightbox">
+    <div style="background: var(--color-surface); padding: 2rem; border-radius: var(--radius-lg); max-width: 500px; width: 90%;">
+      <h2>CSS-Only Modal</h2>
+      <p style="margin: 1rem 0; color: var(--color-text-muted);">
+        This modal is triggered using CSS <code>:target</code> rule without single line of JavaScript.
+      </p>
+      <a href="#" class="btn btn--secondary">Close Modal</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <p>&copy; 2026 WebDev Hub - Module 2 Assignment</p>
+    </div>
+  </footer>
+
+</body>
+</html>

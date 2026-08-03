@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 2 - Pricing & Comparison</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo">WebDev Hub</a>
+      <ul class="navbar__list">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="cv.html" class="navbar__link">CV</a></li>
+        <li><a href="registration.html" class="navbar__link">Register</a></li>
+        <li><a href="comparison.html" class="navbar__link navbar__link--active">Pricing</a></li>
+        <li><a href="dashboard.html" class="navbar__link">Dashboard</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main style="max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem;">
+    <h1 style="text-align: center; margin-bottom: 2rem;">Flexible Pricing Plans</h1>
+
+    <!-- Stacking Pricing Table (Task 21) -->
+    <div class="pricing-grid" style="margin-bottom: 4rem;">
+      <div class="pricing-card">
+        <h3>Basic</h3>
+        <p style="font-size: 2rem; font-weight: bold; margin: 1rem 0;">$9<span style="font-size: 1rem;">/mo</span></p>
+        <p>Essential features for individual learners.</p>
+        <button class="btn btn--outline" style="width: 100%; margin-top: 1.5rem;">Choose Plan</button>
+      </div>
+
+      <div class="pricing-card pricing-card--recommended">
+        <span style="background: var(--color-primary); color: #fff; padding: 0.2rem 0.6rem; border-radius: var(--radius-sm); font-size: var(--text-xs);">RECOMMENDED</span>
+        <h3 style="margin-top: 0.5rem;">Pro</h3>
+        <p style="font-size: 2rem; font-weight: bold; margin: 1rem 0;">$29<span style="font-size: 1rem;">/mo</span></p>
+        <p>Full access to all layout systems and components.</p>
+        <button class="btn btn--primary" style="width: 100%; margin-top: 1.5rem;">Choose Plan</button>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <p style="font-size: 2rem; font-weight: bold; margin: 1rem 0;">$99<span style="font-size: 1rem;">/mo</span></p>
+        <p>Dedicated support and custom themes.</p>
+        <button class="btn btn--outline" style="width: 100%; margin-top: 1.5rem;">Choose Plan</button>
+      </div>
+    </div>
+
+    <!-- Mobile-friendly Responsive Data Table (Task 22) -->
+    <h2 style="margin-bottom: 1rem;">Feature Comparison</h2>
+    <div class="table-container">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Basic</th>
+            <th>Pro</th>
+            <th>Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CSS Variables Access</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Grid Template Areas</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div style="text-align: center;">
+      <p>&copy; 2026 WebDev Hub</p>
+    </div>
+  </footer>
+
+</body>
+</html>

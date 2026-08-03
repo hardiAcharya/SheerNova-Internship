@@ -1,0 +1,24 @@
+.wrapper {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: sans-serif;
+}
+
+.alert {
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  background-color: #eee;
+  color: #333;
+  border-left: 4px solid #ccc;
+}
+
+.alert.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border-left-color: #28a745;
+}
+
+.alert .alert-message {
+  margin: 0;
+  font-weight: 600;
+}

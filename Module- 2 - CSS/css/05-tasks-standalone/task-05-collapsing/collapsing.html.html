@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 05 - Margin Collapsing Lab</title>
+  <link rel="stylesheet" href="collapsing.css">
+</head>
+<body>
+  <div class="demo-section">
+    <h2>1. Collapsing Margins (Adjacent Siblings)</h2>
+    <div class="box-a">Margin Bottom: 40px</div>
+    <div class="box-b">Margin Top: 30px (Effective Gap = 40px)</div>
+  </div>
+
+  <div class="demo-section parent-prevent">
+    <h2>2. Prevent Parent-Child Collapsing</h2>
+    <div class="child">Child with 30px top margin</div>
+  </div>
+</body>
+</html>
