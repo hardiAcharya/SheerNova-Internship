@@ -1003,22 +1003,29 @@ ul {
   color: #ffffff;
 }
 
-/*  ========  RESPONSIVE MEDIA QUERIES  =========== */
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES (OPTIMIZED)
+   ========================================== */
 
-/* Tablet: 1024px */
+/* 1. Tablet / Large Screens (1024px & down) */
 @media (max-width: 1024px) {
   .container {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .categories,
+  .promo-grid,
+  .value-props-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .categories {
-    grid-template-columns: repeat(2, 1fr);
     padding: 15px 20px;
   }
 
   .promo-grid,
   .value-props-grid {
-    grid-template-columns: repeat(2, 1fr);
     padding: 20px 20px 50px;
   }
 
@@ -1033,20 +1040,18 @@ ul {
   }
 }
 
-/* Mobile: 768px */
+/* 2. Mobile / Tablets Portait (768px & down) */
 @media (max-width: 768px) {
   .container {
-    padding: 0 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
+  /* Grid Layouts */
   .categories {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     padding: 15px 16px;
-  }
-
-  .category-card {
-    height: 320px;
   }
 
   .promo-grid,
@@ -1055,37 +1060,9 @@ ul {
     padding: 20px 16px 50px;
   }
 
-  .hero-title {
-    font-size: 1.8rem;
-  }
-
-  .hero-content {
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .hero-cta-buttons {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .floating-header {
-    left: 12px;
-    right: 12px;
-    padding: 0.7rem 1rem;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  /* Mobile me menu hide */
-  .best-sellers-section,
-  .value-props-section,
-  .promo-grid {
-    padding-left: 16px;
-    padding-right: 16px;
+  /* Cards & Sections */
+  .category-card {
+    height: 320px;
   }
 
   .product-card {
@@ -1093,13 +1070,52 @@ ul {
     min-width: 240px;
   }
 
-  /* Mobile me card chota */
+  .best-sellers-section,
+  .value-props-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Hero Section */
+  .hero-content {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Header & Navigation */
+  .floating-header {
+    left: 12px;
+    right: 12px;
+    padding: 0.7rem 1rem;
+  }
+
+  /* Hide Desktop Links on Mobile */
+  .nav-links {
+    display: none;
+  }
+
+  /* Mobile Hamburger Toggle Icon (agar aap use kar rahe ho) */
+  .mobile-menu-btn {
+    display: block;
+  }
 }
 
-/* Small Mobile: 480px */
+/* 3. Small Mobile Devices (480px & down) */
 @media (max-width: 480px) {
   .container {
-    padding: 0 12px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .categories {
@@ -1121,9 +1137,7 @@ ul {
   }
 
   .product-card {
-    flex: 0 0 220px;
-    min-width: 220px;
+    flex: 0 0 200px;
+    min-width: 200px;
   }
-
-  /* Aur chota */
 }
