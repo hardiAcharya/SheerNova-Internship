@@ -465,84 +465,67 @@
     // Auto start
     startInterval();
 
-    /* BEST SELLERS INFINITE CAROUSEL LOGIC */
-    const grid = document.getElementById("bestSellerGrid");
-    const prevBestSellerBtn = document.getElementById("prevBestSellerBtn");
-    const nextBestSellerBtn = document.getElementById("nextBestSellerBtn");
+    /* ======== BEST SELLERS INFINITE CAROUSEL LOGIC ======== */
+const grid = document.getElementById("bestSellerGrid");
+const prevBestSellerBtn = document.getElementById("prevBestSellerBtn");
+const nextBestSellerBtn = document.getElementById("nextBestSellerBtn");
 
-    if (!grid ||!prevBestSellerBtn ||!nextBestSellerBtn) return;
+if (grid && prevBestSellerBtn && nextBestSellerBtn) {
+  const originalCards = Array.from(grid.children);
+  const cardCount = originalCards.length;
 
-    const originalCards = Array.from(grid.children);
-    const cardCount = originalCards.length;
+  const cardWidth = 280;
+  const gap = 16;
+  const scrollStep = cardWidth + gap; // 296px
 
-    // Single card step size (Card width + Grid Gap)
-    const cardWidth = 280;
-    const gap = 16;
-    const scrollStep = cardWidth + gap;
+  const cloneCount = 5;
 
-    // Kitne cards visible fit honge context screen par (Minimum 4 clone rakhenge)
-    const cloneCount = 5;
+  // 1. Front Cloning (Last few items to start)
+  for (let i = cardCount - cloneCount; i < cardCount; i++) {
+    const clone = originalCards[i].cloneNode(true);
+    clone.classList.add("clone");
+    grid.insertBefore(clone, grid.firstChild);
+  }
 
-    // 1. Front Cloning (Last few items added to start)
-    for (let i = cardCount - cloneCount; i < cardCount; i++) {
-      const clone = originalCards[i].cloneNode(true);
-      clone.classList.add("clone");
-      grid.insertBefore(clone, grid.firstChild);
+  // 2. Back Cloning (First few items to end)
+  for (let i = 0; i < cloneCount; i++) {
+    const clone = originalCards[i].cloneNode(true);
+    clone.classList.add("clone");
+    grid.appendChild(clone);
+  }
+
+  // Initial Scroll Position Set
+  const initialScrollPos = cloneCount * scrollStep;
+  grid.scrollLeft = initialScrollPos;
+
+  const totalOriginalWidth = cardCount * scrollStep;
+
+  // --- BUTTON CLICK LOGIC (NEXT / PREV) ---
+  nextBestSellerBtn.addEventListener("click", () => {
+    grid.scrollBy({ left: scrollStep, behavior: "smooth" });
+  });
+
+  prevBestSellerBtn.addEventListener("click", () => {
+    grid.scrollBy({ left: -scrollStep, behavior: "smooth" });
+  });
+
+  // --- INFINITE LOOP BOUNDARY CHECK ---
+  grid.addEventListener("scroll", () => {
+    // Right Edge boundary -> Instant Jump to Start
+    if (grid.scrollLeft >= initialScrollPos + totalOriginalWidth) {
+      grid.style.scrollBehavior = "auto";
+      grid.scrollLeft -= totalOriginalWidth;
+      grid.style.scrollBehavior = "smooth";
     }
 
-    // 2. Back Cloning (First few items added to end)
-    for (let i = 0; i < cloneCount; i++) {
-      const clone = originalCards[i].cloneNode(true);
-      clone.classList.add("clone");
-      grid.appendChild(clone);
+    // Left Edge boundary -> Instant Jump to End
+    if (grid.scrollLeft <= 0) {
+      grid.style.scrollBehavior = "auto";
+      grid.scrollLeft += totalOriginalWidth;
+      grid.style.scrollBehavior = "smooth";
     }
-
-    // Calculated start scroll position
-    const initialScrollPos = cloneCount * scrollStep;
-    grid.scrollLeft = initialScrollPos;
-
-    // Total original width of 12 items
-    const originalWidth = cardCount * scrollStep;
-
-    let isAdjusting = false;
-
-    // Check scroll boundary continuously for seamless loop
-    grid.addEventListener("scroll", () => {
-      if (isAdjusting) return;
-
-      // Right Boundary Check (Near cloned end)
-      if (grid.scrollLeft >= initialScrollPos + originalWidth) {
-        isAdjusting = true;
-        grid.style.scrollBehavior = "auto"; // Disable smooth effect momentarily
-        grid.scrollLeft -= originalWidth;
-        grid.style.scrollBehavior = "smooth";
-        isAdjusting = false;
-      }
-      // Left Boundary Check (Near cloned start)
-      else if (grid.scrollLeft <= initialScrollPos - originalWidth) {
-        isAdjusting = true;
-        grid.style.scrollBehavior = "auto";
-        grid.scrollLeft += originalWidth;
-        grid.style.scrollBehavior = "smooth";
-        isAdjusting = false;
-      }
-    });
-
-    // Next Button Click Event
-    nextBestSellerBtn.addEventListener("click", () => {
-      grid.scrollBy({
-        left: scrollStep,
-        behavior: "smooth"
-      });
-    });
-
-    // Previous Button Click Event
-    prevBestSellerBtn.addEventListener("click", () => {
-      grid.scrollBy({
-        left: -scrollStep,
-        behavior: "smooth"
-      });
-    });
+  });
+}
   });
   </script>
 </body>

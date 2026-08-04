@@ -370,19 +370,21 @@ ul {
   color: var(--color-white);
 }
 
-/*  ========  FEATURED CATEGORIES SECTION  =========== */
+/* ======== FEATURED CATEGORIES SECTION =========== */
 .categories {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
   gap: 10px;
-  padding: 15px 24px;
-  max-width: var(--max-width);
+  padding: 15px 0; 
+  width: 100%;
+  max-width: 100%; 
   margin: 0 auto;
 }
 
 .category-card {
   position: relative;
   height: 400px;
+  width: 100%; /* Card poori available width cover karega */
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
@@ -484,7 +486,6 @@ ul {
   color: #000;
   transform: translateY(-2px);
 }
-
 /*  ========  BEST SELLERS CAROUSEL SECTION  =========== */
 .best-sellers-section {
   padding: 30px 24px 50px;
@@ -498,8 +499,8 @@ ul {
 }
 
 .section-title-underline {
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   border-bottom: 2px solid var(--color-black, #000);
@@ -569,13 +570,17 @@ ul {
 }
 
 .color-dot {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 1px solid #d3d4d5;
   position: absolute;
   bottom: 16px;
   left: 16px;
+
+  /* Naya circle outline add karne ke liye */
+  outline: 2px solid #000;  /* Black outer ring */
+  outline-offset: 3px;         /* Color dot aur black ring ke beech me gap */
 }
 
 /*    Color variations */
