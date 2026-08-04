@@ -4,7 +4,7 @@
   --font-handwriting: 'Caveat', cursive;
   --color-black: #1c1917;
   --color-white: #ffffff;
-  --color-bg: #f4f3ef;
+  --color-bg: #efeee7;
   --color-card-bg: #ffffff;
   --color-text-muted: #666;
   --max-width: 1400px;
@@ -39,6 +39,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* SIDE SCROLL FIX */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -816,7 +822,7 @@ ul {
   border-radius: 25px;
   flex: 1;
   font-size: 13px;
-  color: #333333;
+  color: #333;
 }
 
 .newsletter-form button {
@@ -846,7 +852,7 @@ ul {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid #555555;
+  border: 1px solid #555;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -912,7 +918,7 @@ ul {
 .country-dropdown {
   background-color: #212121;
   color: #ffffff;
-  border: 1px solid #555555;
+  border: 1px solid #555;
   padding: 8px 15px;
   border-radius: 4px;
   font-size: 13px;
@@ -962,7 +968,7 @@ ul {
   color: #ffffff;
 }
 
-/* 10. RESPONSIVE MEDIA QUERIES */
+/* 10. RESPONSIVE MEDIA QUERIES - ORIGINAL */
 @media (max-width: 1024px) {
   .promo-grid,
   .value-props-grid { 
@@ -994,5 +1000,94 @@ ul {
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* ==========================================================================
+   11. RESPONSIVE FIXES - NAYA ADD KIYA HAI
+   KUCH REMOVE NAHI KIYA, SIRF OVERRIDE KIYA
+   ========================================================================== */
+
+/* Tablet: 1024px */
+@media (max-width: 1024px) {
+  .categories {
+    grid-template-columns: repeat(2, 1fr) !important; /* 4 se 2 */
+    padding: 15px 20px !important;
+  }
+  .promo-grid,
+  .value-props-grid { 
+    grid-template-columns: repeat(2, 1fr) !important; /* 3 se 2 */
+    padding: 20px 20px 50px !important;
+  }
+  .floating-header {
+    left: 20px !important;
+    right: 20px !important;
+    padding: 0.85rem 1.2rem !important;
+  }
+  .nav-links {
+    gap: 1.2rem !important;
+  }
+}
+
+/* Mobile: 768px */
+@media (max-width: 768px) {
+  .categories {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 column */
+    gap: 8px !important;
+    padding: 15px 16px !important;
+  }
+  .category-card {
+    height: 320px !important; /* Height kam */
+  }
+  .promo-grid,
+  .value-props-grid { 
+    grid-template-columns: 1fr !important; /* 1 column */
+    padding: 20px 16px 50px !important;
+  }
+  .hero-title {
+    font-size: 1.8rem !important;
+  }
+  .hero-content {
+    padding: 2rem !important;
+    text-align: center !important;
+  }
+  .hero-cta-buttons {
+    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .floating-header {
+    left: 12px !important;
+    right: 12px !important;
+    padding: 0.7rem 1rem !important;
+  }
+  .nav-links {
+    display: none !important; /* Mobile me menu hide */
+  }
+  .best-sellers-section,
+  .value-props-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* Small Mobile: 480px */
+@media (max-width: 480px) {
+  .categories {
+    grid-template-columns: 1fr !important; /* 1 column */
+    padding: 15px 12px !important;
+  }
+  .category-card {
+    height: 280px !important;
+  }
+  .hero-title {
+    font-size: 1.5rem !important;
+  }
+  .container {
+    padding: 0 16px !important;
+  }
+  .floating-header {
+    left: 8px !important;
+    right: 8px !important;
   }
 }
