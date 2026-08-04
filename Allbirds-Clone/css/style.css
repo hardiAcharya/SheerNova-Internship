@@ -13,14 +13,14 @@
 /* Font Imports - Variable Fonts */
 @font-face {
   font-family: 'Inter';
-  src: url('../fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  src: url('./fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 100 900; /* 100 to 900 all weights */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('../fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  src: url('./fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
 }
@@ -714,7 +714,7 @@ ul {
 }
 
 .promo-card .button--outline:hover {
-  background: #ffffff;
+  background: #f4f4f4;
   color: var(--color-black);
   border-color: #ffffff;
   transform: translateY(-2px);
@@ -740,7 +740,8 @@ ul {
 }
 
 .value-card {
-  background-color: #f8f7f4;
+  gap:5px;
+  background-color: #eeede7;
   border-radius: 16px;
   padding: 40px 32px;
   min-height: 240px;
@@ -757,7 +758,7 @@ ul {
 }
 
 .value-card-text {
-  font-size: 0.88rem;
+  font-size: 14px;
   color: #333;
   line-height: 1.7;
   font-weight: 400;
