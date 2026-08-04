@@ -10,6 +10,29 @@
   --max-width: 1400px;
 }
 
+/* Font Imports - Variable Fonts */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900; /* 100 to 900 all weights */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src: url('../fonts/Caveat/Caveat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+}
+
+/* Base Reset */
 *,
 *::before,
 *::after {
@@ -17,95 +40,24 @@
   margin: 0;
   padding: 0;
 }
-/* Popup ko hide/show karne ka logic */
-#country-popup:checked ~ .popup-overlay {
-  display: flex;
-}
-.popup-overlay {
-  display: none; /* Default me hide */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-  z-index: 9999;
-  align-items: center;
-  justify-content: center;
-}
 
-/* Dialog Box */
-.popup-box {
-  position: relative;
-  background: #f5f5f5;
-  width: 90%;
-  max-width: 500px;
-  padding: 40px 30px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  font-family: Arial, sans-serif;
-}
-
-/* Close Button X */
-.popup-close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 28px;
-  color: #333;
-  cursor: pointer;
-  line-height: 1;
-}
-.popup-close:hover {
-  color: #000;
-}
-
-/* Text */
-.popup-box h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 15px;
-}
-.popup-box p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-/* Dropdown */
-.country-select {
-  width: 100%;
-  padding: 12px 15px;
-  font-size: 16px;
-  border: 1.5px solid #0a0000;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  appearance: none; /* default arrow hatane ke liye */
-  background: #fff url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill='%23333' d='M8 11L3 6h10z'/%3E%3C/svg%3E") no-repeat right 12px center;
-}
-
-/* Confirm Button */
-.confirm-btn {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  background: #00070f; /* Dark color */
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  border-radius: 4px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
 body {
   font-family: var(--font-main);
+  font-weight: 400;
   color: var(--color-black);
   background-color: var(--color-bg);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-main);
+  font-weight: 700;
+}
+
+.handwritten-text {
+  font-family: var(--font-handwriting);
+  font-weight: 600;
 }
 
 img {
@@ -129,7 +81,88 @@ ul {
   padding: 0 24px;
 }
 
-/* 2. ANNOUNCEMENT BAR & NAVIGATION */
+/* 2. POPUP - COUNTRY SELECTOR */
+#country-popup:checked ~ .popup-overlay {
+  display: flex;
+}
+
+.popup-overlay {
+  display: none; /* Default hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-box {
+  position: relative;
+  background: #f5f5f5;
+  width: 90%;
+  max-width: 500px;
+  padding: 40px 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.popup-close:hover {
+  color: #000;
+}
+
+.popup-box h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.popup-box p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.country-select {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1.5px solid #0a0000;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  appearance: none;
+  background: #fff url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill='%23333' d='M8 11L3 6h10z'/%3E%3C/svg%3E") no-repeat right 12px center;
+}
+
+.confirm-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #00070f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* 3. ANNOUNCEMENT BAR & HEADER */
 .announcement-bar {
   background-color: var(--color-black);
   color: var(--color-white);
@@ -211,7 +244,7 @@ ul {
   object-fit: contain;
 }
 
-/* 3. HERO SECTION */
+/* 4. HERO SECTION */
 .hero-banner-card {
   position: relative;
   width: 100%;
@@ -319,7 +352,7 @@ ul {
   color: var(--color-black);
 }
 
-/* 3. FEATURED CATEGORIES SECTION */
+/* 5. FEATURED CATEGORIES SECTION */
 .categories {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -329,7 +362,6 @@ ul {
   margin: 0 auto;
 }
 
-/* Base Card Style */
 .category-card {
   position: relative;
   height: 400px;
@@ -339,23 +371,18 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  /* SAB TARAH KI SHADOW BAND */
   box-shadow: none !important;
-  -webkit-box-shadow: none !important;
   filter: none !important;
-  -webkit-filter: none !important;
-  background: transparent !important; /* Agar theme bg de raha ho */
+  background: transparent !important;
+  transition: border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s ease;
 }
 
 .category-card:hover {
-  border-radius: 50%;
+  border-radius: 200px;
   transform: translateY(-5px);
   box-shadow: none !important;
-  -webkit-box-shadow: none !important;
 }
 
-/* IMAGE KE NICHE WALI SHADOW BHI */
 .category-card img {
   display: block;
   width: 100%;
@@ -363,6 +390,7 @@ ul {
   object-fit: cover;
   box-shadow: none !important;
   filter: none !important;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .category-card:hover img {
@@ -370,7 +398,6 @@ ul {
   opacity: 0.85;
 }
 
-/* Overlay */
 .category-overlay {
   position: absolute;
   inset: 0;
@@ -385,14 +412,12 @@ ul {
   border-radius: inherit;
   opacity: 1;
   transition: background 0.4s ease;
-  box-shadow: none !important;
 }
 
 .category-card:hover .category-overlay {
   background: rgba(0, 0, 0, 0.35);
 }
 
-/* TITLE */
 .category-title {
   display: inline-block;
   padding: 8px 18px;
@@ -404,7 +429,7 @@ ul {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   margin-bottom: 14px;
   transition: all 0.3s ease;
   opacity: 1;
@@ -416,7 +441,6 @@ ul {
   color: #ffffff;
 }
 
-/* Buttons */
 .cat-buttons {
   display: flex;
   gap: 12px;
@@ -432,13 +456,12 @@ ul {
   opacity: 1;
 }
 
-/* FIRST OR LAST CARD KE BUTTONS ME ZYADA GAP */
+/* Extra gap for first and last card buttons */
 .category-card:first-child .cat-buttons,
 .category-card:last-child .cat-buttons {
   gap: 20px;
 }
 
-/* Button */
 .button--white {
   background: transparent;
   color: #ffffff;
@@ -460,7 +483,7 @@ ul {
   transform: translateY(-2px);
 }
 
-/* 5. BEST SELLERS CAROUSEL SECTION */
+/* 6. BEST SELLERS CAROUSEL SECTION */
 .best-sellers-section {
   padding: 30px 0 50px;
 }
@@ -516,6 +539,7 @@ ul {
   scrollbar-width: none;
   padding-bottom: 10px;
 }
+
 .product-cards-grid::-webkit-scrollbar {
   display: none;
 }
@@ -549,6 +573,8 @@ ul {
   bottom: 16px;
   left: 16px;
 }
+
+/* Color variations */
 .product-card[data-color="#f5f2ec"] .color-dot { background: #f5f2ec; }
 .product-card[data-color="#e0e0e0"] .color-dot { background: #e0e0e0; }
 .product-card[data-color="#d2b48c"] .color-dot { background: #d2b48c; }
@@ -582,6 +608,7 @@ ul {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
+
 .product-card p {
   font-size: 14px;
   color: var(--color-text-muted);
@@ -595,8 +622,7 @@ ul {
   font-weight: 700;
 }
 
-
-/* 6. PROMOTIONAL SECTIONS - TITLE CENTER, BUTTONS BOTTOM */
+/* 7. PROMOTIONAL SECTIONS */
 .promo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -627,12 +653,10 @@ ul {
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* HOVER: IMAGE ZOOM OUT */
 .promo-card:hover img {
   transform: scale(0.95);
 }
 
-/* CENTER TITLE */
 .promo-card h2 {
   position: absolute;
   top: 50%;
@@ -648,7 +672,6 @@ ul {
   width: 90%;
 }
 
-/* BOTTOM BUTTONS WRAPPER */
 .promo-card nav {
   position: absolute;
   bottom: 20px;
@@ -657,7 +680,6 @@ ul {
   gap: 12px;
 }
 
-/* CARD 1 & 2: 2 BUTTONS SIDE BY SIDE */
 .promo-card:nth-child(1) nav,
 .promo-card:nth-child(2) nav {
   left: 16px;
@@ -665,7 +687,6 @@ ul {
   justify-content: space-between;
 }
 
-/* CARD 3: 1 BUTTON FULL WIDTH */
 .promo-card:nth-child(3) nav {
   left: 16px;
   right: 16px;
@@ -676,7 +697,6 @@ ul {
   width: 100%;
 }
 
-/* PILL BUTTON STYLE */
 .promo-card .button--outline {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
@@ -700,7 +720,6 @@ ul {
   transform: translateY(-2px);
 }
 
-/* DARK OVERLAY */
 .promo-card::after {
   content: '';
   position: absolute;
@@ -709,7 +728,7 @@ ul {
   z-index: 2;
 }
 
-/* 7. SUSTAINABILITY VALUE PROPOSITIONS SECTION - NO HOVER */
+/* 8. VALUE PROPOSITIONS SECTION */
 .value-props-section {
   padding: 40px 0 60px;
 }
@@ -744,10 +763,7 @@ ul {
   font-weight: 400;
 }
 
-/* 8. FOOTER SECTION */
-/* ==========================================
-   FOOTER MAIN CONTAINER
-   ========================================== */
+/* 9. FOOTER SECTION */
 .footer {
   background-color: #212121;
   color: #ffffff;
@@ -761,9 +777,6 @@ ul {
   margin: 0 auto;
 }
 
-/* ==========================================
-   FOOTER TOP LAYOUT
-   ========================================== */
 .footer-top {
   display: flex;
   flex-wrap: wrap;
@@ -772,9 +785,6 @@ ul {
   margin-bottom: 30px;
 }
 
-/* ==========================================
-   NEWSLETTER & SOCIAL SECTION
-   ========================================== */
 .footer-newsletter {
   flex: 1 1 320px;
   max-width: 400px;
@@ -822,10 +832,9 @@ ul {
 }
 
 .newsletter-form button:hover {
-  background-color: #444444;
+  background-color: #444;
 }
 
-/* Social Media Image Icons */
 .social-icons {
   display: flex;
   gap: 12px;
@@ -854,13 +863,9 @@ ul {
   width: 18px;
   height: 18px;
   object-fit: contain;
-  /* Dark background par black icons ko white karne ke liye filter (optional) */
   filter: brightness(0) invert(1);
 }
 
-/* ==========================================
-   NAVIGATION LINKS COLUMNS
-   ========================================== */
 .footer-links-wrapper {
   display: flex;
   flex: 2 1 600px;
@@ -882,12 +887,6 @@ ul {
   text-transform: uppercase;
 }
 
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .footer-column ul li {
   margin-bottom: 10px;
 }
@@ -905,9 +904,6 @@ ul {
   text-decoration: underline;
 }
 
-/* ==========================================
-   COUNTRY DROPDOWN
-   ========================================== */
 .footer-country {
   margin: 20px 0 30px;
 }
@@ -934,18 +930,15 @@ ul {
   color: #ffffff;
 }
 
-/* ==========================================
-   BOTTOM LEGAL & COPYRIGHT
-   ========================================== */
 .footer-bottom {
-  border-top: 1px solid #333333;
+  border-top: 1px solid #333;
   padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-  color: #888888;
+  color: #888;
   font-size: 11px;
 }
 
@@ -959,7 +952,7 @@ ul {
 }
 
 .legal-links a {
-  color: #888888;
+  color: #888;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -968,11 +961,18 @@ ul {
   color: #ffffff;
 }
 
-/* ==========================================
-   RESPONSIVE (MOBILE)
-   ========================================== */
+/* 10. RESPONSIVE MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .promo-grid,
+  .value-props-grid { 
+    grid-template-columns: 1fr; 
+  }
+}
+
 @media (max-width: 768px) {
-  .footer-top {
+  .footer-top,
+  .footer-links-wrapper,
+  .footer-bottom {
     flex-direction: column;
   }
 
@@ -981,42 +981,15 @@ ul {
   }
 
   .footer-links-wrapper {
-    flex-direction: column;
     gap: 25px;
   }
 
   .footer-bottom {
-    flex-direction: column;
     align-items: flex-start;
   }
-}
-/* Responsive adjustments for Mobile */
-@media (max-width: 768px) {
-  .footer-top {
-    flex-direction: column;
-  }
-  
-  .footer-links-wrapper {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-/* RESPONSIVE ADJUSTMENTS */
-@media (max-width: 1024px) {
-  .color-cards-grid { grid-template-columns: repeat(2, 1fr); }
-  .promo-grid,
-  .value-props-grid { grid-template-columns: 1fr; }
-  .footer-content-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 600px) {
-  .color-cards-grid { grid-template-columns: 1fr; }
-  .footer-content-grid { grid-template-columns: 1fr; }
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
