@@ -36,19 +36,132 @@
       <option>Brazil</option>
       <!-- Yaha aur countries add kar sakte ho -->
     </select>
-
     <!-- Confirm Button - Click karne se bhi band ho jayega -->
     <label for="country-popup" class="confirm-btn">CONFIRM</label>
   </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const announcements = [
+    "Due to increased demand, orders may take up to 2 weeks to ship.",
+    "Free ground shipping on orders over $100"
+  ];
+
+  const announcementText = document.getElementById('announcementText');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let currentIndex = 0;
+  let intervalId;
+  const intervalTime = 5000; // 5 second. 3 sec chahiye to 3000 kar do
+
+  // Pehli line load karte hi dikh jaye
+  announcementText.textContent = announcements[currentIndex];
+
+  function updateAnnouncement() {
+    announcementText.style.opacity = 0; // fade out
+
+    setTimeout(() => {
+      announcementText.textContent = announcements[currentIndex];
+      announcementText.style.opacity = 1; // fade in
+    }, 400);
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % announcements.length;
+    updateAnnouncement();
+    resetInterval(); // click ke baad timer reset
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + announcements.length) % announcements.length;
+    updateAnnouncement();
+    resetInterval();
+  }
+
+  function startInterval() {
+    intervalId = setInterval(showNext, intervalTime);
+  }
+
+  function resetInterval() {
+    clearInterval(intervalId);
+    startInterval();
+  }
+
+  // Button click events
+  nextBtn.addEventListener('click', showNext);
+  prevBtn.addEventListener('click', showPrev);
+
+  // Auto start
+  startInterval();
+
+});
+
+// ===== BEST SELLERS AUTO SCROLL =====
+  const grid = document.getElementById('bestSellerGrid');
+  const nextBtn = document.getElementById('nextBestSeller');
+  const prevBtn = document.getElementById('prevBestSeller');
+  
+  if(grid && nextBtn && prevBtn){ // check karega ki ye page par hai ya nahi
+    const cardWidth = 280 + 16; // card width + gap
+    let intervalId;
+    const autoScrollTime = 5000; // 5 second
+
+    function scrollNext() {
+      if (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 10) {
+        grid.scrollTo({ left: 0, behavior: 'smooth' }); // loop to start
+      } else {
+        grid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+      resetInterval();
+    }
+
+    function scrollPrev() {
+      if (grid.scrollLeft <= 10) {
+        grid.scrollTo({ left: grid.scrollWidth, behavior: 'smooth' }); // loop to end
+      } else {
+        grid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      }
+      resetInterval();
+    }
+
+    function startInterval() {
+      intervalId = setInterval(scrollNext, autoScrollTime);
+    }
+
+    function resetInterval() {
+      clearInterval(intervalId);
+      startInterval();
+    }
+
+    // Arrow click
+    nextBtn.addEventListener('click', scrollNext);
+    prevBtn.addEventListener('click', scrollPrev);
+
+    // Auto start
+    startInterval();
+
+    // Hover par pause
+    grid.addEventListener('mouseenter', () => clearInterval(intervalId));
+    grid.addEventListener('mouseleave', startInterval);
+  }
+// ===== END BEST SELLERS AUTO SCROLL =====
+
+</script>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <aside class="announcement-bar">
-    <p>Free ground shipping on orders over $100</p>
-  </aside>
+ <!-- Top Announcement Bar -->
+<aside class="announcement-bar">
+  <button class="announcement-btn prev-btn" id="prevBtn" aria-label="Previous Announcement">&lt;</button>
 
-  <!-- Navigation Header & Main Hero Banner -->
+  <div class="announcement-content">
+    <p id="announcementText">Free ground shipping on orders over $100</p>
+  </div>
+
+  <button class="announcement-btn next-btn" id="nextBtn" aria-label="Next Announcement">&gt;</button>
+</aside>
+ <!-- Navigation Header & Main Hero Banner -->
   <div class="hero-wrapper">
     <header class="floating-header">
       <div class="header-container">
@@ -146,7 +259,7 @@
     <!-- 2. BEST SELLERS PRODUCT CAROUSEL -->
     <section class="best-sellers-section">
       <div class="section-header-bar"><span class="section-title-underline">BEST SELLERS</span><div class="carousel-arrows"><button class="arrow-btn" aria-label="Previous">&lt;</button><button class="arrow-btn" aria-label="Next">&gt;</button></div></div>
-      <div class="product-cards-grid">
+      <div class="product-cards-grid"  id="bestSellerGrid">
         <div class="product-card" id="card-1" data-color="#f5f2ec">
             <img src="./images/warm-white-canvas.png" alt="Women's Canvas Cruiser">
             <div class="color-dot"></div>
