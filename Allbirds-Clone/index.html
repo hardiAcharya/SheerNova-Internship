@@ -4,164 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Allbirds Homepage Clone</title>
-  
-  
+
   <!-- CSS LINK -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<!-- Popup Toggle Checkbox -->
-<input type="checkbox" id="country-popup" checked hidden>
-
-<!-- Overlay + Dialog Box -->
-<div class="popup-overlay">
-  <div class="popup-box">
-    
-    <!-- Close Button -->
-    <label for="country-popup" class="popup-close">×</label>
-
-    <h2>Where are we shipping to?</h2>
-    <p>Purchasing from your country's website is the best way to connect your feet to the world's most comfortable shoe.</p>
-
-    <!-- Country Dropdown -->
-    <select class="country-select">
-      <option>United States</option>
-      <option>India</option>
-      <option>Canada</option>
-      <option>United Kingdom</option>
-      <option>Australia</option>
-      <option>Germany</option>
-      <option>France</option>
-      <option>Japan</option>
-      <option>China</option>
-      <option>Brazil</option>
-      <!-- Yaha aur countries add kar sakte ho -->
-    </select>
-    <!-- Confirm Button - Click karne se bhi band ho jayega -->
-    <label for="country-popup" class="confirm-btn">CONFIRM</label>
-  </div>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-
-  const announcements = [
-    "Due to increased demand, orders may take up to 2 weeks to ship.",
-    "Free ground shipping on orders over $100"
-  ];
-
-  const announcementText = document.getElementById('announcementText');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-
-  let currentIndex = 0;
-  let intervalId;
-  const intervalTime = 5000; // 5 second. 3 sec chahiye to 3000 kar do
-
-  // Pehli line load karte hi dikh jaye
-  announcementText.textContent = announcements[currentIndex];
-
-  function updateAnnouncement() {
-    announcementText.style.opacity = 0; // fade out
-
-    setTimeout(() => {
-      announcementText.textContent = announcements[currentIndex];
-      announcementText.style.opacity = 1; // fade in
-    }, 400);
-  }
-
-  function showNext() {
-    currentIndex = (currentIndex + 1) % announcements.length;
-    updateAnnouncement();
-    resetInterval(); // click ke baad timer reset
-  }
-
-  function showPrev() {
-    currentIndex = (currentIndex - 1 + announcements.length) % announcements.length;
-    updateAnnouncement();
-    resetInterval();
-  }
-
-  function startInterval() {
-    intervalId = setInterval(showNext, intervalTime);
-  }
-
-  function resetInterval() {
-    clearInterval(intervalId);
-    startInterval();
-  }
-
-  // Button click events
-  nextBtn.addEventListener('click', showNext);
-  prevBtn.addEventListener('click', showPrev);
-
-  // Auto start
-  startInterval();
-
-});
-
-// ===== BEST SELLERS AUTO SCROLL =====
-  const grid = document.getElementById('bestSellerGrid');
-  const nextBtn = document.getElementById('nextBestSeller');
-  const prevBtn = document.getElementById('prevBestSeller');
-  
-  if(grid && nextBtn && prevBtn){ // check karega ki ye page par hai ya nahi
-    const cardWidth = 280 + 16; // card width + gap
-    let intervalId;
-    const autoScrollTime = 5000; // 5 second
-
-    function scrollNext() {
-      if (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 10) {
-        grid.scrollTo({ left: 0, behavior: 'smooth' }); // loop to start
-      } else {
-        grid.scrollBy({ left: cardWidth, behavior: 'smooth' });
-      }
-      resetInterval();
-    }
-
-    function scrollPrev() {
-      if (grid.scrollLeft <= 10) {
-        grid.scrollTo({ left: grid.scrollWidth, behavior: 'smooth' }); // loop to end
-      } else {
-        grid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-      }
-      resetInterval();
-    }
-
-    function startInterval() {
-      intervalId = setInterval(scrollNext, autoScrollTime);
-    }
-
-    function resetInterval() {
-      clearInterval(intervalId);
-      startInterval();
-    }
-
-    // Arrow click
-    nextBtn.addEventListener('click', scrollNext);
-    prevBtn.addEventListener('click', scrollPrev);
-
-    // Auto start
-    startInterval();
-
-    // Hover par pause
-    grid.addEventListener('mouseenter', () => clearInterval(intervalId));
-    grid.addEventListener('mouseleave', startInterval);
-  }
-// ===== END BEST SELLERS AUTO SCROLL =====
-
-</script>
 <body>
 
- <!-- Top Announcement Bar -->
-<aside class="announcement-bar">
-  <button class="announcement-btn prev-btn" id="prevBtn" aria-label="Previous Announcement">&lt;</button>
+  <!-- ======== POPUP - COUNTRY SELECTOR =========== -->
+  <!-- Popup Toggle Checkbox -->
+  <input type="checkbox" id="country-popup" checked hidden>
 
-  <div class="announcement-content">
-    <p id="announcementText">Free ground shipping on orders over $100</p>
+  <!-- Overlay + Dialog Box -->
+  <div class="popup-overlay">
+    <div class="popup-box">
+
+      <!-- Close Button -->
+      <label for="country-popup" class="popup-close">×</label>
+
+      <h2>Where are we shipping to?</h2>
+      <p>Purchasing from your country's website is the best way to connect your feet to the world's most comfortable shoe.</p>
+
+      <!-- Country Dropdown -->
+      <select class="country-select">
+        <option>United States</option>
+        <option>India</option>
+        <option>Canada</option>
+        <option>United Kingdom</option>
+        <option>Australia</option>
+        <option>Germany</option>
+        <option>France</option>
+        <option>Japan</option>
+        <option>China</option>
+        <option>Brazil</option>
+        <!-- Yaha aur countries add kar sakte ho -->
+      </select>
+      <!-- Confirm Button - Click karne se bhi band ho jayega -->
+      <label for="country-popup" class="confirm-btn">CONFIRM</label>
+    </div>
   </div>
 
-  <button class="announcement-btn next-btn" id="nextBtn" aria-label="Next Announcement">&gt;</button>
-</aside>
- <!-- Navigation Header & Main Hero Banner -->
+  <!-- ======== TOP ANNOUNCEMENT BAR =========== -->
+  <aside class="announcement-bar">
+    <button class="announcement-btn prev-btn" id="prevAnnouncementBtn" aria-label="Previous Announcement">&lt;</button>
+
+    <div class="announcement-content">
+      <p id="announcementText">Free ground shipping on orders over $100</p>
+    </div>
+
+    <button class="announcement-btn next-btn" id="nextAnnouncementBtn" aria-label="Next Announcement">&gt;</button>
+  </aside>
+
+  <!-- ======== NAVIGATION HEADER & HERO BANNER =========== -->
   <div class="hero-wrapper">
     <header class="floating-header">
       <div class="header-container">
@@ -178,14 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
           </ul>
         </nav>
         <div class="nav-right">
-          <div class="nav-right">
-  <button class="icon-btn" aria-label="Search">
-    <img src="./icons/search-icon.png" alt="Search">
-  </button>
-  <button class="icon-btn" aria-label="Cart">
-    <img src="./icons/shopping-bag-icon.png" alt="Cart">
-  </button>
-</div>
+          <button class="icon-btn" aria-label="Search">
+            <img src="./icons/search-icon.png" alt="Search">
+          </button>
+          <button class="icon-btn" aria-label="Cart">
+            <img src="./icons/shopping-bag-icon.png" alt="Cart">
+          </button>
         </div>
       </div>
     </header>
@@ -206,141 +97,148 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 
   <main class="container">
-    
-   <!-- 3. FEATURED CATEGORIES -->
+
+    <!-- ======== FEATURED CATEGORIES =========== -->
     <section class="categories">
-  
-  <div class="category-card bg-blue">
-    <img src="./images/category-1.jpg" alt="Shoe">
-    <div class="category-overlay">
-      <h3 class="category-title">
-        <span class="first-word">NEW</span>
-        <span class="rest-word"> ARRIVALS</span>
-      </h3>
-       <div class="cat-buttons"><a href="#" class="button--white">SHOP MEN</a></div>
-       <div class="cat-buttons"><a href="#" class="button--white">SHOP WOMEN</a></div>
-    </div>
-  </div>
 
-  <!-- Baaki 3 cards me bhi same: MENS, WOMENS, BESTSELLERS -->
-  <div class="category-card bg-brown">
-    <img src="./images/category-2.jpg" alt="Shoe">
-    <div class="category-overlay">
-      <h3 class="category-title">
-        <span class="first-word">MENS</span>
-      </h3>
-      <div class="cat-buttons"><a href="#" class="button--white">SHOP NOW</a></div>
-    </div>
-  </div>
+      <div class="category-card bg-blue">
+        <img src="./images/category-1.jpg" alt="Shoe">
+        <div class="category-overlay">
+          <h3 class="category-title">
+            <span class="first-word">NEW</span>
+            <span class="rest-word"> ARRIVALS</span>
+          </h3>
+          <div class="cat-buttons"><a href="#" class="button--white">SHOP MEN</a></div>
+          <div class="cat-buttons"><a href="#" class="button--white">SHOP WOMEN</a></div>
+        </div>
+      </div>
 
-  <div class="category-card bg-pink">
-    <img src="./images/category-3.jpg" alt="Shoe">
-    <div class="category-overlay">
-      <h3 class="category-title">
-        <span class="first-word">WOMENS</span>
-      </h3>
-      <div class="cat-buttons"><a href="#" class="button--white">SHOP NOW</a></div>
-    </div>
-  </div>
+      <!-- Baaki 3 cards me bhi same: MENS, WOMENS, BESTSELLERS -->
+      <div class="category-card bg-brown">
+        <img src="./images/category-2.jpg" alt="Shoe">
+        <div class="category-overlay">
+          <h3 class="category-title">
+            <span class="first-word">MENS</span>
+          </h3>
+          <div class="cat-buttons"><a href="#" class="button--white">SHOP NOW</a></div>
+        </div>
+      </div>
 
-  <div class="category-card bg-green">
-    <img src="./images/category-4.jpg" alt="Shoe">
-    <div class="category-overlay">
-      <h3 class="category-title">
-        <span class="first-word">BEST</span>
-        <span class="rest-word"> SELLERS</span>
-      </h3>
-      <div class="cat-buttons"><a href="#" class="button--white">SHOP MEN</a></div>
-      <div class="cat-buttons"><a href="#" class="button--white">SHOP WOMEN</a></div>
-    </div>
-  </div>
+      <div class="category-card bg-pink">
+        <img src="./images/category-3.jpg" alt="Shoe">
+        <div class="category-overlay">
+          <h3 class="category-title">
+            <span class="first-word">WOMENS</span>
+          </h3>
+          <div class="cat-buttons"><a href="#" class="button--white">SHOP NOW</a></div>
+        </div>
+      </div>
 
-</section>
-    <!-- 2. BEST SELLERS PRODUCT CAROUSEL -->
+      <div class="category-card bg-green">
+        <img src="./images/category-4.jpg" alt="Shoe">
+        <div class="category-overlay">
+          <h3 class="category-title">
+            <span class="first-word">BEST</span>
+            <span class="rest-word"> SELLERS</span>
+          </h3>
+          <div class="cat-buttons"><a href="#" class="button--white">SHOP MEN</a></div>
+          <div class="cat-buttons"><a href="#" class="button--white">SHOP WOMEN</a></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======== BEST SELLERS PRODUCT CAROUSEL =========== -->
     <section class="best-sellers-section">
-      <div class="section-header-bar"><span class="section-title-underline">BEST SELLERS</span><div class="carousel-arrows"><button class="arrow-btn" aria-label="Previous">&lt;</button><button class="arrow-btn" aria-label="Next">&gt;</button></div></div>
-      <div class="product-cards-grid"  id="bestSellerGrid">
+      <div class="section-header-bar">
+        <span class="section-title-underline">BEST SELLERS</span>
+        <div class="carousel-arrows">
+          <button class="arrow-btn" id="prevBestSellerBtn" aria-label="Previous">&lt;</button>
+          <button class="arrow-btn" id="nextBestSellerBtn" aria-label="Next">&gt;</button>
+        </div>
+      </div>
+
+      <div class="product-cards-grid" id="bestSellerGrid">
         <div class="product-card" id="card-1" data-color="#f5f2ec">
-            <img src="./images/warm-white-canvas.png" alt="Women's Canvas Cruiser">
-            <div class="color-dot"></div>
-            <figcaption>
-              <span class="badge">NEW</span>
-              <h3>WOMEN'S CANVAS CRUISER</h3>
-              <p>Warm White</p>
-              <span class="price">$75</span>
-            </figcaption>
-          </div>
+          <img src="./images/warm-white-canvas.png" alt="Women's Canvas Cruiser">
+          <div class="color-dot"></div>
+          <figcaption>
+            <span class="badge">NEW</span>
+            <h3>WOMEN'S CANVAS CRUISER</h3>
+            <p>Warm White</p>
+            <span class="price">$75</span>
+          </figcaption>
+        </div>
 
-          <div class="product-card" data-color="#e0e0e0">
-            <img src="./images/cruiser-slip-on-blizzard.png" alt="Women's Cruiser">
-            <div class="color-dot"></div>
-            <figcaption><span class="badge">NEW</span><h3>WOMEN'S CRUISER SLIP ON</h3><p>Blizzard</p><span class="price">$100</span></figcaption>
-          </div>
+        <div class="product-card" data-color="#e0e0e0">
+          <img src="./images/cruiser-slip-on-blizzard.png" alt="Women's Cruiser">
+          <div class="color-dot"></div>
+          <figcaption><span class="badge">NEW</span><h3>WOMEN'S CRUISER SLIP ON</h3><p>Blizzard</p><span class="price">$100</span></figcaption>
+        </div>
 
-          <div class="product-card" data-color="#d2b48c">
-            <img src="./images/Runner-NZ-Slip-On-Mushroom.png" alt="Women's Runner">
-            <div class="color-dot"></div>
-            <figcaption><span class="badge">NEW</span><h3>WOMEN'S RUNNER NZ</h3><p>Mushroom</p><span class="price">$105</span></figcaption>
-          </div>
+        <div class="product-card" data-color="#d2b48c">
+          <img src="./images/Runner-NZ-Slip-On-Mushroom.png" alt="Women's Runner">
+          <div class="color-dot"></div>
+          <figcaption><span class="badge">NEW</span><h3>WOMEN'S RUNNER NZ</h3><p>Mushroom</p><span class="price">$105</span></figcaption>
+        </div>
 
-          <div class="product-card" data-color="#4a4a4a">
-            <img src="./images/Runner-NZ-Slip-On-Anthracite-Dark-Anthr.png" alt="Women's Runner">
-            <div class="color-dot"></div>
-            <figcaption><span class="badge">NEW</span><h3>WOMEN'S RUNNER NZ</h3><p>Anthracite</p><span class="price">$105</span></figcaption>
-          </div>
+        <div class="product-card" data-color="#4a4a4a">
+          <img src="./images/Runner-NZ-Slip-On-Anthracite-Dark-Anthr.png" alt="Women's Runner">
+          <div class="color-dot"></div>
+          <figcaption><span class="badge">NEW</span><h3>WOMEN'S RUNNER NZ</h3><p>Anthracite</p><span class="price">$105</span></figcaption>
+        </div>
 
-          <div class="product-card" id="card-5" data-color="#1a1a1a">
-            <img src="./images/Runner-NZ-Slip-On-Dark-Navy.png" alt="Men's Tree Runner">
-            <div class="color-dot"></div>
-            <figcaption><span class="badge">NEW</span><h3>MEN'S TREE RUNNER</h3><p>Natural Black</p><span class="price">$105</span></figcaption>
-          </div>
+        <div class="product-card" id="card-5" data-color="#1a1a1a">
+          <img src="./images/Runner-NZ-Slip-On-Dark-Navy.png" alt="Men's Tree Runner">
+          <div class="color-dot"></div>
+          <figcaption><span class="badge">NEW</span><h3>MEN'S TREE RUNNER</h3><p>Natural Black</p><span class="price">$105</span></figcaption>
+        </div>
 
-          <div class="product-card" data-color="#c0c0c0">
-            <img src="./images/Cruiser-Canvas-Sea-Spray-Natural-White.png" alt="Women's Wool Runner">
-            <div class="color-dot"></div>
-            <figcaption><span class="badge">NEW</span><h3>WOMEN'S WOOL RUNNER</h3><p>Hazy Gray</p><span class="price">$110</span></figcaption>
-          </div>
+        <div class="product-card" data-color="#c0c0c0">
+          <img src="./images/Cruiser-Canvas-Sea-Spray-Natural-White.png" alt="Women's Wool Runner">
+          <div class="color-dot"></div>
+          <figcaption><span class="badge">NEW</span><h3>WOMEN'S WOOL RUNNER</h3><p>Hazy Gray</p><span class="price">$110</span></figcaption>
+        </div>
 
-          <div class="product-card" data-color="#555555">
-            <img src="./images/Cruiser-Canvas-Port-Natural-White.png" alt="Men's Wool Runner">
-            <div class="color-dot"></div>
-            <figcaption><span class="badge">NEW</span><h3>MEN'S WOOL RUNNER</h3><p>Charcoal</p><span class="price">$110</span></figcaption>
-          </div>
+        <div class="product-card" data-color="#555555">
+          <img src="./images/Cruiser-Canvas-Port-Natural-White.png" alt="Men's Wool Runner">
+          <div class="color-dot"></div>
+          <figcaption><span class="badge">NEW</span><h3>MEN'S WOOL RUNNER</h3><p>Charcoal</p><span class="price">$110</span></figcaption>
+        </div>
 
-          <div class="product-card" data-color="#a0a0a0">
-            <img src="./images/Tree_Runner_NZ_Medium_Grey_Blizzard.png" alt="Women's Tree Breezers">
-            <div class="color-dot"></div>
-            <figcaption><span class="badge">NEW</span><h3>WOMEN'S TREE BREEZERS</h3><p>Bluff</p><span class="price">$90</span></figcaption>
-          </div>
+        <div class="product-card" data-color="#a0a0a0">
+          <img src="./images/Tree_Runner_NZ_Medium_Grey_Blizzard.png" alt="Women's Tree Breezers">
+          <div class="color-dot"></div>
+          <figcaption><span class="badge">NEW</span><h3>WOMEN'S TREE BREEZERS</h3><p>Bluff</p><span class="price">$90</span></figcaption>
+        </div>
 
-          <div class="product-card" data-color="#3a3a3a">
-            <img src="./images/A_Runner-NZ-Slip-On-Anthracite-Dark-Anthr.png" alt="Men's Tree Dasher">
-            <div class="color-dot"></div>
-            <figcaption><span class="badge">NEW</span><h3>MEN'S TREE DASHER</h3><p>Rugged</p><span class="price">$120</span></figcaption>
-          </div>
+        <div class="product-card" data-color="#3a3a3a">
+          <img src="./images/A_Runner-NZ-Slip-On-Anthracite-Dark-Anthr.png" alt="Men's Tree Dasher">
+          <div class="color-dot"></div>
+          <figcaption><span class="badge">NEW</span><h3>MEN'S TREE DASHER</h3><p>Rugged</p><span class="price">$120</span></figcaption>
+        </div>
 
-          <div class="product-card" data-color="#000080">
-            <img src="./images/A_Runner-NZ-Slip-On-Dark-Navy-Dark-Navy.png" alt="Women's Tree Dasher">
-            <div class="color-dot"></div>
-            <figcaption><span class="badge">NEW</span><h3>WOMEN'S TREE DASHER</h3><p>Thunder</p><span class="price">$120</span></figcaption>
-          </div>
+        <div class="product-card" data-color="#000080">
+          <img src="./images/A_Runner-NZ-Slip-On-Dark-Navy-Dark-Navy.png" alt="Women's Tree Dasher">
+          <div class="color-dot"></div>
+          <figcaption><span class="badge">NEW</span><h3>WOMEN'S TREE DASHER</h3><p>Thunder</p><span class="price">$120</span></figcaption>
+        </div>
 
-          <div class="product-card" data-color="#808000">
-            <img src="./images/A_Cruiser_Dark_Navy_Blizzard.png" alt="Men's Piper">
-            <div class="color-dot"></div>
-            <figcaption><span class="badge">NEW</span><h3>MEN'S PIPER</h3><p>Olive</p><span class="price">$85</span></figcaption>
-          </div>
+        <div class="product-card" data-color="#808000">
+          <img src="./images/A_Cruiser_Dark_Navy_Blizzard.png" alt="Men's Piper">
+          <div class="color-dot"></div>
+          <figcaption><span class="badge">NEW</span><h3>MEN'S PIPER</h3><p>Olive</p><span class="price">$85</span></figcaption>
+        </div>
 
-          <div class="product-card" data-color="#d2b48c">
-            <img src="./images/Tree_Runner_NZ_Medium_Grey_Blizzard.png" alt="Women's Piper">
-            <div class="color-dot"></div>
-            <figcaption><span class="badge">NEW</span><h3>WOMEN'S PIPER</h3><p>Sand</p><span class="price">$85</span></figcaption>
-          </div>
-
+        <div class="product-card" data-color="#d2b48c">
+          <img src="./images/Tree_Runner_NZ_Medium_Grey_Blizzard.png" alt="Women's Piper">
+          <div class="color-dot"></div>
+          <figcaption><span class="badge">NEW</span><h3>WOMEN'S PIPER</h3><p>Sand</p><span class="price">$85</span></figcaption>
+        </div>
       </div>
     </section>
 
-    <!-- 5. PROMOTIONAL SECTIONS -->
+    <!-- ======== PROMOTIONAL SECTIONS =========== -->
     <section class="promo-grid container">
       <article class="promo-card">
         <img src="./images/summer_travel_essentials.jpg" alt="Summer Travel">
@@ -367,145 +265,285 @@ document.addEventListener('DOMContentLoaded', () => {
       </article>
     </section>
 
+    <!-- ======== VALUE PROPOSITIONS SECTION =========== -->
     <section class="value-props-section">
-  <div class="value-props-grid">
-    <div class="value-card">
-      <h3 class="value-card-title">WEAR ALL DAY COMFORT</h3>
-      <p class="value-card-text">Lightweight, bouncy, and wildly comfortable, Allbirds shoes make any outing feel effortless. Slip in, lace up, or slide them on and enjoy the comfy support.</p>
-    </div>
-    <div class="value-card">
-      <h3 class="value-card-title">SUSTAINABILITY IN EVERY STEP</h3>
-      <p class="value-card-text">From materials to transport, we're working to reduce our carbon footprint to near zero. Holding ourselves accountable and striving for climate goals isn't a 30-year goal—it's now.</p>
-    </div>
-    <div class="value-card">
-      <h3 class="value-card-title">MATERIALS FROM THE EARTH</h3>
-      <p class="value-card-text">We replace petroleum-based synthetics with natural alternatives wherever we can. Like using wool, tree fiber, and sugarcane. They're soft, breathable, and better for the planet—win, win, win.</p>
-    </div>
-  </div>
-</section>
+      <div class="value-props-grid">
+        <div class="value-card">
+          <h3 class="value-card-title">WEAR ALL DAY COMFORT</h3>
+          <p class="value-card-text">Lightweight, bouncy, and wildly comfortable, Allbirds shoes make any outing feel effortless. Slip in, lace up, or slide them on and enjoy the comfy support.</p>
+        </div>
+        <div class="value-card">
+          <h3 class="value-card-title">SUSTAINABILITY IN EVERY STEP</h3>
+          <p class="value-card-text">From materials to transport, we're working to reduce our carbon footprint to near zero. Holding ourselves accountable and striving for climate goals isn't a 30-year goal—it's now.</p>
+        </div>
+        <div class="value-card">
+          <h3 class="value-card-title">MATERIALS FROM THE EARTH</h3>
+          <p class="value-card-text">We replace petroleum-based synthetics with natural alternatives wherever we can. Like using wool, tree fiber, and sugarcane. They're soft, breathable, and better for the planet—win, win, win.</p>
+        </div>
+      </div>
+    </section>
 
   </main>
 
+  <!-- ======== FOOTER SECTION =========== -->
   <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-top">
+    <div class="footer-container">
+      <div class="footer-top">
 
-      <!-- Newsletter & Social Section -->
-      <div class="footer-newsletter">
-        <h3>SUBSCRIBE TO OUR EMAILS</h3>
-        <form class="newsletter-form" onsubmit="event.preventDefault();">
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit">SIGN UP</button>
-        </form>
+        <!-- Newsletter & Social Section -->
+        <div class="footer-newsletter">
+          <h3>SUBSCRIBE TO OUR EMAILS</h3>
+          <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">SIGN UP</button>
+          </form>
 
-        <div class="footer-social">
-          <h3>FOLLOW THE FLOCK</h3>
-          <div class="social-icons">
-            <!-- 1. Instagram Image Icon -->
-            <a href="https://instagram.com" target="_blank">
-              <img src="./icons/instagram.png" alt="Instagram">
-            </a>
-            
-            <!-- 2. Pinterest Image Icon -->
-            <a href="https://pinterest.com" target="_blank">
-              <img src="./icons/pinterest.png" alt="Pinterest">
-            </a>
-            
-            <!-- 3. Facebook Image Icon -->
-            <a href="https://facebook.com" target="_blank">
-              <img src="./icons/facebook.png" alt="Facebook">
-            </a>
-            
-            <!-- 4. X (Twitter) Image Icon -->
-            <a href="https://twitter.com" target="_blank">
-              <img src="./icons/twitter.png" alt="Twitter">
-            </a>
-            
-            <!-- 5. TikTok Image Icon -->
-            <a href="https://tiktok.com" target="_blank">
-              <img src="./icons/tiktok.png" alt="TikTok">
-            </a>
-            
-            <!-- 6. YouTube Image Icon -->
-            <a href="https://youtube.com" target="_blank">
-              <img src="./icons/youtube.png" alt="YouTube">
-            </a>
+          <div class="footer-social">
+            <h3>FOLLOW THE FLOCK</h3>
+            <div class="social-icons">
+              <!-- 1. Instagram Image Icon -->
+              <a href="https://instagram.com" target="_blank">
+                <img src="./icons/instagram.png" alt="Instagram">
+              </a>
+
+              <!-- 2. Pinterest Image Icon -->
+              <a href="https://pinterest.com" target="_blank">
+                <img src="./icons/pinterest.png" alt="Pinterest">
+              </a>
+
+              <!-- 3. Facebook Image Icon -->
+              <a href="https://facebook.com" target="_blank">
+                <img src="./icons/facebook.png" alt="Facebook">
+              </a>
+
+              <!-- 4. X (Twitter) Image Icon -->
+              <a href="https://twitter.com" target="_blank">
+                <img src="./icons/twitter.png" alt="Twitter">
+              </a>
+
+              <!-- 5. TikTok Image Icon -->
+              <a href="https://tiktok.com" target="_blank">
+                <img src="./icons/tiktok.png" alt="TikTok">
+              </a>
+
+              <!-- 6. YouTube Image Icon -->
+              <a href="https://youtube.com" target="_blank">
+                <img src="./icons/youtube.png" alt="YouTube">
+              </a>
+            </div>
           </div>
         </div>
+
+        <!-- Navigation Columns -->
+        <div class="footer-links-wrapper">
+
+          <!-- Column 1: HELP -->
+          <div class="footer-column">
+            <h4>HELP</h4>
+            <ul>
+              <li><a href="mailto:help@allbirds.com">help@allbirds.com</a></li>
+              <li><a href="#">FAQ/Contact Us</a></li>
+              <li><a href="#">Returns/Exchanges</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2: SHOP -->
+          <div class="footer-column">
+            <h4>SHOP</h4>
+            <ul>
+              <li><a href="#">Men's Shoes</a></li>
+              <li><a href="#">Women's Shoes</a></li>
+              <li><a href="#">Men's Apparel</a></li>
+              <li><a href="#">Women's Apparel</a></li>
+              <li><a href="#">Socks</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: COMPANY -->
+          <div class="footer-column">
+            <h4>COMPANY</h4>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Our Materials</a></li>
+              <li><a href="#">Sustainability</a></li>
+              <li><a href="#">Shoe Care</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Allbirds Responsible Disclosure Program</a></li>
+              <li><a href="#">California Transparency Act</a></li>
+              <li><a href="#">Community Offers</a></li>
+              <li><a href="#">Our Blog</a></li>
+              <li><a href="#">Patents</a></li>
+            </ul>
+          </div>
+
+        </div>
       </div>
 
-      <!-- Navigation Columns -->
-      <div class="footer-links-wrapper">
-        
-        <!-- Column 1: HELP -->
-        <div class="footer-column">
-          <h4>HELP</h4>
-          <ul>
-            <li><a href="mailto:help@allbirds.com">help@allbirds.com</a></li>
-            <li><a href="#">FAQ/Contact Us</a></li>
-            <li><a href="#">Returns/Exchanges</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 2: SHOP -->
-        <div class="footer-column">
-          <h4>SHOP</h4>
-          <ul>
-            <li><a href="#">Men's Shoes</a></li>
-            <li><a href="#">Women's Shoes</a></li>
-            <li><a href="#">Men's Apparel</a></li>
-            <li><a href="#">Women's Apparel</a></li>
-            <li><a href="#">Socks</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 3: COMPANY -->
-        <div class="footer-column">
-          <h4>COMPANY</h4>
-          <ul>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Our Materials</a></li>
-            <li><a href="#">Sustainability</a></li>
-            <li><a href="#">Shoe Care</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Allbirds Responsible Disclosure Program</a></li>
-            <li><a href="#">California Transparency Act</a></li>
-            <li><a href="#">Community Offers</a></li>
-            <li><a href="#">Our Blog</a></li>
-            <li><a href="#">Patents</a></li>
-          </ul>
-        </div>
-
+      <!-- Country Selector Dropdown -->
+      <div class="footer-country">
+        <select class="country-dropdown">
+          <option value="US">🇺🇸</option>
+          <option value="IN">🇮🇳</option>
+          <option value="UK">🇬🇧</option>
+          <option value="CA">🇨🇦</option>
+          <option value="AU">🇦🇺</option>
+          <option value="DE">🇩🇪</option>
+          <option value="FR">🇫🇷</option>
+          <option value="JP">🇯🇵</option>
+        </select>
       </div>
-    </div>
 
-    <!-- Country Selector Dropdown -->
-    <div class="footer-country">
-      <select class="country-dropdown">
-        <option value="US">🇺🇸</option>
-        <option value="IN">🇮🇳</option>
-        <option value="UK">🇬🇧</option>
-        <option value="CA">🇨🇦</option>
-        <option value="AU">🇦🇺</option>
-        <option value="DE">🇩🇪</option>
-        <option value="FR">🇫🇷</option>
-        <option value="JP">🇯🇵</option>
-      </select>
-    </div>
+      <!-- Bottom Legal Links & Copyright -->
+      <div class="footer-bottom">
+        <p class="copyright">© 2025 Allbirds, Inc. All Rights Reserved</p>
+        <ul class="legal-links">
+          <li><a href="#">Refund policy</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Terms of service</a></li>
+          <li><a href="#">Do Not Sell My Personal Information</a></li>
+          <li><a href="#">California Transparency Act</a></li>
+        </ul>
+      </div>
 
-    <!-- Bottom Legal Links & Copyright -->
-    <div class="footer-bottom">
-      <p class="copyright">© 2025 Allbirds, Inc. All Rights Reserved</p>
-      <ul class="legal-links">
-        <li><a href="#">Refund policy</a></li>
-        <li><a href="#">Privacy policy</a></li>
-        <li><a href="#">Terms of service</a></li>
-        <li><a href="#">Do Not Sell My Personal Information</a></li>
-        <li><a href="#">California Transparency Act</a></li>
-      </ul>
     </div>
+  </footer>
 
-  </div>
-</footer>
+  <!-- ======== JAVASCRIPT =========== -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    /* ANNOUNCEMENT BAR LOGIC */
+    const announcements = [
+      "Due to increased demand, orders may take up to 2 weeks to ship.",
+      "Free ground shipping on orders over $100"
+    ];
+
+    const announcementText = document.getElementById('announcementText');
+    const prevAnnouncementBtn = document.getElementById('prevAnnouncementBtn');
+    const nextAnnouncementBtn = document.getElementById('nextAnnouncementBtn');
+
+    let currentIndex = 0;
+    let intervalId;
+    const intervalTime = 5000; // 5 second. 3 sec chahiye to 3000 kar do
+
+    // Pehli line load karte hi dikh jaye
+    announcementText.textContent = announcements[currentIndex];
+
+    function updateAnnouncement() {
+      announcementText.style.opacity = 0; // fade out
+      setTimeout(() => {
+        announcementText.textContent = announcements[currentIndex];
+        announcementText.style.opacity = 1; // fade in
+      }, 400);
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % announcements.length;
+      updateAnnouncement();
+      resetInterval(); // click ke baad timer reset
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + announcements.length) % announcements.length;
+      updateAnnouncement();
+      resetInterval();
+    }
+
+    function startInterval() {
+      intervalId = setInterval(showNext, intervalTime);
+    }
+
+    function resetInterval() {
+      clearInterval(intervalId);
+      startInterval();
+    }
+
+    // Button click events
+    nextAnnouncementBtn.addEventListener('click', showNext);
+    prevAnnouncementBtn.addEventListener('click', showPrev);
+
+    // Auto start
+    startInterval();
+
+    /* BEST SELLERS INFINITE CAROUSEL LOGIC */
+    const grid = document.getElementById("bestSellerGrid");
+    const prevBestSellerBtn = document.getElementById("prevBestSellerBtn");
+    const nextBestSellerBtn = document.getElementById("nextBestSellerBtn");
+
+    if (!grid ||!prevBestSellerBtn ||!nextBestSellerBtn) return;
+
+    const originalCards = Array.from(grid.children);
+    const cardCount = originalCards.length;
+
+    // Single card step size (Card width + Grid Gap)
+    const cardWidth = 280;
+    const gap = 16;
+    const scrollStep = cardWidth + gap;
+
+    // Kitne cards visible fit honge context screen par (Minimum 4 clone rakhenge)
+    const cloneCount = 5;
+
+    // 1. Front Cloning (Last few items added to start)
+    for (let i = cardCount - cloneCount; i < cardCount; i++) {
+      const clone = originalCards[i].cloneNode(true);
+      clone.classList.add("clone");
+      grid.insertBefore(clone, grid.firstChild);
+    }
+
+    // 2. Back Cloning (First few items added to end)
+    for (let i = 0; i < cloneCount; i++) {
+      const clone = originalCards[i].cloneNode(true);
+      clone.classList.add("clone");
+      grid.appendChild(clone);
+    }
+
+    // Calculated start scroll position
+    const initialScrollPos = cloneCount * scrollStep;
+    grid.scrollLeft = initialScrollPos;
+
+    // Total original width of 12 items
+    const originalWidth = cardCount * scrollStep;
+
+    let isAdjusting = false;
+
+    // Check scroll boundary continuously for seamless loop
+    grid.addEventListener("scroll", () => {
+      if (isAdjusting) return;
+
+      // Right Boundary Check (Near cloned end)
+      if (grid.scrollLeft >= initialScrollPos + originalWidth) {
+        isAdjusting = true;
+        grid.style.scrollBehavior = "auto"; // Disable smooth effect momentarily
+        grid.scrollLeft -= originalWidth;
+        grid.style.scrollBehavior = "smooth";
+        isAdjusting = false;
+      }
+      // Left Boundary Check (Near cloned start)
+      else if (grid.scrollLeft <= initialScrollPos - originalWidth) {
+        isAdjusting = true;
+        grid.style.scrollBehavior = "auto";
+        grid.scrollLeft += originalWidth;
+        grid.style.scrollBehavior = "smooth";
+        isAdjusting = false;
+      }
+    });
+
+    // Next Button Click Event
+    nextBestSellerBtn.addEventListener("click", () => {
+      grid.scrollBy({
+        left: scrollStep,
+        behavior: "smooth"
+      });
+    });
+
+    // Previous Button Click Event
+    prevBestSellerBtn.addEventListener("click", () => {
+      grid.scrollBy({
+        left: -scrollStep,
+        behavior: "smooth"
+      });
+    });
+  });
+  </script>
 </body>
 </html>
