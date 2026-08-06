@@ -1,6 +1,7 @@
+// TASK 3: TEN BASIC FUNCTIONS
+
 console.log("=== TASK 3: TEN BASIC FUNCTIONS ===");
 
-// 1. FizzBuzz
 function fizzBuzz(n) {
   const result = [];
   for (let i = 1; i <= n; i++) {
@@ -17,7 +18,6 @@ function fizzBuzz(n) {
   return result;
 }
 
-// 2. Reverse a String without reverse()
 function reverseString(str) {
   let reversed = "";
   for (let i = str.length - 1; i >= 0; i--) {
@@ -26,14 +26,12 @@ function reverseString(str) {
   return reversed;
 }
 
-// 3. Check Palindrome
 function isPalindrome(str) {
   const cleanStr = str.toLowerCase();
   const reversed = reverseString(cleanStr);
   return cleanStr === reversed;
 }
 
-// 4. Find Largest Number in Array without Math.max
 function findLargest(arr) {
   if (arr.length === 0) return null;
   let largest = arr[0];
@@ -45,7 +43,6 @@ function findLargest(arr) {
   return largest;
 }
 
-// 5. Count Vowels
 function countVowels(str) {
   const vowels = "aeiouAEIOU";
   let count = 0;
@@ -57,7 +54,6 @@ function countVowels(str) {
   return count;
 }
 
-// 6. Generate Fibonacci Series
 function generateFibonacci(count) {
   if (count <= 0) return [];
   if (count === 1) return [0];
@@ -70,7 +66,6 @@ function generateFibonacci(count) {
   return series;
 }
 
-// 7. Check Prime Number
 function isPrime(num) {
   if (num <= 1) return false;
   for (let i = 2; i < num; i++) {
@@ -79,13 +74,11 @@ function isPrime(num) {
   return true;
 }
 
-// 8. Factorial by Recursion
 function factorial(n) {
   if (n <= 1) return 1;
   return n * factorial(n - 1);
 }
 
-// 9. Convert Number to Words (0 to 9)
 function numberToWords(num) {
   const words = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
   if (num >= 0 && num <= 9) {
@@ -94,7 +87,6 @@ function numberToWords(num) {
   return "Out of range (0-9 only)";
 }
 
-// 10. Find Duplicates in Array
 function findDuplicates(arr) {
   const duplicates = [];
   const seen = [];
@@ -111,7 +103,6 @@ function findDuplicates(arr) {
   return duplicates;
 }
 
-// --- Demos ---
 console.log("FizzBuzz (15):", fizzBuzz(15));
 console.log("Reverse 'hello':", reverseString("hello"));
 console.log("Is 'racecar' palindrome?:", isPalindrome("racecar"));
